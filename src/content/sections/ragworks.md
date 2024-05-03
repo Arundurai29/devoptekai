@@ -3,7 +3,7 @@ enable: true
 subtitle: Our Crux
 title: RagWorks
 content: RagWorks is DevopTek AI’s RAG (Retrieval Augmented Generation) engine which merges retrieval based models and generative AI to produce precise and contextually accurate responses.
-image: "/images/chart.png"
+image: "/images/banner/banner-1.jpg"
 accordion:
   - title: Generative AI core engine
     description: Your core element of your AI engine, designed to leverage your knowledge base and tailored to address specific requirements

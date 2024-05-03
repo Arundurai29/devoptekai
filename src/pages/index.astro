@@ -78,7 +78,7 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
                         <div class="hero-content relative z-20">
                           {subtitle && (
                             <span
-                              class={`h4 uppercase font-normal text-dark mb-0 block anim-item ${
+                              class={`h4 uppercase font-normal text-white mb-0 block anim-item ${
                                 index === 0
                                   ? "anim-slide-right anim-delay-1"
                                   : index === 1
@@ -92,7 +92,7 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
                           )}
                           {title && (
                             <h1
-                              class={`text-5xl/tight lg:text-5xl/tight font-semibold sm:font-bold mb-6 anim-item ${
+                              class={`text-5xl/tight text-white  lg:text-5xl/tight font-semibold sm:font-bold mb-6 anim-item ${
                                 index === 0
                                   ? "anim-slide-right anim-delay-3"
                                   : index === 1
@@ -106,7 +106,7 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
                           )}
                           {content && (
                             <p
-                              class={`text-dark anim-item ${
+                              class={`text-white anim-item ${
                                 index === 0
                                   ? "anim-slide-right anim-delay-6"
                                   : index === 1
@@ -120,7 +120,7 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
                           )}
                           {button?.enable && (
                             <div
-                              class={`anim-item relative w-fit mt-12 ${
+                              class={`anim-item  relative w-fit mt-12 ${
                                 index === 0
                                   ? "anim-slide-right anim-delay-8"
                                   : index === 1
@@ -130,11 +130,12 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
                                       : "anim-slide-bottom anim-delay-8"
                               }`}>
                               <a
-                                class="btn btn-outline-dark uppercase"
+                                class="btn text-white btn-outline-dark uppercase"
                                 href={button.link}
                                 set:html={button.label}
                               />
                             </div>
+                           
                           )}
                         </div>
                         {bg_image && (
@@ -171,6 +172,7 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
             </button>
           </div>
         </div>
+        
         <div class="container">
           <div class="swiper banner-nav-slider">
             <div class="swiper-wrapper flex justify-center	 items-center">
@@ -198,7 +200,11 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
     )
   }
 
-
+<style>
+  .btn-outline-dark{
+        border-color: rgb(255 255 255) !important;
+  }
+</style>
 
   <!-- {
     about?.enable && (
