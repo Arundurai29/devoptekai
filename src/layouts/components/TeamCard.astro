@@ -1,0 +1,74 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  content: CollectionEntry<"team">;
+}
+
+const {
+  content: {
+    data: { title, designation, social, image },
+    slug,
+  },
+} = Astro.props;
+---
+
+<div class="border text-center h-full rounded-md overflow-hidden group">
+  <a href={`/team/${slug}`} class="block">
+    {
+      image && (
+        <ImageMod
+          src={image}
+          width={300}
+          height={400}
+          alt={title ? title : "author image"}
+          class="w-full inline-block"
+        />
+      )
+    }
+  </a>
+  <div
+    class="pb-0 pt-4 px-4 transition group-hover:text-white text-dark group-hover:bg-primary group-hover:before:bg-primary relative rectangle">
+    {
+      title && (
+        <h3 class="h5 mb-1 font-medium block !text-inherit transition-none">
+          <a
+            class="hover:text-inherit duration-0"
+            href={`/team/${slug}`}
+            set:html={markdownify(title)}
+          />
+        </h3>
+      )
+    }
+    {
+      designation && (
+        <p
+          class="text-text group-hover:text-white mb-2 font-medium"
+          set:html={markdownify(designation)}
+        />
+      )
+    }
+    {
+      social && (
+        <ul class="flex flex-wrap border-t py-2 w-fit mx-auto gap-3 sm:gap-x-6 ">
+          {social.map((social) => (
+            <li>
+              <a
+                href={social.link}
+                target="_blank"
+                class="inline-block p-2 text-text group-hover:!text-white">
+                {social.icon && (
+                  <DynamicIcon className="inline-block" icon={social.icon} />
+                )}
+                <span class="sr-only">social-link</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</div>

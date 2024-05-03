@@ -1,0 +1,43 @@
+---
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getEntry } from "astro:content";
+import TeamCard from "@/components/TeamCard.astro";
+
+const COLLECTION_FOLDER = "team";
+const { body, data, render } = await getEntry("team", "-index");
+const teamCollection = await getSinglePage(COLLECTION_FOLDER);
+const { Content } = await render();
+const { title, bg_image, meta_title, description, image } = data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <PageHeader title={title} meta_title={title} bg_image={bg_image} />
+  {
+    (
+      <section class="section">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-12 mb-5">
+              {body && (
+                <div class="content max-w-lg">{Content && <Content />}</div>
+              )}
+            </div>
+            {teamCollection.map((team) => {
+              return (
+                <div class="lg:col-4 sm:col-6">
+                  <TeamCard content={team} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    )
+  }
+</Base>

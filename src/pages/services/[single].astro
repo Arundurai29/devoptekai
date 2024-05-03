@@ -1,0 +1,74 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import ServiceSidebar from "@/partials/ServiceSidebar.astro";
+import { type CollectionEntry } from "astro:content";
+
+interface Props {
+  service: CollectionEntry<"services">;
+}
+
+const COLLECTION_FOLDER = "services";
+export async function getStaticPaths() {
+  const COLLECTION_FOLDER = "services";
+  const servicesCollection = await getSinglePage(COLLECTION_FOLDER);
+
+  const paths = servicesCollection.map((service) => ({
+    params: {
+      single: service.slug,
+    },
+    props: { service },
+  }));
+  return paths;
+}
+
+const { service } = Astro.props;
+const {
+  body,
+  render,
+  data: { title, meta_title, description, bg_image, image },
+} = service;
+const { Content } = await render();
+const servicesCollection = await getSinglePage(COLLECTION_FOLDER);
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <PageHeader title={title} bg_image={bg_image} />
+
+  <section class="section">
+    <div class="container">
+      <div class="row gy-4">
+        <ServiceSidebar
+          content={service}
+          servicesCollection={servicesCollection}
+        />
+        <article class="lg:col-8 lg:order-2 order-1">
+          {
+            image && (
+              <ImageMod
+                src={image}
+                width={900}
+                height={500}
+                class="w-full mb-8 md:mb-16 rounded-t"
+                alt="service"
+              />
+            )
+          }
+          {
+            body && (
+              <div class="content">
+                <Content />
+              </div>
+            )
+          }
+        </article>
+      </div>
+    </div>
+  </section>
+</Base>

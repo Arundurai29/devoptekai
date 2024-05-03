@@ -1,0 +1,137 @@
+---
+import config from "@/config/config.json";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  content: CollectionEntry<"projects">;
+  class?: string;
+}
+
+const {
+  content: {
+    data: { case_study, overview, live_demo, title },
+  },
+  class: className,
+} = Astro.props;
+---
+
+<aside class={`lg:col-4${className ? ` ` + className : ""}`}>
+  <div class="flex flex-col gap-10 lg:gap-14">
+    {
+      overview && overview[0] && (
+        <div class="py-4 px-6 rounded border">
+          <h2 class="h5 text-text mb-2" set:html="Overview" />
+          <ul class="ps-0 mb-5">
+            <li class="py-3 border-b border-b-border/50 text-dark flex max-[400px]:flex-wrap">
+              <span class="flex-[0_0_120px]">Project Name:</span>
+              {title}
+            </li>
+            {overview.map(
+              ({ label, data }) =>
+                data && (
+                  <li class="py-4 border-b border-b-border/50 text-dark flex">
+                    <span class="flex-[0_0_120px]">{label} :</span>
+                    {markdownify(data)}
+                  </li>
+                ),
+            )}
+          </ul>
+
+          {live_demo && (
+            <a
+              href={live_demo}
+              class="btn btn-primary"
+              set:html="Watch Live Demo"
+            />
+          )}
+        </div>
+      )
+    }
+
+    {
+      case_study && (
+        <div class="rounded border py-4 px-6 flex gap-1">
+          <DynamicIcon
+            className="inline-block mr-2 mt-1 text-dark"
+            icon="TfiFiles"
+            style={{ fontSize: "20px" }}
+          />
+          <div class="ml-1">
+            <h2 class="mb-1 inline-block h5" set:html="Complete Case Study" />
+            <a
+              download=""
+              class="block text-dark underline"
+              href={case_study}
+              set:html="Download pdf"
+            />
+          </div>
+        </div>
+      )
+    }
+
+    {
+      config.service_consultation_form &&
+        config.service_consultation_form.enable && (
+          <div>
+            <h2
+              class="mb-5 h5"
+              set:html={markdownify(config.service_consultation_form.title)}
+            />
+            <form
+              action={config.service_consultation_form.form_action}
+              class="row gy-3">
+              <div class="lg:col-12">
+                <input
+                  type="text"
+                  class="form-input"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="lg:col-12">
+                <input
+                  type="email"
+                  class="form-input"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+              <div class="lg:col-12">
+                <input
+                  type="text"
+                  class="form-input"
+                  name="subject"
+                  id="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="lg:col-12">
+                <textarea
+                  name="question"
+                  id="question"
+                  class="form-input"
+                  placeholder="Your Question Here..."
+                  style="height: 150px;"
+                />
+              </div>
+              <div class="lg:col-12">
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  aria-label="Submit"
+                  set:html="Submit"
+                />
+              </div>
+            </form>
+          </div>
+        )
+    }
+  </div>
+</aside>

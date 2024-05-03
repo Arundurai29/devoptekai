@@ -1,0 +1,225 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import PageHeader from "@/partials/PageHeader.astro";
+
+export async function getStaticPaths() {
+  const COLLECTION_FOLDER = "team";
+  const teamCollection = await getSinglePage(COLLECTION_FOLDER);
+
+  const paths = teamCollection.map((team) => ({
+    params: {
+      single: team.slug,
+    },
+    props: { team },
+  }));
+  return paths;
+}
+
+const {
+  team: { data, body, slug, render },
+} = Astro.props;
+const {
+  title,
+  bio,
+  meta_title,
+  designation,
+  skill,
+  social,
+  contacts,
+  cv,
+  description,
+  image,
+  bg_image,
+  information,
+} = data;
+const { Content } = await render();
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <PageHeader title={title} meta_title={title} bg_image={bg_image} />
+
+  <section class="section">
+    <div class="container">
+      <div class="row gy-4">
+        <aside class="lg:col-4">
+          <div class="flex flex-col gap-12">
+            <div
+              class="text-center h-full md:rounded overflow-hidden group bg-theme-light">
+              <a href={`/team/${slug}`} class="block">
+                {
+                  image && (
+                    <ImageMod
+                      src={image}
+                      width={300}
+                      height={400}
+                      alt={title ? title : "author image"}
+                      class="w-full inline-block"
+                    />
+                  )
+                }
+              </a>
+              {
+                information && (
+                  <div class="py-2 px-4 pb-3">
+                    {information.map((info) => {
+                      const { data, label, icon } = info;
+                      return (
+                        <div class="p-3 flex justify-between">
+                          <p class=" font-primary m-0">
+                            {icon && (
+                              <DynamicIcon
+                                className="inline-block me-2"
+                                icon={icon}
+                              />
+                            )}
+                            {label}
+                          </p>
+                          <span
+                            class="font-medium text-dark"
+                            set:html={markdownify(data)}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                )
+              }
+            </div>
+            {
+              cv && (
+                <div class="rounded border py-4 px-6 flex gap-1">
+                  <DynamicIcon
+                    className="inline-block mr-2 mt-1 text-dark"
+                    icon="TfiFiles"
+                    style={{ fontSize: "20px" }}
+                  />
+                  <div class="ml-1">
+                    <h2
+                      class="mb-1 inline-block h5"
+                      set:html="Professional CV"
+                    />
+                    <a
+                      download=""
+                      class="block text-dark underline"
+                      href={cv}
+                      set:html="Download pdf"
+                    />
+                  </div>
+                </div>
+              )
+            }
+          </div>
+        </aside>
+        <article class="lg:col-8">
+          {title && <h2 class="h3" set:html={markdownify(title)} />}
+          {
+            designation && (
+              <span class="text-primary h6 mb-8" set:html={designation} />
+            )
+          }
+          {bio && <p class="mb-10" set:html={markdownify(bio)} />}
+          <div class="row">
+            {
+              contacts && (
+                <div class="md:col-6">
+                  <h2 class="h5" set:html="Contact Information" />
+                  <ul class="pl-0 mb-5 md:mb-10">
+                    {contacts.map((contact) => {
+                      const { id, icon } = contact;
+
+                      if (!id) return null;
+
+                      return (
+                        <li class="text-color my-3">
+                          {icon && (
+                            <DynamicIcon
+                              className="me-3 inline-block"
+                              icon={icon}
+                            />
+                          )}
+                          {id}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )
+            }
+            {
+              social && (
+                <div class="md:col-6">
+                  <h2 class="mb-5 h5" set:html="Follow on Social" />
+                  <ul class="flex flex-wrap gap-2 mb-5 md:mb-10">
+                    {social.map((social) => {
+                      const { link, icon } = social;
+                      return (
+                        <li class="mr-2">
+                          <a
+                            class="bg-dark block w-10 h-10 leading-10 text-base hover:bg-primary hover:text-white text-center rounded-full text-white"
+                            href={link}
+                            target="_blank"
+                            aria-label={title}>
+                            {icon && (
+                              <DynamicIcon
+                                className="inline-block"
+                                icon={icon}
+                              />
+                            )}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )
+            }
+
+            {
+              body && (
+                <div class="content">
+                  <Content />
+                </div>
+              )
+            }
+
+            {
+              skill && (
+                <div class="mt-5">
+                  {skill.map((skill) => {
+                    const { label, percentage } = skill;
+                    return (
+                      <div>
+                        {label && (
+                          <h3 class="h6 font-normal mb-2" set:html={label} />
+                        )}
+                        {percentage && (
+                          <div class="flex w-full h-4 bg-gray-20 mb-5 rounded-full overflow-hidden bg-theme-light">
+                            <div
+                              class="flex flex-col justify-center rounded-full relative overflow-hidden bg-secondary text-xs text-white text-center"
+                              role="progressbar"
+                              aria-label={label}
+                              style={`width: ${percentage}`}>
+                              <div class="progress-bar-striped absolute w-full h-full left-0 bottom-0" />
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )
+            }
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</Base>

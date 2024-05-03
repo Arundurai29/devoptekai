@@ -1,0 +1,102 @@
+---
+import TextCounter from "@/components/TextCounter.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { OurExpertiseType } from "@/types";
+
+interface Props {
+  content: OurExpertiseType;
+}
+
+const {
+  content: { enable, subtitle, title, content, funfacts, progressbar },
+} = Astro.props;
+---
+
+{
+  enable && (
+    <section class="section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-12 mb-5">
+            {subtitle && (
+              <span
+                class="text-lg text-text"
+                set:html={markdownify(subtitle)}
+              />
+            )}
+            {title && <h2 set:html={markdownify(title)} />}
+            <div class="separator separator-secondary after:shadow-white after:bg-white" />
+          </div>
+          <div class="lg:col-7">
+            {content && <p set:html={markdownify(content)} />}
+            {funfacts && (
+              <ul class="flex justify-between gap-x-2 sm:gap-x-10 mt-8 mb-6">
+                {funfacts.map((funfact) => (
+                  <li class="flex flex-col text-center md:text-start md:flex-row items-center gap-4">
+                    {funfact && funfact.icon && (
+                      <span
+                        class={`${funfact.icon} h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-3xl text-primary inline-block rounded-full border-solid`}>
+                        {funfact.icon && (
+                          <DynamicIcon
+                            className="inline-block"
+                            icon={funfact.icon}
+                          />
+                        )}
+                        {funfact.title && (
+                          <span
+                            class="sr-only"
+                            set:html={markdownify(funfact.title) || "icon"}
+                          />
+                        )}
+                      </span>
+                    )}
+                    <div>
+                      {funfact?.count && (
+                        <h3 class="lg:h3 mb-1">
+                          <TextCounter value={funfact.count} />
+                        </h3>
+                      )}
+                      {funfact?.title && (
+                        <p
+                          class="opacity-80"
+                          set:html={markdownify(funfact.title)}
+                        />
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+          {progressbar && (
+            <div class="lg:col-4 ml-auto">
+              {progressbar.map((progressbar) => {
+                if (!progressbar) return null;
+
+                return (
+                  <div>
+                    {progressbar.title && (
+                      <h4 class="h6 font-normal mb-2">{progressbar.title}</h4>
+                    )}
+                    {progressbar.progress && (
+                      <div class="flex w-full h-4 bg-gray-20 mb-5 rounded-full overflow-hidden bg-theme-light">
+                        <div
+                          class="flex flex-col justify-center rounded-full relative overflow-hidden bg-secondary text-xs text-white text-center"
+                          role="progressbar"
+                          aria-label="progressbar"
+                          style={`width: ${progressbar.progress}`}>
+                          <div class="progress-bar-striped absolute w-full h-full left-0 bottom-0" />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}

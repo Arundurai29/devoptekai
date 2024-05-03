@@ -1,0 +1,163 @@
+---
+import config from "@/config/config.json";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getEntry } from "astro:content";
+
+interface data {
+  title: string;
+  description: string;
+  image: string;
+  meta_title: string;
+  bg_image: string;
+  contact_info: {
+    name: string;
+    icon: string;
+    content: string;
+  }[];
+}
+
+const { contact_form_action }: { contact_form_action: string } = config.params;
+const {
+  data: { title, description, image, contact_info, meta_title, bg_image },
+}: { data: data } = await getEntry("contact", "-index");
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <PageHeader title={title} meta_title={title} bg_image={bg_image} />
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="lg:col-4 lg:offset-1 md:col-5 grid place-content-center">
+          <h2 class="h3 mb-8" set:html="Contact Us" />
+
+          {
+            contact_info && (
+              <ul class="pl-0">
+                {contact_info.map((info) => {
+                  const { name, icon, content } = info;
+
+                  return (
+                    <li class="flex mb-8">
+                      <span
+                        class={`mr-4${
+                          icon ? ` ${icon}` : ""
+                        } h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-3xl text-primary inline-block rounded-full border-solid`}>
+                        <span class="sr-only" set:html={name} />
+                        <DynamicIcon className="inline-block" icon={icon} />
+                      </span>
+                      <div class="self-center font-primary">
+                        <div
+                          class="text-dark"
+                          set:html={markdownify(content)}
+                        />
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            )
+          }
+        </div>
+        <div class="lg:col-7 md:col-7">
+          <div class="p-5 md:p-10 rounded shadow">
+            <form method="post" action={contact_form_action} class="row g-3">
+              <div class="lg:col-6">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-input"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="lg:col-6">
+                <input
+                  type="email"
+                  class="form-input"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+              <div class="lg:col-6 flex items-start">
+                <input
+                  type="tel"
+                  class="form-input"
+                  name="phone"
+                  id="phone"
+                  placeholder="Phone No"
+                  required
+                />
+              </div>
+              <div class="lg:col-6">
+                <input
+                  type="text"
+                  name="company-name"
+                  id="company-name"
+                  class="form-input"
+                  placeholder="Company Name"
+                  required
+                />
+              </div>
+              <div class="lg:col-6 px-4">
+              <label class="" for="">Which Service Can We Help You With?</label>
+<div class="flex items-center mb-4 mt-3">
+  <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4  bg-light-100 border-gray-300 rounded text-primary focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2  dark:border-gray-600">
+  <label for="default-checkbox" class=" font-primary ms-2 text-sm  text-drak-400 dark:text-drak-400">DocuSage</label>
+</div>
+<div class="flex items-center mb-4">
+  <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-primary bg-light-100 border-gray-300 rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2  dark:border-gray-600">
+  <label for="default-checkbox" class="font-primary ms-2 text-sm  text-drak-400 dark:text-drak-400">Web Concierge</label>
+</div>
+<div class="flex items-center mb-4">
+  <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-primary bg-light-100 border-gray-300 rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2  dark:border-gray-600">
+  <label for="default-checkbox" class="font-primary ms-2 text-sm  text-drak-400 dark:text-drak-400">AI Consulting</label>
+</div>
+<div class="flex items-center">
+  <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-primary bg-light-100 border-gray-300 rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:border-gray-600">
+  <label for="checked-checkbox" class="font-primary ms-2 text-sm  text-drak-400 dark:text-drak-400">Cloud/Devops Consulting</label>
+</div>
+
+              </div>
+              <div class="lg:col-12">
+                <textarea
+                  class="form-input"
+                  name="message"
+                  id="message"
+                  placeholder="Your Message Here..."
+                  required
+                  style="height: 150px;"></textarea>
+              </div>
+              <div class="lg:col-12">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {
+    config.params.google_map &&
+      config.params.google_map.enable &&
+      config.params.google_map.address && (
+        <section>
+          <iframe
+            style="height:400px;width:100%;border:0;"
+            src={config.params.google_map.address}
+            title="google map"
+          />
+        </section>
+      )
+  }
+</Base>

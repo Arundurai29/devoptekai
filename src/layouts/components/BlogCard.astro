@@ -1,0 +1,65 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import config from "@/config/config.json";
+import dateFormat from "@/lib/utils/dateFormat";
+import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  content: CollectionEntry<"blog">;
+}
+
+const {
+  content: {
+    data: { title, image, date, author },
+    slug,
+  },
+} = Astro.props;
+
+const { blog_folder } = config.settings;
+---
+
+<div
+  class="border group bg-white border-border rounded-md relative overflow-hidden">
+  {
+    image && (
+      <a
+        href={`/${blog_folder}/${slug}`}
+        class="overlay after:opacity-0  group-hover:after:opacity-100 after:duration-300">
+        <ImageMod
+          src={image}
+          width={400}
+          height={240}
+          class="w-full"
+          alt={title}
+        />
+      </a>
+    )
+  }
+  <div class="flex">
+    {
+      date && (
+        <div class="flex flex-col flex-wrap justify-center items-center px-6 py-5 border-e">
+          <span
+            class="text-primary font-medium text-3xl"
+            set:html={dateFormat(date, "dd")}
+          />
+          <span set:html={dateFormat(date, "MMM")} />
+        </div>
+      )
+    }
+    <div class="p-5 w-full">
+      <h3 class="h5">
+        <a href={`/${blog_folder}/${slug}`} set:html={markdownify(title)} />
+      </h3>
+      <p class="text-dark/70">
+        By
+        <a
+          href={`/authors/${slugify(author)}`}
+          class="capitalize text-dark"
+          set:html={humanize(author)}
+        />
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+---
+import BlogCard from "@/components/BlogCard.astro";
+import Pagination from "@/components/Pagination.astro";
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser.astro";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+import PageHeader from "@/partials/PageHeader.astro";
+import PostSidebar from "@/partials/PostSidebar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const BLOG_FOLDER = "blog";
+const {
+  data: { title, meta_title, image, description, bg_image },
+} = await getEntry(BLOG_FOLDER, "-index");
+const posts = await getSinglePage(BLOG_FOLDER);
+const allCategories = await getAllTaxonomy(BLOG_FOLDER, "categories");
+const categories = await getTaxonomy(BLOG_FOLDER, "categories");
+const tags = await getTaxonomy(BLOG_FOLDER, "tags");
+const sortedPosts = sortByDate(posts) as CollectionEntry<"blog">[];
+const totalPages: number = Math.ceil(posts.length / config.settings.pagination);
+const currentPosts = sortedPosts.slice(0, config.settings.pagination);
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  image={image}
+  description={description}>
+  <PageHeader title={title} bg_image={bg_image} />
+  <section class="overflow-hidden">
+    <div class="container">
+      <div class="row lg:gx-6">
+        <!-- blog posts -->
+        <div class="lg:col-8">
+          <div class="section max-lg:pb-0">
+            <div class="row g-4">
+              {
+                currentPosts.map((post) => (
+                  <div class="md:col-6">
+                    <BlogCard content={post} />
+                  </div>
+                ))
+              }
+            </div>
+            <Pagination
+              class="mt-10"
+              currentPage={1}
+              section={BLOG_FOLDER}
+              totalPages={totalPages}
+            />
+          </div>
+        </div>
+
+        <!-- sidebar -->
+        <PostSidebar
+          categories={categories}
+          tags={tags}
+          allCategories={allCategories}
+          sortedPosts={sortedPosts}
+          class="section-md lg:section lg:shadow-[-8px_0px_10px_0px] lg:shadow-light/10"
+        />
+      </div>
+    </div>
+  </section>
+</Base>

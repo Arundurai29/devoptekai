@@ -1,0 +1,61 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  content: CollectionEntry<"projects">;
+}
+
+const {
+  content: {
+    data: { title, image, category },
+    slug,
+  },
+} = Astro.props;
+---
+
+<div class="relative overflow-hidden">
+  <div class="group">
+    <div
+      class="md:overlay after:opacity-0 after:bg-theme-dark/80 group-hover:after:opacity-100 after:duration-300">
+      {
+        image && (
+          <ImageMod
+            src={image}
+            width={460}
+            height={460}
+            class="w-full"
+            alt={title || "project image"}
+          />
+        )
+      }
+      <div
+        class="absolute max-md:bg-gradient-to-r max-md:from-dark max-md:to-white/10 top-0 w-full h-full flex flex-col justify-end text-white p-5 z-10">
+        {
+          title && (
+            <h3 class="h5 mb-2 mt-auto text-white">
+              <a
+                href={`/projects/${slug}`}
+                class="after:content-[''] after:inset-0 after:w-full duration-0">
+                <span
+                  class="block md:translate-y-4 md:duration-300 md:opacity-0 group-hover:md:translate-y-0 group-hover:md:opacity-100"
+                  set:html={markdownify(title)}
+                />
+              </a>
+            </h3>
+          )
+        }
+        {
+          category && (
+            <p class="text-white/80 md:translate-y-2 md:opacity-0 group-hover:md:translate-y-0 group-hover:md:opacity-100 duration-300 delay-100">
+              <DynamicIcon className="inline-block me-2" icon="TfiTag" />
+              <span class="capitalize text-sm">{category}</span>
+            </p>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</div>

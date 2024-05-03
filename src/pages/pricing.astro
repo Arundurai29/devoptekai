@@ -1,0 +1,77 @@
+---
+import Base from "@/layouts/Base.astro";
+import { getEntry } from "astro:content";
+import type { PricingType } from "@/types";
+import PageHeader from "@/partials/PageHeader.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+
+const { data, body, render } = await getEntry("pricing", "-index");
+const { title, meta_title, description, image, bg_image, pricingTable } =
+  data as PricingType;
+const { Content } = await render();
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <PageHeader title={title} meta_title={meta_title} bg_image={bg_image} />
+  <section class="section">
+    <div class="container">
+      <div class="row gy-5 gx-4 pb-6">
+        <div class="col-12">
+          {body && <div class="content max-w-lg">{Content && <Content />}</div>}
+        </div>
+        {
+          pricingTable &&
+            pricingTable.map((table) => (
+              <div class="lg:col-4 md:col-6">
+                <div class="border pt-4 h-full rounded flex flex-col">
+                  <div class="pt-2 px-7 border-b rounded-0">
+                    <h3
+                      class="text-color mb-0 text-dark/80"
+                      set:html={table.title}
+                    />
+                    <span class="ml-auto w-[50px] sm:w-[70px] h-[50px] sm:h-[70px] !leading-[50px] sm:!leading-[70px] border border-border text-center text-lg/none sm:text-2xl/none xl:text-4xl/none text-white bg-primary block rounded translate-y-4">
+                      <DynamicIcon className="inline-block" icon={table.icon} />
+                    </span>
+                  </div>
+                  <div class="pt-10 px-7">
+                    {table.value && (
+                      <span class="font-bold mb-3 block h2 text-dark">
+                        {table.value}
+                        <span class="h5 font-medium">/{table.unit}</span>
+                      </span>
+                    )}
+                    {table.features && table.features[0] && (
+                      <ul class="pl-0 mb-8 first:pt-0">
+                        {table.features.map((feature) => (
+                          <li class="text-color py-1.5 border-b">
+                            <DynamicIcon
+                              icon="TfiArrowCircleRight"
+                              className="me-3 text-primary inline-block"
+                            />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  {table.link && (
+                    <div class="border-0 py-0 px-7 mt-auto">
+                      <a
+                        href={table.link}
+                        class="btn btn-primary translate-y-6"
+                        set:html="Buy Now"
+                      />
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>

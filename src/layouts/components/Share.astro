@@ -1,0 +1,66 @@
+---
+import config from "@/config/config.json";
+import DynamicIcon from "@/helpers/DynamicIcon";
+
+const { base_url }: { base_url: string } = config.site;
+
+interface Props {
+  title?: string;
+  description?: string;
+  slug?: string;
+  className?: string;
+}
+
+const { title, description, slug, className } = Astro.props;
+---
+
+<ul class={`${className}`}>
+  <li>
+    <a
+      aria-label="facebook share button"
+      href={`https://facebook.com/sharer/sharer.php?u=${base_url}/${slug}`}
+      target="_blank"
+      class="rounded-full !text-white bg-[#4267b2] w-10 h-10 leading-10 text-center block"
+      rel="noreferrer noopener">
+     <span>
+       <DynamicIcon icon="TfiFacebook" className="inline-block"/>
+     </span>
+    </a>
+  </li>
+  <li>
+    <a
+      aria-label="twitter share button"
+      href={`https://twitter.com/intent/tweet/?text=${title}&amp;url=${base_url}/${slug}`}
+      target="_blank"
+      class="rounded-full !text-white bg-[#449de8] w-10 h-10 leading-10 text-center block"
+      rel="noreferrer noopener">
+     <span>
+       <DynamicIcon icon="TfiTwitter" className="inline-block"/>
+     </span>
+    </a>
+  </li>
+  <li>
+    <a
+      aria-label="linkedin share button"
+      href={`https://www.linkedin.com/shareArticle?mini=true&url=${base_url}/${slug}&title=${title}&summary=${description}&source=${base_url}`}
+      target="_blank"
+      class="rounded-full !text-white bg-[#F75400] w-10 h-10 leading-10 text-center block"
+      rel="noreferrer noopener">
+     <span>
+       <DynamicIcon icon="TfiReddit" className="inline-block"/>
+     </span>
+    </a>
+  </li>
+  <li>
+    <a
+      aria-label="pinterest share button"
+      href={`https://pinterest.com/pin/create/button/?url=${base_url}/${slug}&media=&description=${description}`}
+      target="_blank"
+      class="rounded-full !text-white bg-[#F75400] w-10 h-10 leading-10 text-center block"
+      rel="noreferrer noopener">
+     <span>
+       <DynamicIcon icon="TfiPinterest" className="inline-block"/>
+     </span>
+    </a>
+  </li>
+</ul>

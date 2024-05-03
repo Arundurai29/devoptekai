@@ -1,0 +1,165 @@
+---
+import Logo from "@/components/Logo.astro";
+import config from "@/config/config.json";
+import menu from "@/config/menu.json";
+import { markdownify } from "@/lib/utils/textConverter";
+
+export interface ChildNavigationLink {
+  name: string;
+  url: string;
+}
+
+export interface NavigationLink {
+  name: string;
+  url: string;
+  hasChildren?: boolean;
+  children?: ChildNavigationLink[];
+}
+
+const { main }: { main: NavigationLink[] } = menu;
+const { navigation_button } = config;
+const { pathname } = Astro.url;
+---
+
+<header class={`header lg:z-20 relative shadow`}>
+  {
+    config.params.top_header &&
+      (config.params.contact_info.email ||
+        config.params.contact_info.phone) && (
+        <div class="bg-theme-dark py-3">
+          <div class="container">
+            <ul class="text-light justify-center lg:justify-end font-light gap-y-2 flex flex-col sm:flex-row gap-x-4 sm:gap-x-0 sm:list-separator items-center">
+              {config.params.contact_info.email && (
+                <li set:html={markdownify(config.params.contact_info.email)} />
+              )}
+              {config.params.contact_info.email && (
+                <li>
+                  Call Us Now:
+                  <a
+                    href={`tel:${config.params.contact_info.phone}`}
+                    class="underline ml-1"
+                    set:html={markdownify(config.params.contact_info.phone)}
+                  />
+                </li>
+              )}
+            </ul>
+          </div>
+        </div>
+      )
+  }
+  <nav class="navbar container">
+    <!-- logo -->
+    <div class="order-0">
+      <Logo />
+    </div>
+    <!-- navbar toggler -->
+    <button
+      class="relative group order-3 navbar-toggler cursor-pointer lg:hidden lg:order-1"
+      aria-label="Toggle navigation">
+      <div
+        class="relative flex overflow-hidden items-center justify-center w-[18px] h-[24px] transform transition-transform bg-white duration-200">
+        <div
+          class="flex flex-col justify-between w-full h-[14px] transform transition-transform duration-300 origin-center overflow-hidden">
+          <div
+            class="bg-dark h-[2px] w-full transform transition-transform duration-300 origin-left group-[.active]:translate-y-6 delay-100"
+          ></div>
+          <div
+            class="bg-dark h-[2px] w-full rounded transform transition-transform duration-300 group-[.active]:translate-y-6 delay-75"
+          ></div>
+          <div
+            class="bg-dark h-[2px] w-full transform transition-transform duration-300 origin-left group-[.active]:translate-y-6"
+          ></div>
+
+          <div
+            class="absolute items-center justify-between transform transition-transform duration-500 top-1/2 -translate-x-10 group-[.active]:translate-x-0 flex w-0 group-[.active]:w-12">
+            <div
+              class="absolute bg-dark h-[2px] w-5 transform transition-transform duration-500 rotate-0 delay-300 group-[.active]:rotate-45"
+            ></div>
+            <div
+              class="absolute bg-dark h-[2px] w-5 transform transition-transform duration-500 -rotate-0 delay-300 group-[.active]:-rotate-45"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </button>
+    <!-- /navbar toggler -->
+    <div class="navbar-nav-wrapper max-lg:w-full order-3 lg:ml-auto lg:order-1">
+      <ul class="navbar-nav lg:flex lg:w-auto lg:space-x-2 xl:space-x-2">
+        {
+          main.map((menu) => (
+            <>
+              {menu.hasChildren ? (
+                <li class="nav-dropdown nav-item group relative">
+                  <span
+                    class={`nav-link inline-flex items-center ${
+                      menu.children?.map(({ url }) => url).includes(pathname) ||
+                      menu.children
+                        ?.map(({ url }) => `${url}/`)
+                        .includes(pathname)
+                        ? "active"
+                        : ""
+                    }`}>
+                    {menu.name}
+                    <svg
+                      class="h-4 w-4 fill-current ml-1 arrow-icon"
+                      viewBox="0 0 20 20">
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </span>
+                  <div class="nav-dropdown-menu">
+                    <ul class="nav-dropdown-list">
+                      {menu.children?.map((child) => (
+                        <li class="nav-dropdown-item">
+                          <a
+                            href={child.url}
+                            class={`nav-dropdown-link block ${
+                              (pathname === `${child.url}/` ||
+                                pathname === child.url) &&
+                              "active"
+                            }`}>
+                            {child.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </li>
+              ) : (
+                <li class="nav-item">
+                  <a
+                    href={menu.url}
+                    class={`nav-link block ${
+                      (pathname === `${menu.url}/` || pathname === menu.url) &&
+                      "active"
+                    }`}>
+                    {menu.name}
+                  </a>
+                </li>
+              )}
+            </>
+          ))
+        }
+        {
+          navigation_button.enable && (
+            <li class="mt-4 inline-block max-lg:w-full max-lg:text-center lg:hidden">
+              <a class="btn btn-primary btn-sm" href={navigation_button.link}>
+                {navigation_button.label}
+              </a>
+            </li>
+          )
+        }
+      </ul>
+    </div>
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+      {
+        navigation_button.enable && (
+          <a
+            class="btn btn-primary btn-sm hidden lg:inline-block ml-5"
+            href={navigation_button.link}>
+            {navigation_button.label}
+          </a>
+        )
+      }
+    </div>
+  </nav>
+</header>

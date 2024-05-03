@@ -1,0 +1,41 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import { plainify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import Social from "./Social.astro";
+
+interface Props {
+  content: CollectionEntry<"authors">;
+}
+
+const {
+  content: {
+    data: { title, image, social },
+    slug,
+    body,
+  },
+} = Astro.props;
+---
+
+<div class="rounded bg-theme-light p-8 text-center">
+  {
+    image && (
+      <ImageMod
+        class="mx-auto mb-6 rounded"
+        src={image}
+        alt={title}
+        width={120}
+        height={120}
+      />
+    )
+  }
+  {
+    title && (
+      <h4 class="mb-3">
+        <a href={`/authors/${slug}`} set:html={title} />
+      </h4>
+    )
+  }
+  {body && <p class="mb-4" set:html={plainify(body?.slice(0, 100))} />}
+  <Social source={social} className="social-icons social-icons-dark" />
+</div>

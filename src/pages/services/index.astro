@@ -1,0 +1,119 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import bgImageMod from "@/lib/utils/bgImageMod";
+import { markdownify } from "@/lib/utils/textConverter";
+import PageHeader from "@/partials/PageHeader.astro";
+import Testimonial from "@/partials/Testimonial.astro";
+import { getEntry } from "astro:content";
+
+const COLLECTION_FOLDER = "services";
+const { data: testimonialContent } = await getEntry("sections", "testimonial");
+const {
+  body,
+  render,
+  data: {
+    title,
+    meta_title,
+    description,
+    bg_image,
+    satisfied_clients,
+    testimonial,
+  },
+} = await getEntry("services", "-index");
+const servicesCollection = await getSinglePage(COLLECTION_FOLDER);
+const { Content } = await render();
+
+// Section Background Images
+const satisfiedBgImage = await bgImageMod(satisfied_clients?.bg_image!);
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  image="bg_{image}"
+  description={description}>
+  <PageHeader title={title} bg_image={bg_image} />
+
+  {
+    (
+      <section class="section">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-12 mb-5">
+              {body && (
+                <div class="content max-w-lg">{Content && <Content />}</div>
+              )}
+            </div>
+            {servicesCollection.map((service) => {
+              return (
+                <div class="md:col-6 xl:col-4">
+                  <ServiceCard content={service} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    satisfied_clients?.enable && (
+      <section
+        class="section overlay bg-theme-dark after:bg-opacity-80 bg-right bg-no-repeat"
+        style={{
+          backgroundImage: `url(${satisfiedBgImage})`,
+          backgroundSize: "50% 100%",
+        }}>
+        <div class="container overlay-content">
+          <div class="row text-center lg:text-start justify-center lg:justify-normal gy-4">
+            <div class="lg:col-6 mb-5">
+              {satisfied_clients.subtitle && (
+                <span
+                  class="text-lg text-white/60"
+                  set:html={markdownify(satisfied_clients.subtitle)}
+                />
+              )}
+              {satisfied_clients.title && (
+                <h2
+                  class="text-white mb-6 mt-1"
+                  set:html={markdownify(satisfied_clients.title)}
+                />
+              )}
+              {satisfied_clients.content && (
+                <p
+                  class="text-white"
+                  set:html={markdownify(satisfied_clients.content)}
+                />
+              )}
+            </div>
+            {satisfied_clients.logo && (
+              <div class="lg:col-6">
+                <div class="row justify-center lg:justify-normal content-around items-center">
+                  {satisfied_clients.logo.map((item) => {
+                    return (
+                      <div class="col-5 lg:col-6 text-center pt-8">
+                        <ImageMod
+                          src={item}
+                          width={140}
+                          height={50}
+                          class="mx-auto"
+                          alt="satisfied client logo"
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {testimonial?.enable && <Testimonial content={testimonialContent} />}
+</Base>

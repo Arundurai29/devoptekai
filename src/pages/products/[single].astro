@@ -1,0 +1,70 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { type CollectionEntry } from "astro:content";
+
+interface Props {
+  products: CollectionEntry<"products">;
+}
+
+const COLLECTION_FOLDER = "products";
+export async function getStaticPaths() {
+  const COLLECTION_FOLDER = "products";
+  const productssCollection = await getSinglePage(COLLECTION_FOLDER);
+
+  const paths = productssCollection.map((products) => ({
+    params: {
+      single: products.slug,
+    },
+    props: { products },
+  }));
+  return paths;
+}
+
+const { products } = Astro.props;
+const {
+  body,
+  render,
+  data: { title, meta_title, description, bg_image, image,list },
+} = products;
+const { Content } = await render();
+const productssCollection = await getSinglePage(COLLECTION_FOLDER);
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <PageHeader title={title} bg_image={bg_image} />
+
+  <section class="section">
+    <div class="container">
+      <div class="row gy-4">
+        
+        <article class="lg:col-12 lg:order-2 order-1">
+          {
+            image && (
+              <ImageMod
+                src={image}
+                width={900}
+                height={500}
+                class="w-9/12 mx-auto mb-8 md:mb-16 rounded-t"
+                alt="products"
+              />
+            )
+          }
+          {
+            body && (
+              <div class="content">
+                <Content />
+              </div>
+            )
+          }
+        </article>
+      </div>
+    </div>
+  </section>
+</Base>

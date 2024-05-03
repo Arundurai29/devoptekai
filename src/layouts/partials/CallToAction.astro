@@ -1,0 +1,46 @@
+---
+import bgImageMod from "@/lib/utils/bgImageMod";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CallToActionType } from "@/types";
+
+interface Props {
+  content: CallToActionType;
+}
+
+const {
+  content: { enable, bg_image, title, button },
+} = Astro.props;
+
+// Section Background Images
+const ctaBgImage = await bgImageMod(bg_image);
+---
+
+{
+  enable && (
+    <section
+      class="section-sm bg-cover bg-center overlay after:bg-primary/60 bg-no-repeat"
+      style={{ backgroundImage: `url(${ctaBgImage})` }}>
+      <div class="container overlay-content">
+        <div class="row items-center text-center lg:text-start gy-4">
+          <div class="lg:col-6">
+            {title && (
+              <h2
+                class="text-white h3 font-medium"
+                set:html={markdownify(title)}
+              />
+            )}
+          </div>
+          <div class="lg:col-6 lg:text-right">
+            {button?.enable && button.label && (
+              <a
+                href={button.link}
+                class="btn btn-primary-white"
+                set:html={markdownify(button.label)}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

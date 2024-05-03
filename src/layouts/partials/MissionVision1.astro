@@ -1,0 +1,62 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import Accordion from "@/helpers/Accordion";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { MissionVisionType } from "@/types";
+
+interface Props {
+  content: MissionVisionType;
+}
+
+const {
+  content: { enable, subtitle, title, content, accordion, image },
+} = Astro.props;
+---
+
+{
+  enable && (
+    <section class="section p-0">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-12 grid justify-center lg:ml-28 ml-0 ">
+            {subtitle && (
+              <span
+                class="text-lg text-text"
+                set:html={markdownify(subtitle)}
+              />
+            )}
+            {title && <h2 set:html={markdownify(title)} />}
+            <div class="separator separator-secondary after:shadow-white after:bg-white" />
+          </div>
+          
+          <div class="lg:col-6">
+            {image && (
+              <ImageMod
+                src={image}
+                width={700}
+                height={700}
+                alt={title || " mission image"}
+              />
+            )}
+          </div>
+          <div class="lg:col-6">
+            {content && <p class="mb-10" set:html={markdownify(content)} />}
+            {accordion &&
+              accordion.map((item, index) => {
+                if (!item || !item.title) return null;
+                return (
+                  <Accordion
+                    client:visible
+                    active={index == 0 ? true : false}
+                    title={item.title}
+                    index={`${index}`}>
+                    {item.description}
+                  </Accordion>
+                );
+              })}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

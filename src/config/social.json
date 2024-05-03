@@ -1,0 +1,24 @@
+{
+  "main": [
+    {
+      "name": "facebook",
+      "icon": "TfiFacebook",
+      "link": "https://www.facebook.com/"
+    },
+    {
+      "name": "twitter",
+      "icon": "TfiTwitterAlt",
+      "link": "https://twitter.com/"
+    },
+    {
+      "name": "github",
+      "icon": "TfiGithub",
+      "link": "https://www.github.com/"
+    },
+    {
+      "name": "linkedin",
+      "icon": "TfiLinkedin",
+      "link": "https://www.linkedin.com/"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+---
+import Base from "@/layouts/Base.astro";
+import { getEntry } from "astro:content";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import bgImageMod from "@/lib/utils/bgImageMod";
+import { markdownify } from "@/lib/utils/textConverter";
+import Testimonial from "@/partials/Testimonial.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import BlogCard from "@/components/BlogCard.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import OurExpertise from "@/partials/OurExpertise.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import MissionVision from "@/partials/MissionVision.astro";
+import MissionVision1 from "@/partials/MissionVision1.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+
+import type {
+  CallToActionType,
+  MissionVisionType,
+  OurExpertiseType,
+  TestimonialType,
+} from "@/types";
+
+const missionVisionContent = (await getEntry("sections", "ragworks"))
+  .data as MissionVisionType;
+const missionVisionContent1 = (await getEntry("sections", "docusage"))
+  .data as MissionVisionType;
+  const missionVisionContent2 = (await getEntry("sections", "webconcierge"))
+  .data as MissionVisionType;
+const ourExpertiseContent = (await getEntry("sections", "our-expertise"))
+  .data as OurExpertiseType;
+const callToActionContent = (await getEntry("sections", "call-to-action"))
+  .data as CallToActionType;
+const testimonialContent = (await getEntry("sections", "testimonial"))
+  .data as TestimonialType;
+
+const BLOG_FOLDER = "blog";
+const blogCollection = await getSinglePage(BLOG_FOLDER);
+const servicesCollection = await getSinglePage("services");
+const projectsCollection = await getSinglePage("projects");
+
+const {
+  data: {
+    banner_slider,
+    service,
+    about,
+    project,
+    mission,
+    promo_video,
+    our_expertise,
+    blog,
+    testimonial,
+    call_to_action,
+    clients_logo_slider,
+  },
+} = await getEntry("homepage", "-index");
+
+// Section Background Images
+const aboutBgImage = await bgImageMod(about?.bg_image!);
+const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
+---
+
+<Base>
+
+
+    
+
+
+  
+  {mission?.enable && <MissionVision content={missionVisionContent} />}
+  {mission?.enable && <MissionVision1 content={missionVisionContent1} />}
+  {mission?.enable && <MissionVision content={missionVisionContent2} />}
+
+
+  {
+    service?.enable && (
+      <section class="section pt-0">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-12 text-center mb-5">
+              {service.subtitle && (
+                <span
+                  class="text-lg text-text"
+                  set:html={markdownify(service.subtitle)}
+                />
+              )}
+              {service.title && <h2 set:html={markdownify(service.title)} />}
+              <div class="separator" />
+            </div>
+            {servicesCollection.slice(0, 4).map((service) => {
+              return (
+                <div class="md:col-6 xl:col-3">
+                  <ServiceCard content={service} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+{call_to_action?.enable && <CallToAction content={callToActionContent} />}
+
+  {testimonial?.enable && <Testimonial content={testimonialContent} />}
+ 
+
+
+
+  {
+    clients_logo_slider?.enable && (
+      <section class="bg-white py-4">
+        <div class="container">
+          <div class="client-logo-slider swiper self-center">
+            <div class="swiper-wrapper justify-center items-center">
+              {clients_logo_slider.clientLogos &&
+                clients_logo_slider.clientLogos.map((item) => {
+                  if (!item?.logo) return null;
+
+                  const { logo, link } = item;
+
+                  return (
+                    <div class="swiper-slide">
+                      {link || link === "#?" ? (
+                        <a
+                          href={link}
+                          target="_blank"
+                          class="text-center block outline-0 py-3 px-2">
+                          <ImageMod
+                            src={logo}
+                            width={140}
+                            height={50}
+                            alt="client-logo"
+                          />
+                        </a>
+                      ) : (
+                        <span class="text-center block outline-0 py-3 px-2">
+                          <ImageMod
+                            src={logo}
+                            width={140}
+                            height={50}
+                            alt="client-logo"
+                          />
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <div
+    class="modal"
+    tabindex="-1"
+    id="videoModal"
+    role="dialog"
+    aria-label="video modal"
+    aria-hidden="false">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button data-dismiss="modal" class="btn-close" title="close modal">
+          <DynamicIcon className="inline-block" icon="TfiClose" />
+        </button>
+        <div class="modal-body">
+          <iframe class="aspect-video w-full" src=""></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Select all elements with the attribute "data-toggle" set to "modal"
+    const modalButtons: NodeListOf<HTMLElement> = document.querySelectorAll(
+      "[data-toggle='modal']",
+    );
+    const body: HTMLElement = document.body; // Reference to the body element
+
+    // Function to add a modal backdrop to the body
+    const addModalBackdrop = (): void => {
+      const backdrop: HTMLDivElement = document.createElement("div");
+      backdrop.className = "modal-backdrop fade show";
+      backdrop.id = "modalBackdrop";
+      body.appendChild(backdrop);
+    };
+
+    // Function to get a modal element based on the provided target selector
+    const getModal = (target: string): HTMLElement | null =>
+      document.querySelector(target);
+
+    // Function to show a modal when a corresponding button is clicked
+    const showModal = (button: HTMLElement): void => {
+      // Get the target modal ID from the button's data-target attribute
+      const targetModalId: string = button.getAttribute("data-target") ?? "";
+      const modal: HTMLElement | null = getModal(targetModalId);
+
+      if (modal) {
+        // Add a modal backdrop and update body styles
+        addModalBackdrop();
+        body.classList.add("modal-open");
+
+        // Function to close the modal
+        const closeModalHandler = (): void => closeModal(modal);
+        document
+          .querySelector(".modal-backdrop")
+          ?.addEventListener("click", closeModalHandler);
+
+        // Show the modal and set the iframe source if available
+        modal.classList.add("show");
+        const iframe: HTMLIFrameElement | null = modal.querySelector("iframe");
+        if (iframe) {
+          const dataSrc: string | null = button.getAttribute("data-src");
+          iframe.src = dataSrc as string; // Type assertion
+        }
+
+        // Calculate scrollbar width and adjust body styles
+        const scrollbarWidth: number =
+          window.innerWidth - document.documentElement.clientWidth;
+        body.style.overflow = "hidden";
+        body.style.paddingRight = `${scrollbarWidth}px`;
+        modal.style.paddingRight = `${scrollbarWidth}px`;
+
+        // Attach click event handlers to modal close buttons
+        const modalCloseBtns: NodeListOf<HTMLElement> =
+          modal.querySelectorAll("[data-dismiss]");
+        modalCloseBtns.forEach((btn) =>
+          btn.addEventListener("click", closeModalHandler),
+        );
+      }
+    };
+
+    // Function to close the modal and remove the backdrop
+    const closeModal = (modal: HTMLElement): void => {
+      const modalBackdrop: HTMLElement | null =
+        document.querySelector(".modal-backdrop");
+
+      if (modal) {
+        // Reset iframe src when the modal is closed
+        const iframe: HTMLIFrameElement | null = modal.querySelector("iframe");
+        if (iframe) iframe.src = "";
+
+        // Hide the modal and reset body styles
+        modal.classList.remove("show");
+        body.style.overflow = "";
+        body.style.paddingRight = "";
+        modal.style.paddingRight = "";
+        modalBackdrop && modalBackdrop.remove(); // Remove modal backdrop if exists
+      }
+    };
+
+    // Attach click event handlers to all modal buttons
+    modalButtons.forEach((button) => {
+      button.addEventListener("click", () => showModal(button));
+    });
+  </script>
+</Base>

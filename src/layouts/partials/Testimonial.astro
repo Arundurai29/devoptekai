@@ -1,0 +1,97 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { TestimonialType } from "@/types";
+
+interface Props {
+  class?: string;
+  content: TestimonialType;
+}
+
+const {
+  class: className,
+  content: { enable, subtitle, title, image, list },
+} = Astro.props;
+---
+
+{
+  enable && (
+    <section class={`section pb-0${className ? ` ` + className : ""}`}>
+      <div class="container">
+        <div class="row justify-center lg:gy-4">
+          <div class="col-12 text-center mb-10 lg:mb-5">
+            {subtitle && (
+              <span
+                class="text-lg text-text"
+                set:html={markdownify(subtitle)}
+              />
+            )}
+            {title && <h2 set:html={markdownify(title)} />}
+            <div class="separator" />
+          </div>
+          <div class="sm:col-8 md:col-6 lg:col-5">
+            {image && (
+              <ImageMod
+                src={image}
+                width={1110}
+                height={1150}
+                alt={title || "testimonial image"}
+              />
+            )}
+          </div>
+          <div class="md:col-12 lg:col-7 self-center lg:pl-0 mb-5 lg:mb-0">
+            <div class="testimonial-slider swiper shadow p-4 md:p-8">
+              <div class="swiper-wrapper">
+                {list &&
+                  list.map((item) => {
+                    if (!item) return null;
+
+                    return (
+                      <div class="swiper-slide p-5">
+                        <span class="w-14 sm:h-20 place-items-center place-content-center h-14 sm:w-20 text-primary text-2xl leading-[56px] sm:leading-[80px] inline-grid text-center mb-6 rounded-full bg-theme-light">
+                          <img class="w-5/12" src="/public/images/Quotation.svg" />
+                        </span>
+                        {item.content && (
+                          <p
+                            class="text-dark mb-3"
+                            set:html={markdownify(item.content)}
+                          />
+                        )}
+                        {item.name && (
+                          <h3
+                            class="font-light h5 mb-2"
+                            set:html={markdownify(item.name)}
+                          />
+                        )}
+                        {item.designation && (
+                          <span
+                            class="text-color"
+                            set:html={markdownify(item.designation)}
+                          />
+                        )}
+                      </div>
+                    );
+                  })}
+              </div>
+              <div class="swiper-navigation">
+                <button
+                  type="button"
+                  class="prevArrow absolute text-xl text-primary z-10 border-0 top-12 md:top-20 !right-24">
+                  <span class="sr-only" set:html="see previous slide" />
+                  <DynamicIcon className="inline-block" icon="TfiArrowLeft" />
+                </button>
+                <button
+                  type="button"
+                  class="nextArrow absolute text-xl text-primary z-10 border-0 top-12 md:top-20 !right-14">
+                  <span class="sr-only" set:html="see next slide" />
+                  <DynamicIcon className="inline-block" icon="TfiArrowRight" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

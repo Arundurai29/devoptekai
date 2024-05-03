@@ -1,0 +1,44 @@
+---
+import { humanize } from "@/lib/utils/textConverter";
+
+const { class: className }: { class?: string } = Astro.props;
+
+const paths = Astro.url.pathname.split("/").filter((x) => x);
+let parts = [
+  {
+    label: "Home",
+    href: "/",
+    "aria-label": Astro.url.pathname === "/" ? "page" : undefined,
+  },
+];
+
+paths.forEach((label: string, i: number) => {
+  const href = `/${paths.slice(0, i + 1).join("/")}`;
+
+  if (label !== "page" && label !== "categories" && label !== "tags") {
+    parts.push({
+      label: humanize(label.replace(".html", "").replace(/[-_]/g, " ")) || "",
+      href,
+      "aria-label": Astro.url.pathname === href ? "page" : undefined,
+    });
+  }
+});
+---
+
+<nav aria-label="Breadcrumb" class={className}>
+  <ol class="breadcrumb" role="list">
+    {
+      parts.map(({ label, ...attrs }, index) => (
+        <li class="capitalize text-white font-medium" role="listitem">
+          {index !== parts.length - 1 ? (
+            <a class="text-white" {...attrs}>
+              {label}
+            </a>
+          ) : (
+            <span class="text-sm" set:html={label} />
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>

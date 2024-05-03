@@ -1,0 +1,34 @@
+---
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import bgImageMod from "@/lib/utils/bgImageMod";
+import { humanize } from "@/lib/utils/textConverter";
+
+interface Props {
+  title: string;
+  meta_title?: string;
+  bg_image?: string;
+}
+
+const {
+  title,
+  meta_title,
+  bg_image = "/images/background/page-title.jpg",
+} = Astro.props;
+
+// Section Background Images
+const pageHeaderBgImage = await bgImageMod(bg_image);
+---
+
+<section
+  class="overlay after:bg-opacity-60 bg-no-repeat bg-center bg-cover"
+  style={`background-image: url(${pageHeaderBgImage})`}>
+  <div class="container text-center z-10 relative">
+    <div class="sm:px-8 py-32">
+      <h1
+        class="h2 font-bold text-white"
+        set:text={humanize(meta_title ? meta_title : title)}
+      />
+      <Breadcrumbs class="mt-2" />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,80 @@
+{
+  "site": {
+    "title": "DevoptekAi",
+    "base_url": "",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_width": "180",
+    "logo_height": "80",
+    "logo_footer": "/images/logo-footer.png",
+    "logo_footer_width": "360",
+    "logo_footer_height": "120",
+    "logo_text": "DevoptekAi"
+  },
+
+  "settings": {
+    "pagination": 6,
+    "blog_folder": "blog"
+  },
+
+  "params": {
+    "top_header": true,
+    "preloder": true,
+    "contact_form_action": "#",
+    "footer_description": "Founders of DevOpTek AI, leverages over a decade of principal expertise in ML pipelines, infrastructure, automation, custom LLM solutions, coupled with extensive DevOps/SRE and Cloud architect roles, to lead teams and drive companies towards operational excellence and advancement in the Cloud Deployment and LLM integration.",
+    "copyright": "Copyright by your company",
+    "contact_info": {
+      "email": "admin@devoptek.ai",
+      "phone": "+1 -(226) 246-7055",
+      "address" : " 67, Zieman Crescent, Cambridge, ON"
+    },
+    "google_map": {
+      "enable": true,
+      "address": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2898.7203910253093!2d-80.282328!3d43.4037733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b8870d4d5e505%3A0xce92085a4ca736a6!2s67%20Zieman%20Crescent%2C%20Cambridge%2C%20ON%20N1T%202H6%2C%20Canada!5e0!3m2!1sen!2sin!4v1714632885495!5m2!1sen!2sin"
+    }
+  },
+
+  "navigation_button": {
+    "enable": true,
+    "label": "Get A Quote",
+    "link": "/contact"
+  },
+
+  "subscription_in_footer": {
+    "enable": true,
+    "title": "Subscribe Us",
+    "description": "Lorem ipsum dolor sit amet, consect etur adipisicing. elit sed do eiusmod.",
+    "placeholder": "Enter Your Email Address",
+    "mailchimp_form_action": "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074",
+    "mailchimp_form_name": "b_463ee871f45d2d93748e77cad_a0a2c6d074"
+  },
+
+  "subscription_in_blog_sidebar": {
+    "enable": true,
+    "title": "Stay Updated",
+    "description": "Lorem ipsum dolor sit amet, consect etur adipisicing. elit sed do eiusmod.",
+    "placeholder": "Enter Your Email Address",
+    "mailchimp_form_action": "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074",
+    "mailchimp_form_name": "b_463ee871f45d2d93748e77cad_a0a2c6d074"
+  },
+
+  "service_consultation_form": {
+    "enable": true,
+    "title": "Request Free Consultation",
+    "form_action": "#"
+  },
+
+  "disqus": {
+    "enable": true,
+    "shortname": "themefisher-template",
+    "settings": {}
+  },
+
+  "metadata": {
+    "meta_author": "Themefisher",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "this is meta description"
+  }
+}

@@ -1,0 +1,60 @@
+---
+import Base from "@/layouts/Base.astro";
+import PostSingle from "@/layouts/PostSingle.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser.astro";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+import PageHeader from "@/partials/PageHeader.astro";
+import PostSidebar from "@/partials/PostSidebar.astro";
+
+export async function getStaticPaths() {
+  const BLOG_FOLDER = "blog";
+  const posts = await getSinglePage(BLOG_FOLDER);
+  const paths = posts.map((post) => ({
+    params: {
+      single: post.slug,
+    },
+    props: { post },
+  }));
+  return paths;
+}
+
+const { post } = Astro.props;
+const { title, meta_title, image, description, bg_image } = post.data;
+
+const BLOG_FOLDER = "blog";
+const posts = await getSinglePage(BLOG_FOLDER);
+const allCategories = await getAllTaxonomy(BLOG_FOLDER, "categories");
+const categories = await getTaxonomy(BLOG_FOLDER, "categories");
+const tags = await getTaxonomy(BLOG_FOLDER, "tags");
+const sortedPosts = sortByDate(posts);
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  image={image}
+  description={description}>
+  <PageHeader title={title} {bg_image} />
+  <section>
+    <div class="container overflow-hidden">
+      <div class="row lg:gx-6">
+        <!-- blog posts -->
+        <div class="lg:col-8">
+          <div class="section max-lg:pb-0">
+            <PostSingle post={post} />
+          </div>
+        </div>
+
+        <!-- sidebar -->
+        <PostSidebar
+          allCategories={allCategories}
+          categories={categories}
+          tags={tags}
+          sortedPosts={sortedPosts}
+          class="section-md lg:section lg:shadow-[-8px_0px_10px_0px] lg:shadow-light/10"
+        />
+      </div>
+    </div>
+  </section>
+</Base>

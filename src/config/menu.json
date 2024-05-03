@@ -1,0 +1,79 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    
+    {
+      "name": "RagWorks",
+      "url": "/products/ragworks"
+    },
+    {
+      "name": "Products",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        
+        {
+          "name": "DocuSage",
+          "url": "/products/docusage"
+        },
+        {
+          "name": "Web Concierge",
+          "url": "/products/webconcierge"
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "name": "AI",
+      "url": "/contact"
+    },
+    {
+      "name": "DevOps",
+      "url": "/contact"
+    },
+    {
+      "name": "Cloud Architecture",
+      "url": "/contact"
+    }
+  ],
+  "products": [
+    {
+      "name": "DocuSage",
+      "url": "/products/docusage"
+    },
+    {
+      "name": "Web Concierge",
+      "url": "/products/webconcierge"
+    }
+  ],
+  "quick_links": [
+    {
+      "name": "RagWorks",
+      "url": "/products/ragworks"
+    },
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    
+    {
+      "name": "Contact ",
+      "url": "/contact"
+    }
+  ],
+  "footer": [
+   
+    {
+      "name": "Privacy Policy",
+      "url": "#"
+    },
+    {
+      "name": "Terms & Conditions",
+      "url": "#"
+    }
+  ]
+}

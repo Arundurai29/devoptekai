@@ -1,0 +1,10 @@
+---
+interface Props {
+  dataCounterTime?: string;
+  value: number;
+}
+
+const { value, dataCounterTime = "1800" } = Astro.props;
+---
+
+<span class="counter" data-counter-time={dataCounterTime} set:html={value} />

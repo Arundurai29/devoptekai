@@ -1,0 +1,62 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify, plainify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  content: CollectionEntry<"services">;
+}
+
+const {
+  content: {
+    body,
+    slug,
+    data: { title, short_description, image, icon },
+  },
+} = Astro.props;
+
+const description = () => {
+  if (!short_description) {
+    return plainify(body).slice(1, 180);
+  }
+  return short_description;
+};
+---
+
+<div
+  class="text-center border border-border rounded-md relative pb-6 mb-6 group">
+  {title && <h3 class="h5 my-4 px-3" set:html={markdownify(title)} />}
+  <div>
+    <div
+      class="overlay after:opacity-0 group-hover:after:opacity-100 after:duration-300">
+      {
+        image && (
+          <ImageMod
+            src={image}
+            width={400}
+            height={220}
+            class="w-full"
+            alt={title || "service image"}
+          />
+        )
+      }
+    </div>
+    {
+      icon && (
+        <div class="w-16 h-16 bg-primary text-3xl rounded-md flex justify-center items-center mx-auto -mt-8 overlay-content text-white">
+          <DynamicIcon icon={icon} />
+        </div>
+      )
+    }
+  </div>
+  <div class="px-4">
+    {description && <p set:html={description} class="my-8 text-justify mb-2" />}
+    <!-- <a
+      class="btn btn-primary-dark absolute -bottom-6 left-1/2 -translate-x-1/2"
+      href={`/services/${slug}`}
+      set:html="Read More">
+      <span class="sr-only" set:html="details" />
+    </a> -->
+  </div>
+</div>

@@ -1,0 +1,35 @@
+---
+import AuthorCard from "@/components/AuthorCard.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getEntry } from "astro:content";
+
+const {
+  data: { title, meta_title, description, bg_image, image },
+} = await getEntry("authors", "-index");
+
+const COLLECTION_FOLDER = "authors";
+const authors = await getSinglePage(COLLECTION_FOLDER);
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <PageHeader title={title} bg_image={bg_image} />
+  <section class="section-sm pb-0">
+    <div class="container">
+      <div class="row justify-center">
+        {
+          authors.map((author) => (
+            <div class="mb-14 md:col-6 lg:col-4">
+              <AuthorCard content={author} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>
