@@ -69,7 +69,13 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
           <div class="swiper-wrapper ">
             {banner_slider.slider_item.map((slider, index) => {
               let { title, subtitle, content, bg_image, button } = slider;
+              const bgImageUrls = bg_image.split(':');
+const desktopImageUrl = bgImageUrls[0].trim();
+const mobileImageUrl = bgImageUrls[1] ? bgImageUrls[1].trim() : desktopImageUrl;
 
+// Check if the client environment is available and determine if it's a mobile device
+const isClient = typeof window !== 'undefined';
+const isMobile = isClient && window.innerWidth <= 768;
               return (
                 <div class="swiper-slide banner-slider-item py-36 anim">
                   <div class="container">
@@ -104,6 +110,10 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
                               set:html={markdownify(title)}
                             />
                           )}
+                          <div>
+    <p>Desktop Image URL: {desktopImageUrl}</p>
+    <p>Mobile Image URL: {mobileImageUrl}</p>
+</div>
                           {content && (
                             <p
                               class={`text-white anim-item ${
@@ -139,15 +149,15 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
                           )}
                         </div>
                         {bg_image && (
-                          <ImageMod
-                            src={bg_image}
-                            width={1550}
-                            height={600}
-                            loading="eager"
-                            alt={title || "banner image"}
-                            class="z-10 absolute left-0 top-0 w-full h-full object-cover"
-                          />
-                        )}
+    <ImageMod
+        src={isMobile ? desktopImageUrl : mobileImageUrl}
+        width={1550}
+        height={600}
+        loading="eager"
+        alt={title || "banner image"}
+        class="z-10 absolute left-0 top-0 w-full h-full object-cover"
+    />
+)}
                       </div>
                     </div>
                   </div>

@@ -3,7 +3,7 @@ title: RagWorks
 # date: 2018-09-25T15:51:35+06:00
 # description: This is meta description
 short_description: RAGWorks is a versatile and powerful platform designed to revolutionise the way businesses utilise AI for content generation. Here’s a deeper look into what makes RAGWorks a standout product
-image: "/images/banner/banner-1.jpg"
+image: "/images/service/redflowchart.jpg"
 bg_image: "/images/background/page-title.jpg"
 list:
   - name: Manoj
@@ -77,7 +77,7 @@ One of the key strengths of RAGWorks is its compatibility with both on-premises 
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-6 ml-auto h-3/6">
-   <img class="w-full object-cover rounded-lg h-3/6" src="/images/service/service-3.jpg" />
+   <img class="w-full object-cover rounded-lg h-3/6" src="/images/service/service-4.jpg" />
 </div>
 <div class="lg:col-6 mr-auto grid place-content-center">
 
@@ -106,7 +106,7 @@ RAGWorks is supported by comprehensive managed services offered by DevopTek AI. 
 </div>
 
 <div class="lg:col-6 ml-auto h-3/6">
-   <img class="w-full object-cover rounded-lg h-3/6" src="/images/service/service-4.jpg" />
+   <img class="w-full object-cover rounded-lg h-3/6" src="/images/service/service-5.jpg" />
 </div>
 
 </div>
@@ -117,7 +117,7 @@ RAGWorks is supported by comprehensive managed services offered by DevopTek AI. 
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-6 ml-auto h-3/6">
-   <img class="w-full object-cover rounded-lg h-3/6" src="/images/service/service-5.jpg" />
+   <img class="w-full object-cover rounded-lg h-3/6" src="/images/service/service-6.jpg" />
 </div>
 <div class="lg:col-6 mr-auto grid place-content-center">
 

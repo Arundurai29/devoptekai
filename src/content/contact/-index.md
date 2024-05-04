@@ -8,7 +8,7 @@ description: This is meta description
 contact_info:
   - name: mobile
     icon: TfiMobile
-    content: +1 -2262467055
+    content: +1 -(226) 246-7055
 
   - name: mail
     icon: TfiEmail

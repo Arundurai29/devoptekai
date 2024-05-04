@@ -3,7 +3,7 @@ title: Integrate AI Solutions in the Product
 # date: 2018-09-25T15:51:35+06:00
 # description: This is meta description
 short_description: Embedding artificial intelligence capabilities directly into products to enhance their functionality and user experience. This integration allows products to become smarter, more adaptive, and more responsive to user needs. This approach not only adds value to the product but also helps in differentiating it in the competitive market by offering unique, AI-driven benefits to the end users. 
-image: "/images/service/service-3.jpg"
+image: "/images/service/service-6.jpg"
 bg_image: "/images/background/page-title.jpg"
 # icon: TfiBarChart 
 # brochure: "#?"

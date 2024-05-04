@@ -82,6 +82,14 @@ const { pathname } = Astro.url;
         </div>
       </div>
     </button>
+    <style>
+      @media (max-width: 600px) {
+    .nav-item, .nav-link {
+        text-align: start !important;
+        margin: 0 !important;
+    }
+}
+    </style>
     <!-- /navbar toggler -->
     <div class="navbar-nav-wrapper max-lg:w-full order-3 lg:ml-auto lg:order-1">
       <ul class="navbar-nav lg:flex lg:w-auto lg:space-x-2 xl:space-x-2">
@@ -141,7 +149,7 @@ const { pathname } = Astro.url;
         }
         {
           navigation_button.enable && (
-            <li class="mt-4 inline-block max-lg:w-full max-lg:text-center lg:hidden">
+            <li class="mt-4 inline-block max-lg:w-full max-lg:text-start lg:hidden">
               <a class="btn btn-primary btn-sm" href={navigation_button.link}>
                 {navigation_button.label}
               </a>
