@@ -18,7 +18,7 @@ banner_slider:
 
 
     # slider item loop
-    - bg_image: "/images/banner/banner-2.jpg"
+    - bg_image: "/images/banner/banner-2.jpg:/images/banner/aimobileheader.jpg"
       subtitle: Powered by people
       title: Accelerated by AI
       content: We simplify the integration of AI, DevOps, and cloud technologies, streamlining your business transformation.
