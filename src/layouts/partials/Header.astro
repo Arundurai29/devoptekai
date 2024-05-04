@@ -28,13 +28,15 @@ const { pathname } = Astro.url;
         config.params.contact_info.phone) && (
         <div class="bg-theme-dark py-3">
           <div class="container">
-            <ul class="text-light justify-center lg:justify-end font-light gap-y-2 flex flex-col sm:flex-row gap-x-4 sm:gap-x-0 sm:list-separator items-center">
+            <ul class="text-light justify-around lg:justify-end font-light gap-y-2 flex flex-row sm:flex-row gap-x-4 sm:gap-x-0 sm:list-separator items-center">
               {config.params.contact_info.email && (
                 <li set:html={markdownify(config.params.contact_info.email)} />
               )}
               {config.params.contact_info.email && (
                 <li>
+                  <span class="hidden md:block">
                   Call Us Now:
+                </span>
                   <a
                     href={`tel:${config.params.contact_info.phone}`}
                     class="underline ml-1"

@@ -19,7 +19,6 @@ banner_slider:
 
     # slider item loop
     - bg_image: "/images/banner/banner-2.jpg"
-      mobile_bg_image: "/images/banner/header1mobile.jpg"
       subtitle: Powered by people
       title: Accelerated by AI
       content: We simplify the integration of AI, DevOps, and cloud technologies, streamlining your business transformation.
@@ -31,8 +30,7 @@ banner_slider:
         link: /contact
 
     # slider item loop
-    - bg_image: "/images/banner/banner-3.jpg"
-      mobile_bg_image: "/images/banner/header1mobile.jpg"
+    - bg_image: "/images/banner/banner-3.jpg:/images/banner/Aimobheader.jpg"
       subtitle: Cloud Services
       title: DevOps and Cloud Consultation 
       content: Empower your Cloud with our expertise to unlock limitless scalability and reliability. We also offer a range of DevOps<br> services to streamline your development and operations workflows.

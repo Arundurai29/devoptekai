@@ -39,7 +39,7 @@ RAGWorks is a versatile and powerful platform designed to revolutionise the way 
 
 <section>
 <div class="container overlay-content">
-<div class="row">
+<div class="row flex flex-col-reverse sm:flex-row">
 <div class="lg:col-6 ml-auto h-3/6">
    <img class="w-full object-cover rounded-lg h-3/6" src="/images/service/service-1.jpg" />
 </div>
@@ -75,7 +75,7 @@ One of the key strengths of RAGWorks is its compatibility with both on-premises 
 </section>
 <section>
 <div class="container overlay-content">
-<div class="row">
+<div class=" row flex flex-col-reverse sm:flex-row">
 <div class="lg:col-6 ml-auto h-3/6">
    <img class="w-full object-cover rounded-lg h-3/6" src="/images/service/service-4.jpg" />
 </div>
@@ -95,7 +95,7 @@ At its core, RAGWorks utilises advanced RAG technology to enhance AI-generated c
 
 <section>
 <div class="container overlay-content">
-<div class="row">
+<div class="row ">
 
 <div class="lg:col-6 mr-auto grid place-content-center">
 
@@ -115,7 +115,7 @@ RAGWorks is supported by comprehensive managed services offered by DevopTek AI. 
 
 <section>
 <div class="container overlay-content">
-<div class="row">
+<div class="row flex flex-col-reverse sm:flex-row">
 <div class="lg:col-6 ml-auto h-3/6">
    <img class="w-full object-cover rounded-lg h-3/6" src="/images/service/service-6.jpg" />
 </div>

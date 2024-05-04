@@ -73,11 +73,8 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
 const desktopImageUrl = bgImageUrls[0].trim();
 const mobileImageUrl = bgImageUrls[1] ? bgImageUrls[1].trim() : desktopImageUrl;
 
-// Check if the client environment is available and determine if it's a mobile device
-const isClient = typeof window !== 'undefined';
-const isMobile = isClient && window.innerWidth <= 768;
               return (
-                <div class="swiper-slide banner-slider-item py-36 anim">
+                <div class="swiper-slide banner-slider-item lg:py-36 pt-10 pb-40 anim">
                   <div class="container">
                     <div class="row items-center">
                       <div class="col-lg-12">
@@ -110,10 +107,6 @@ const isMobile = isClient && window.innerWidth <= 768;
                               set:html={markdownify(title)}
                             />
                           )}
-                          <div>
-    <p>Desktop Image URL: {desktopImageUrl}</p>
-    <p>Mobile Image URL: {mobileImageUrl}</p>
-</div>
                           {content && (
                             <p
                               class={`text-white anim-item ${
@@ -148,15 +141,29 @@ const isMobile = isClient && window.innerWidth <= 768;
                            
                           )}
                         </div>
-                        {bg_image && (
-    <ImageMod
-        src={isMobile ? desktopImageUrl : mobileImageUrl}
+                        {desktopImageUrl && (
+    <div class="hidden md:block">
+      <ImageMod
+        src={desktopImageUrl}
         width={1550}
         height={600}
         loading="eager"
         alt={title || "banner image"}
         class="z-10 absolute left-0 top-0 w-full h-full object-cover"
-    />
+      />
+    </div>
+
+ 
+    <div class="block md:hidden">
+      <ImageMod
+        src={mobileImageUrl}
+        width={200}
+        height={400}
+        loading="eager"
+        alt={title || "mobile banner image"}
+        class="z-10 absolute left-0 top-0 w-full h-full object-cover"
+      />
+    </div>
 )}
                       </div>
                     </div>
@@ -372,7 +379,7 @@ const isMobile = isClient && window.innerWidth <= 768;
       <section class="bg-white py-4">
         <div class="container">
           <div class="client-logo-slider swiper self-center">
-            <div class="swiper-wrapper justify-center items-center">
+            <div class="swiper-wrapper lg:justify-center justify-left items-center">
               {clients_logo_slider.clientLogos &&
                 clients_logo_slider.clientLogos.map((item) => {
                   if (!item?.logo) return null;

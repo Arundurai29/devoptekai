@@ -256,5 +256,13 @@ Get Started with DocuSage Today
     b{
       font-size: 17px !important;
     }
+    @media(max-width:600px){
+       th,td{
+        padding: 5px !important;
+       }
+       td,th{
+        font-size:12px !important;
+       }
+    }
 </style>
 
