@@ -71,6 +71,7 @@ export interface TestimonialType {
   title: string;
   subtitle: string;
   image: string;
+  quote:string;
   list: [
     {
       name: string;

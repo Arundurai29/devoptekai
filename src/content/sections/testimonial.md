@@ -3,6 +3,7 @@ enable: true
 title: Testimonials
 subtitle: What client Say
 image: "/images/client.png"
+quote: "/public/images/Quotation.png"
 list:
   - name: Manoj
     content: DevopTek.AI's chat bot product has significantly enhanced our customer support system.
