@@ -3,7 +3,7 @@ title: Strategic Business Consultation
 date: 2018-09-25T15:51:35+06:00
 description: This is meta description
 short_description: Tailored consulting solutions to align your business strategy with market trends and customer needs
-image: "/images/service/service-5.jpg"
+image: "/images/service/service04.jpg"
 bg_image: "/images/background/page-title.jpg"
 icon: TfiBarChart # themify icon pack: https://react-icons.github.io/react-icons/icons/tfi/
 brochure: "#?"

@@ -3,7 +3,7 @@ title: Valuable Idea
 date: 2018-09-29T11:51:17+06:00
 description: This is meta description
 short_description: Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing
-image: "/images/service/service-2.jpg"
+image: "/images/service/service05.jpg"
 bg_image: "/images/background/page-title.jpg"
 icon: TfiThought
 brochure: "#?"

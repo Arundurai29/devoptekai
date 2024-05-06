@@ -3,7 +3,7 @@ title: AI for Business Automations
 # date: 2018-09-25T15:51:35+06:00
 # description: This is meta description
 short_description: By integrating AI, businesses can automate routine tasks, optimise processes, and gain insights from data analytics, leading to increased efficiency and reduced costs. AI can also improve customer experiences through personalised services and predictive analytics. Furthermore, AI-driven solutions support better strategic planning and innovation by enabling more accurate forecasts and scenario analysis. 
-image: "/images/service/service-1.jpg"
+image: "/images/service/service01.jpg"
 bg_image: "/images/background/page-title.jpg"
 # icon: TfiBarChart 
 # brochure: "#?"
