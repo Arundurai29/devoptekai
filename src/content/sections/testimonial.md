@@ -11,7 +11,7 @@ list:
       The feedback from our customers has been overwhelmingly positive, praising the bot's efficiency and effectiveness.
       We are delighted with the positive impact it has had on our customer experience,
       thanks to DevopTek.AI's innovative solution.
-    designation: Co Founder, Beyond Cloud Consulting
+    designation: Co-Founder, Beyond Cloud Consulting
 
   - name: Gokulraj
     content: Using Web Concierge by DevopTek.AI has revolutionized how we engage with our website visitors.

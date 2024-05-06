@@ -137,7 +137,9 @@ The platform is built to scale with your business needs, easily handling increas
 .content .list-content {
     padding-left: 2.5rem !important;
 }
-
+.breadcrumb li:nth-child(2){
+  display:none;
+}
 </style>
 
  <div class="md:flex grid justify-between pt-3" >
