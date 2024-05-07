@@ -27,7 +27,7 @@
     "copyright": "© 2024 Devoptek.AI ",
     "contact_info": {
       "email": "admin@devoptek.ai",
-      "phone": "+1 -(226) 246-7055",
+      "phone": "+1 (226) 246-7055 ",
       "address" : " 67, Zieman Crescent, Cambridge, ON"
     },
     "google_map": {
@@ -68,12 +68,12 @@
 
   "disqus": {
     "enable": true,
-    "shortname": "themefisher-template",
+    "shortname": "DevoptekAi",
     "settings": {}
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "DevoptekAi",
     "meta_image": "/images/og-image.png",
     "meta_description": "this is meta description"
   }
