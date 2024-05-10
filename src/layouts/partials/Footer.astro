@@ -7,6 +7,9 @@ import DynamicIcon from "@/helpers/DynamicIcon";
 import menu from "@/config/menu.json";
 import social from "@/config/social.json";
 import { markdownify } from "@/lib/utils/textConverter";
+import { FaPhoneAlt,FaLocationArrow } from "react-icons/fa";
+import { IoMdMailOpen } from "react-icons/io";
+
 ---
 
 <footer class="bg-theme-dark text-sm">
@@ -111,13 +114,22 @@ import { markdownify } from "@/lib/utils/textConverter";
                  <ul class="grid mb-4 gap-y-0 gap-x-4 lg:gap-x-10 md:justify-start text-left md:text-start">
                 <li class="p mb-4 text-white" set:html={markdownify(
                        config.params.contact_info.email
-                    )}/>
+                    )}> <IoMdMailOpen
+                      className="inline-block text-white me-2 align-[-1px] text-xs"
+                     
+                    /></li>
                    <li class="p mb-4 text-white" set:html={markdownify(
                        config.params.contact_info.phone
-                    )}/>
+                    )}>
+                      <FaPhoneAlt className="inline-block text-white me-2 align-[-1px] text-xs" />
+                    </li>
                        <li class="p mb-4 text-white" set:html={markdownify(
                        config.params.contact_info.address
-                    )}/>
+                    )}>
+                      <FaLocationArrow
+                      className="inline-block text-white me-2 align-[-1px] text-xs"
+                     
+                    /></li>
                
             </ul>
                 )}

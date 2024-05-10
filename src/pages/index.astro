@@ -14,6 +14,7 @@ import MissionVision from "@/partials/MissionVision.astro";
 import MissionVision1 from "@/partials/MissionVision1.astro";
 import ImageMod from "@/components/ImageMod.astro";
 import DynamicIcon from "@/helpers/DynamicIcon";
+import Swiper from 'swiper';
 
 import type {
   CallToActionType,
@@ -59,6 +60,8 @@ const {
 // Section Background Images
 const aboutBgImage = await bgImageMod(about?.bg_image!);
 const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
+
+
 ---
 
 <Base>
@@ -157,8 +160,8 @@ const mobileImageUrl = bgImageUrls[1] ? bgImageUrls[1].trim() : desktopImageUrl;
     <div class="block md:hidden">
       <ImageMod
         src={mobileImageUrl}
-        width={200}
-        height={400}
+        width={800}
+        height={800}
         loading="eager"
         alt={title || "mobile banner image"}
         class="z-10 absolute left-0 top-0 w-full h-full object-cover"
@@ -440,6 +443,14 @@ const mobileImageUrl = bgImageUrls[1] ? bgImageUrls[1].trim() : desktopImageUrl;
   </div>
 
   <script>
+
+const mySwiper = new Swiper('.swiper-container', {
+  // Other options...
+  autoplay: {
+    delay: 8000, // Adjust this value to set the autoplay delay in milliseconds
+  },
+});
+
     // Select all elements with the attribute "data-toggle" set to "modal"
     const modalButtons: NodeListOf<HTMLElement> = document.querySelectorAll(
       "[data-toggle='modal']",

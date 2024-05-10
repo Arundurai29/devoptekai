@@ -4,7 +4,7 @@ banner_slider:
   enable: true
   slider_item:
     # slider item loop
-    - bg_image: "/images/banner/banner-1.jpg:/images/banner/header1mobile.jpg"
+    - bg_image: "/images/banner/banner-1.jpg:/images/banner/header1mobil.jpg"
       subtitle: Start your journey with
       title:  Generative AI
       content: Tailored, adaptable, cost effective and scalable solution for your Generative AI journey

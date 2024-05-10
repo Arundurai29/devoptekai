@@ -3,6 +3,8 @@ import Logo from "@/components/Logo.astro";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import { markdownify } from "@/lib/utils/textConverter";
+import { FaPhoneAlt,FaLocationArrow } from "react-icons/fa";
+import { IoMdMailOpen } from "react-icons/io";
 
 export interface ChildNavigationLink {
   name: string;
@@ -30,10 +32,18 @@ const { pathname } = Astro.url;
           <div class="container">
             <ul class="text-light justify-around lg:justify-end font-light gap-y-2 flex flex-row sm:flex-row gap-x-4 sm:gap-x-0 sm:list-separator items-center">
               {config.params.contact_info.email && (
-                <li set:html={markdownify(config.params.contact_info.email)} />
+                <li class="flex " ><IoMdMailOpen
+                      className="inline-block text-white me-2 mt-1.5 text-xs"
+                     
+                    /><a
+                    href={`mailto:${config.params.contact_info.email}`}
+                    class="underline ml-1"
+                    set:html={markdownify(config.params.contact_info.email)}
+                  /></li>
               )}
               {config.params.contact_info.email && (
                 <li class="flex">
+                   <FaPhoneAlt className="inline-block text-white me-2 mt-1.5 text-xs" />
                   <span class="hidden md:block ">
                   Call Us Now:
                 </span>
