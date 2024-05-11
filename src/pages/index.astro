@@ -62,6 +62,7 @@ const aboutBgImage = await bgImageMod(about?.bg_image!);
 const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
 
 
+
 ---
 
 <Base>
@@ -75,7 +76,12 @@ const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
               const bgImageUrls = bg_image.split(':');
 const desktopImageUrl = bgImageUrls[0].trim();
 const mobileImageUrl = bgImageUrls[1] ? bgImageUrls[1].trim() : desktopImageUrl;
+const isValidPath = (path: string) => {
+  const supportedFormats = ["jpeg", "jpg", "png", "webp"]; // Add supported formats here
+  const format = path.split(".").pop()?.toLowerCase(); // Get the file extension
 
+  return format && supportedFormats.includes(format);
+};
               return (
                 <div class="swiper-slide banner-slider-item lg:py-36 pt-10 pb-40 anim">
                   <div class="container">
@@ -145,15 +151,27 @@ const mobileImageUrl = bgImageUrls[1] ? bgImageUrls[1].trim() : desktopImageUrl;
                           )}
                         </div>
                         {desktopImageUrl && (
+                          
     <div class="hidden md:block">
-      <ImageMod
+       {isValidPath(desktopImageUrl) ? (
+       <img
+      src={desktopImageUrl}
+      alt={title || "banner image"}
+      width={1550}
+      height={600}
+      loading="eager"
+      class="z-10 absolute left-0 top-0 w-full h-full object-cover"
+    />
+    ) : (
+      <img
         src={desktopImageUrl}
+        alt={title || "banner image"}
         width={1550}
         height={600}
         loading="eager"
-        alt={title || "banner image"}
         class="z-10 absolute left-0 top-0 w-full h-full object-cover"
       />
+    )}
     </div>
 
  
@@ -447,7 +465,7 @@ const mobileImageUrl = bgImageUrls[1] ? bgImageUrls[1].trim() : desktopImageUrl;
 const mySwiper = new Swiper('.swiper-container', {
   // Other options...
   autoplay: {
-    delay: 8000, // Adjust this value to set the autoplay delay in milliseconds
+    delay: 15000, // Adjust this value to set the autoplay delay in milliseconds
   },
 });
 

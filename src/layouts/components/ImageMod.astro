@@ -10,7 +10,7 @@ interface Props {
   height: number;
   loading?: "eager" | "lazy" | null | undefined;
   decoding?: "async" | "auto" | "sync" | null | undefined;
-  format?: "auto" | "avif" | "jpeg" | "png" | "svg" | "webp"|"gif" ;
+  format?: "auto" | "avif" | "jpeg" | "png" | "svg" | "webp";
   class?: string;
   style?: any;
 }
@@ -44,7 +44,7 @@ const isValidPath = images[src] ? true : false;
 ---
 
 {
-  isValidPath && format !== "gif" ? (
+  isValidPath && (
     <Image
       src={images[src]() as Promise<{ default: ImageMetadata }>}
       alt={alt}
@@ -56,16 +56,5 @@ const isValidPath = images[src] ? true : false;
       format={format}
       style={style}
     />
-  ) : isValidPath ? (
-    <img
-      src={await images[src]()}
-      alt={alt}
-      width={width}
-      height={height}
-      loading={loading}
-      decoding={decoding}
-      className={className}
-      style={style}
-    />
-  ) : null
+  )
 }
