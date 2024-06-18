@@ -8,7 +8,7 @@ banner_slider:
       subtitle: Start your journey with
       title:  Generative AI
       content: Tailored, adaptable, cost effective and scalable solution for your Generative AI journey
-      paginationIcon: TfiComments # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
+      paginationIcon: TfiServer # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
       paginationName: Products  
       button:
         enable: true
@@ -22,7 +22,7 @@ banner_slider:
       subtitle: Powered by people
       title: Accelerated by AI
       content: We simplify the integration of AI, DevOps, and cloud technologies, streamlining your business transformation.
-      paginationIcon: TfiStatsUp # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
+      paginationIcon: BsPeople # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
       paginationName: AI Consulting
       button:
         enable: true
@@ -34,7 +34,7 @@ banner_slider:
       subtitle: Cloud Services
       title: DevOps and Cloud Consultation 
       content: Empower your Cloud with our expertise to unlock limitless scalability and reliability. We also offer a range of DevOps<br> services to streamline your development and operations workflows.
-      paginationIcon: TfiPackage # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
+      paginationIcon: AiOutlineCloudServer # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
       paginationName: Cloud Consulting
       button:
         enable: true

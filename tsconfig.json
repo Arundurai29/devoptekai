@@ -19,6 +19,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.astro"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.astro", "src/layouts/components/ModeToggle.js", "src/pages/button.jsx"],
   "exclude": ["node_modules"]
 }

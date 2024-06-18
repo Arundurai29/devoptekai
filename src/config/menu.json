@@ -6,6 +6,10 @@
     },
     
     {
+      "name": "About us",
+      "url": "/about"
+    },
+    {
       "name": "RagWorks",
       "url": "/products/ragworks"
     },
@@ -69,7 +73,7 @@
    
     {
       "name": "Privacy Policy",
-      "url": "#"
+      "url": "/privacy-policy"
     },
     {
       "name": "Terms & Conditions",

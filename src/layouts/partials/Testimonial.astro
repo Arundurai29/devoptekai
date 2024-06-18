@@ -17,17 +17,17 @@ const {
 
 {
   enable && (
-    <section class={`section pb-0${className ? ` ` + className : ""}`}>
+    <section class={`section dark:bg-[#07031E] pb-0${className ? ` ` + className : ""}`}>
       <div class="container">
         <div class="row justify-center lg:gy-4">
           <div class="col-12 text-center mb-10 lg:mb-5">
             {subtitle && (
               <span
-                class="text-lg text-text"
+                class="text-lg dark:text-white text-text"
                 set:html={markdownify(subtitle)}
               />
             )}
-            {title && <h2 set:html={markdownify(title)} />}
+            {title && <h2 class="dark:text-white" set:html={markdownify(title)} />}
             <div class="separator" />
           </div>
           <div class="sm:col-8 md:col-6 lg:col-5">
@@ -41,7 +41,7 @@ const {
             )}
           </div>
           <div class="md:col-12 lg:col-7 self-center lg:pl-0 mb-5 lg:mb-0">
-            <div class="testimonial-slider swiper shadow p-4 md:p-8">
+            <div class="testimonial-slider swiper dark:bg-[#222C40] dark:rounded-md shadow p-4 md:p-8">
               <div class="swiper-wrapper">
                 {list &&
                   list.map((item) => {
@@ -55,19 +55,19 @@ const {
                         </span>
                         {item.content && (
                           <p
-                            class="text-dark mb-3"
+                            class="text-dark mb-3 dark:text-white"
                             set:html={markdownify(item.content)}
                           />
                         )}
                         {item.name && (
                           <h3
-                            class="font-light h5 mb-2"
+                            class="font-light h5 mb-2 dark:text-white"
                             set:html={markdownify(item.name)}
                           />
                         )}
                         {item.designation && (
                           <span
-                            class="text-color"
+                            class="text-color dark:text-white"
                             set:html={markdownify(item.designation)}
                           />
                         )}

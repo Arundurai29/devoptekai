@@ -23,7 +23,7 @@ export default function Accordion({
   return (
     <div className="accordion">
       <button
-        className="accordion-header"
+        className="accordion-header bg-white dark:bg-[#222C40] dark:border-gray-950"
         aria-expanded={accordionOpen}
         aria-controls={`accordion-title-${index ? index : slugify(title)}`}
         onClick={(e) => {
@@ -54,7 +54,7 @@ export default function Accordion({
             }`}
           />
         </svg>
-        <span>{title}</span>
+        <span className="dark:text-white text-dark">{title}</span>
       </button>
 
       <div
@@ -66,7 +66,7 @@ export default function Accordion({
             : "grid-rows-[0fr] opacity-0"
         }`}>
         <div className="overflow-hidden">
-          <div className="pt-5">{children}</div>
+          <div className="pt-5 text-zinc-500	dark:text-white">{children}</div>
         </div>
       </div>
     </div>

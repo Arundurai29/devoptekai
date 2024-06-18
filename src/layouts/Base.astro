@@ -12,6 +12,7 @@ import "@/styles/main.scss";
 const pf = theme.fonts.font_family.primary;
 const sf = theme.fonts.font_family.secondary;
 
+
 let fontPrimary, fontSecondary;
 if (theme.fonts.font_family.primary) {
   fontPrimary = theme.fonts.font_family.primary
@@ -165,6 +166,61 @@ const { title, meta_title, description, image, noindex, canonical } =
       }`}
     />
     <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function() {
+        // Function to update the theme based on localStorage or system preference
+        function updateTheme() {
+          const savedTheme = localStorage.getItem('theme');
+          if (savedTheme) {
+            document.documentElement.classList.add(savedTheme);
+            updateToggle(savedTheme);
+          } else {
+            const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (userPrefersDark) {
+              document.documentElement.classList.add('dark');
+              localStorage.setItem('theme', 'dark');
+              updateToggle('dark');
+            } else {
+              document.documentElement.classList.add('light');
+              localStorage.setItem('theme', 'light');
+              updateToggle('light');
+            }
+          }
+        }
+
+        // Function to update the toggle button appearance based on theme
+        function updateToggle(theme) {
+          const toggleCircle = document.getElementById('toggle-circle');
+          if (theme === 'dark') {
+            toggleCircle.style.transform = 'translateX(260%)';
+          } else {
+            toggleCircle.style.transform = 'translateX(30%)';
+          }
+        }
+
+        // Function to toggle theme
+        function toggleTheme() {
+          const html = document.documentElement;
+          if (html.classList.contains('dark')) {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            localStorage.setItem('theme', 'light');
+            updateToggle('light');
+          } else {
+            html.classList.remove('light');
+            html.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            updateToggle('dark');
+          }
+        }
+
+        // Initialize theme and toggle button on page load
+        document.addEventListener('DOMContentLoaded', function() {
+          updateTheme();
+          document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+        });
+      })();
+    </script>
   </head>
   <body>
     <TwSizeIndicator />
@@ -173,5 +229,7 @@ const { title, meta_title, description, image, noindex, canonical } =
       <slot />
     </main>
     <Footer />
+   
+    </script>
   </body></html
 >

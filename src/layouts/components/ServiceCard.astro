@@ -25,8 +25,8 @@ const description = () => {
 ---
 
 <div
-  class="text-center border border-border rounded-md relative pb-6 mb-6 group">
-  {title && <h3 class="h5 my-4 px-3" set:html={markdownify(title)} />}
+  class="text-center border border-border dark:border-slate-700 dark:bg-[#222C40] rounded-md relative pb-6 mb-6 group">
+  {title && <h3 class="h5 my-4 px-3 dark:text-white" set:html={markdownify(title)} />}
   <div>
     <div
       class="overlay after:opacity-0 group-hover:after:opacity-100 after:duration-300">
@@ -51,7 +51,7 @@ const description = () => {
     }
   </div>
   <div class="px-4">
-    {description && <p set:html={description} class="my-8 text-justify mb-2" />}
+    {description && <p set:html={description} class="my-8 text-justify mb-2 dark:text-white" />}
     <!-- <a
       class="btn btn-primary-dark absolute -bottom-6 left-1/2 -translate-x-1/2"
       href={`/services/${slug}`}

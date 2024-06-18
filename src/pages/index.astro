@@ -83,7 +83,7 @@ const isValidPath = (path: string) => {
   return format && supportedFormats.includes(format);
 };
               return (
-                <div class="swiper-slide banner-slider-item lg:py-36 pt-10 pb-40 anim">
+                <div class="swiper-slide banner-slider-item lg:py-36 pt-10 pb-60 anim">
                   <div class="container">
                     <div class="row items-center">
                       <div class="col-lg-12">
@@ -335,17 +335,17 @@ const isValidPath = (path: string) => {
 
   {
     service?.enable && (
-      <section class="section pt-0">
+      <section class="section pt-0 bg-white dark:bg-[#07031E]">
         <div class="container">
           <div class="row gy-4">
             <div class="col-12 text-center mb-5">
               {service.subtitle && (
                 <span
-                  class="text-lg text-text"
+                  class="text-lg text-text dark:text-white"
                   set:html={markdownify(service.subtitle)}
                 />
               )}
-              {service.title && <h2 set:html={markdownify(service.title)} />}
+              {service.title && <h2 class="text-dark dark:text-white" set:html={markdownify(service.title)} />}
               <div class="separator" />
             </div>
             {servicesCollection.slice(0, 4).map((service) => {

@@ -1,0 +1,35 @@
+---
+// src/components/ThemeToggle.astro
+---
+
+<button onclick="toggleTheme()" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-md flex items-center">
+  <svg
+    class="w-6 h-6 mr-2 block dark:hidden"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M12 2a1 1 0 011 1v2a1 1 0 01-2 0V3a1 1 0 011-1zm0 16a1 1 0 011 1v2a1 1 0 01-2 0v-2a1 1 0 011-1zm10-6a1 1 0 01-1 1h-2a1 1 0 010-2h2a1 1 0 011 1zm-16 0a1 1 0 01-1 1H3a1 1 0 010-2h2a1 1 0 011 1zm12.95 5.05a1 1 0 01-1.414 0l-1.414-1.414a1 1 0 011.414-1.414l1.414 1.414a1 1 0 010 1.414zm-12.02-12.02a1 1 0 010 1.414L4.93 7.464a1 1 0 01-1.414-1.414L5.93 4.636a1 1 0 011.414 0zM16.95 4.636a1 1 0 010 1.414L15.536 7.464a1 1 0 01-1.414-1.414l1.414-1.414a1 1 0 011.414 0zM7.464 15.536a1 1 0 010-1.414L8.878 12.707a1 1 0 011.414 1.414l-1.414 1.414a1 1 0 01-1.414 0z"
+    ></path>
+  </svg>
+  <svg
+    class="w-6 h-6 mr-2 hidden dark:block"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.354 15.354A9 9 0 118.646 3.646a7 7 0 1010.708 11.708z"
+    ></path>
+  </svg>
+  Toggle Theme
+</button>

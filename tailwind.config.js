@@ -19,6 +19,7 @@ if (theme.fonts.font_family.secondary) {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",  
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   safelist: [{ pattern: /^swiper-/ }],
   theme: {
@@ -42,6 +43,7 @@ module.exports = {
         border: theme.colors.default.theme_color.border,
         "theme-light": theme.colors.default.theme_color.theme_light,
         "theme-dark": theme.colors.default.theme_color.theme_dark,
+        "theme-text":theme.colors.default.theme_color.theme_text,
       },
       fontSize: {
         base: font_base + "px",

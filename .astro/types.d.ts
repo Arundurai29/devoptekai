@@ -252,6 +252,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
 };
+"policy": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
+  body: string;
+  collection: "policy";
+  data: any
+} & { render(): Render[".md"] };
+};
 "pricing": {
 "-index.md": {
 	id: "-index.md";

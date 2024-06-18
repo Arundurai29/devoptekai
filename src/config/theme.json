@@ -7,7 +7,8 @@
         "body": "#fff",
         "border": "#e5e5e5",
         "theme_light": "#f5f5f5",
-        "theme_dark": "#2e2e30"
+        "theme_dark": "#2e2e30",
+        "theme_text": "#222222cc"
       },
       "text_color": { "default": "#666", "dark": "#222", "light": "#bcbcbd" }
     }
