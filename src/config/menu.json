@@ -26,6 +26,10 @@
         {
           "name": "Web Concierge",
           "url": "/products/webconcierge"
+        },
+        {
+          "name": "Offgrid AI",
+          "url": "/products/offgridai"
         }
       ]
     }

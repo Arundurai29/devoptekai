@@ -285,6 +285,13 @@ declare module 'astro:content' {
   collection: "products";
   data: any
 } & { render(): Render[".md"] };
+"offgridai.md": {
+	id: "offgridai.md";
+  slug: "offgridai";
+  body: string;
+  collection: "products";
+  data: any
+} & { render(): Render[".md"] };
 "ragworks.md": {
 	id: "ragworks.md";
   slug: "ragworks";
