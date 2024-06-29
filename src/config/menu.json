@@ -32,6 +32,31 @@
           "url": "/products/offgridai"
         }
       ]
+    },
+    {
+      "name": "Industries",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        
+        {
+          "name": "Automotive",
+          "url": "/Industries/automotive"
+        },
+        {
+          "name": "E-Commerce",
+          "url": "/Industries/e-commerce"
+        },
+        {
+          "name": "HR Industry",
+          "url": "/Industries/hr-industry"
+        },
+        {
+          "name": "Manufacturing",
+          "url": "/Industries/manufacturing"
+        }
+        
+      ]
     }
   ],
   "services": [

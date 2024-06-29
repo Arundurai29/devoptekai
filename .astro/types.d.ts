@@ -135,13 +135,50 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"about": {
+		"Industries": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
+  body: string;
+  collection: "Industries";
+  data: any
+} & { render(): Render[".md"] };
+"automotive.md": {
+	id: "automotive.md";
+  slug: "automotive";
+  body: string;
+  collection: "Industries";
+  data: any
+} & { render(): Render[".md"] };
+"e-commerce.md": {
+	id: "e-commerce.md";
+  slug: "e-commerce";
+  body: string;
+  collection: "Industries";
+  data: any
+} & { render(): Render[".md"] };
+"hr-industry.md": {
+	id: "hr-industry.md";
+  slug: "hr-industry";
+  body: string;
+  collection: "Industries";
+  data: any
+} & { render(): Render[".md"] };
+"manufacturing.md": {
+	id: "manufacturing.md";
+  slug: "manufacturing";
+  body: string;
+  collection: "Industries";
+  data: any
+} & { render(): Render[".md"] };
+};
+"about": {
 "-index.md": {
 	id: "-index.md";
   slug: "-index";
   body: string;
   collection: "about";
-  data: InferEntrySchema<"about">
+  data: any
 } & { render(): Render[".md"] };
 };
 "authors": {
@@ -150,21 +187,21 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "authors";
-  data: InferEntrySchema<"authors">
+  data: any
 } & { render(): Render[".md"] };
 "john-doe.md": {
 	id: "john-doe.md";
   slug: "john-doe";
   body: string;
   collection: "authors";
-  data: InferEntrySchema<"authors">
+  data: any
 } & { render(): Render[".md"] };
 "mark-dinn.md": {
 	id: "mark-dinn.md";
   slug: "mark-dinn";
   body: string;
   collection: "authors";
-  data: InferEntrySchema<"authors">
+  data: any
 } & { render(): Render[".md"] };
 };
 "blog": {
@@ -173,49 +210,49 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "business-magnate.md": {
 	id: "business-magnate.md";
   slug: "business-magnate";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "cool-the-audits.md": {
 	id: "cool-the-audits.md";
   slug: "cool-the-audits";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "economics-meter.md": {
 	id: "economics-meter.md";
   slug: "economics-meter";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "finance-my-business.md": {
 	id: "finance-my-business.md";
   slug: "finance-my-business";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "money-and-money.md": {
 	id: "money-and-money.md";
   slug: "money-and-money";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "new-hugo-post.md": {
 	id: "new-hugo-post.md";
   slug: "new-hugo-post";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 };
 "contact": {
@@ -233,7 +270,7 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "homepage";
-  data: InferEntrySchema<"homepage">
+  data: any
 } & { render(): Render[".md"] };
 };
 "pages": {
@@ -242,14 +279,14 @@ declare module 'astro:content' {
   slug: "elements";
   body: string;
   collection: "pages";
-  data: InferEntrySchema<"pages">
+  data: any
 } & { render(): Render[".mdx"] };
 "privacy-policy.md": {
 	id: "privacy-policy.md";
   slug: "privacy-policy";
   body: string;
   collection: "pages";
-  data: InferEntrySchema<"pages">
+  data: any
 } & { render(): Render[".md"] };
 };
 "policy": {
@@ -313,63 +350,63 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "project-1.md": {
 	id: "project-1.md";
   slug: "project-1";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "project-2.md": {
 	id: "project-2.md";
   slug: "project-2";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "project-3.md": {
 	id: "project-3.md";
   slug: "project-3";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "project-4.md": {
 	id: "project-4.md";
   slug: "project-4";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "project-5.md": {
 	id: "project-5.md";
   slug: "project-5";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "project-6.md": {
 	id: "project-6.md";
   slug: "project-6";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "project-7.md": {
 	id: "project-7.md";
   slug: "project-7";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "project-8.md": {
 	id: "project-8.md";
   slug: "project-8";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 };
 "sections": {
@@ -429,56 +466,56 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "business-automations.md": {
 	id: "business-automations.md";
   slug: "business-automations";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "business-consulting.md": {
 	id: "business-consulting.md";
   slug: "business-consulting";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "data-driven-decision-support.md": {
 	id: "data-driven-decision-support.md";
   slug: "data-driven-decision-support";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "market-strategy.md": {
 	id: "market-strategy.md";
   slug: "market-strategy";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "strategic-business-consultation.md": {
 	id: "strategic-business-consultation.md";
   slug: "strategic-business-consultation";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "targeted-marketing-strategies.md": {
 	id: "targeted-marketing-strategies.md";
   slug: "targeted-marketing-strategies";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "valuable-idea.md": {
 	id: "valuable-idea.md";
   slug: "valuable-idea";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 };
 "team": {
@@ -487,49 +524,49 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "team";
-  data: InferEntrySchema<"team">
+  data: any
 } & { render(): Render[".md"] };
 "Alex-Cagar.md": {
 	id: "Alex-Cagar.md";
   slug: "alex-cagar";
   body: string;
   collection: "team";
-  data: InferEntrySchema<"team">
+  data: any
 } & { render(): Render[".md"] };
 "Alisha-Mayar.md": {
 	id: "Alisha-Mayar.md";
   slug: "alisha-mayar";
   body: string;
   collection: "team";
-  data: InferEntrySchema<"team">
+  data: any
 } & { render(): Render[".md"] };
 "Andrew-Givson.md": {
 	id: "Andrew-Givson.md";
   slug: "andrew-givson";
   body: string;
   collection: "team";
-  data: InferEntrySchema<"team">
+  data: any
 } & { render(): Render[".md"] };
 "Joseph-Pullin.md": {
 	id: "Joseph-Pullin.md";
   slug: "joseph-pullin";
   body: string;
   collection: "team";
-  data: InferEntrySchema<"team">
+  data: any
 } & { render(): Render[".md"] };
 "Phillip-Wilson.md": {
 	id: "Phillip-Wilson.md";
   slug: "phillip-wilson";
   body: string;
   collection: "team";
-  data: InferEntrySchema<"team">
+  data: any
 } & { render(): Render[".md"] };
 "Steve-Woah.md": {
 	id: "Steve-Woah.md";
   slug: "steve-woah";
   body: string;
   collection: "team";
-  data: InferEntrySchema<"team">
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -541,5 +578,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("./../src/content/config.js");
+	export type ContentConfig = never;
 }

@@ -3,8 +3,11 @@ title: RagWorks
 # date: 2018-09-25T15:51:35+06:00
 # description: This is meta description
 short_description: RAGWorks is a versatile and powerful platform designed to revolutionise the way businesses utilise AI for content generation. Here’s a deeper look into what makes RAGWorks a standout product
+button: Book a Free demo
 image: "/images/service/redflowchart.jpg"
 bg_image: "/images/background/page-title.jpg"
+testimonial:
+  enable: true
 list:
   - name: Manoj
     content:

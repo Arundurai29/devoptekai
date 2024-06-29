@@ -3,7 +3,7 @@ enable: true
 subtitle: Powered by RagWorks
 title: Secure and Own Your AI with OffGrid AI
 description: Enhance your business operations with OffGrid AI's state-of-the-art technology, designed  to provide unparalleled security and innovation tailored to your specific needs.
-
+button: Book a Free demo
 content: Meet Web Concierge, transforming online customer interactions with its advanced website bot, powered by RagWorks technology.
 # image: "/images/service/ai.jpg"
 feature: "Features"
@@ -134,7 +134,7 @@ testimonial:
 <div class="lg:col-4  ">
 <div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-#### Secure Internal Documentation Access
+<h3 class="text-xl text-black">Secure Internal Documentation Access</h3>
 
  OffGrid AI allows employees to securely access and interact with internal documentation, ensuring data remains within the private, secure customer datacenter.
 
@@ -143,7 +143,7 @@ testimonial:
 <div class="lg:col-4 ">
 <div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-#### Healthcare Records Management
+<h3 class="text-xl text-black">Healthcare Records Management</h3>
 
  Enhance healthcare operations by securely managing patient records and providing instant, AI-driven responses to staff queries, all within a secure datacenter environment.
 
@@ -153,7 +153,7 @@ testimonial:
 <div class="lg:col-4  ">
 <div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-####  Legal Document Review
+<h3 class="text-xl text-black">Legal Document Review</h3>
 
 Streamline legal processes by allowing secure, AI-driven analysis and retrieval of legal documents, ensuring sensitive information remains protected.
 
@@ -165,7 +165,7 @@ Streamline legal processes by allowing secure, AI-driven analysis and retrieval 
 <div class="lg:col-4 ml-auto   ">
 <div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-#### Financial Compliance and Reporting
+<h3 class="text-xl text-black">Financial Compliance and Reporting</h3>
 
 Utilize OffGrid AI to handle sensitive financial documents, facilitating compliance and reporting while maintaining data security within the private datacenter.
 
@@ -174,8 +174,8 @@ Utilize OffGrid AI to handle sensitive financial documents, facilitating complia
 </div>
 <div class="lg:col-4 mr-auto   ">
 <div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
-
-#### Government Policy Access
+ 
+<h3 class="text-xl text-black">Government Policy Access</h3>
 
 OffGrid AI provides secure access to governmental policies and documents, ensuring data sovereignty and compliance with regulatory standards.
 

@@ -6,6 +6,7 @@ import { humanize } from "@/lib/utils/textConverter";
 interface Props {
   title: string;
   description:string;
+  button:string;
   meta_title?: string;
   bg_image?: string;
 }
@@ -14,6 +15,7 @@ const {
   title,
   description,
   meta_title,
+  button,
   bg_image = "/images/background/page-title.jpg",
 } = Astro.props;
 
@@ -32,8 +34,7 @@ const pageHeaderBgImage = await bgImageMod(bg_image);
       />
       <p class="text-white pb-5 w-9/12 text-center" set:text={description}/>
       <div>
-        <a href="#" class="btn btn-primary hover:bg-white md:mb-0 mb-4 hover:text-black btn-sm  lg:inline-block ml-5" >Book a Free Demo</a>
-        <a href="#" class="btn bg-white btn-sm lg:inline-block ml-5" >Request a Demo</a>
+        <a href="#" class="btn btn-primary hover:bg-white md:mb-0 mb-4 hover:text-black btn-sm  lg:inline-block ml-5" >{button}</a>
       </div>
 
     </div>

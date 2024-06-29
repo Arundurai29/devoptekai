@@ -10,26 +10,26 @@ import { markdownify } from "@/lib/utils/textConverter";
 import bgImageMod from "@/lib/utils/bgImageMod";
 import Testimonial from "@/partials/Testimonial.astro";
 import config from "@/config/config.json";
-
+import TextCounter from "@/components/TextCounter.astro";
 
 interface Props {
-  products: CollectionEntry<"products">;
+  industries: CollectionEntry<"Industries">;
 }
 
 interface Props {
   class?: string;
   content: TestimonialType;
 }
-const COLLECTION_FOLDER = "products";
+const COLLECTION_FOLDER = "Industries";
 export async function getStaticPaths() {
-  const COLLECTION_FOLDER = "products";
-  const productssCollection = await getSinglePage(COLLECTION_FOLDER);
+  const COLLECTION_FOLDER = "Industries";
+  const industriessCollection = await getSinglePage(COLLECTION_FOLDER);
 
-  const paths = productssCollection.map((products) => ({
+  const paths = industriessCollection.map((industries) => ({
     params: {
-      single: products.slug,
+      single: industries.slug,
     },
-    props: { products },
+    props: { industries },
   }));
   return paths;
 }
@@ -47,7 +47,7 @@ const testimonialContent = (await getEntry("sections", "testimonial"))
   content: string;
 }
 
-const { products } = Astro.props;
+const { industries } = Astro.props;
 const {
   body,
   render,
@@ -70,15 +70,19 @@ const {
     banner_slider3,
     banner_slider4,
     banner_slider5,
-    offgrid
+    offgrid,
+    funfacts,
+    cta
   },
-} = products;
+} = industries;
 
 
 const { Content } = await render();
-const productssCollection = await getSinglePage(COLLECTION_FOLDER);
+const industriessCollection = await getSinglePage(COLLECTION_FOLDER);
 const aboutBgImage = await bgImageMod(about?.bg_image!);
 const { contact_form_action }: { contact_form_action: string } = config.params;
+const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
+
 ---
 
 <Base
@@ -86,15 +90,16 @@ const { contact_form_action }: { contact_form_action: string } = config.params;
   meta_title={meta_title}
   description={description}
   image={image}
+
 >
   <PageHeader title={title} description={description} bg_image={bg_image}   button={button} />
 
   {
     clients_logo_slider?.enable && (
-      <section class="bg-white  section" style="padding-bottom: 0 !important;" >
+      <section class="bg-white py-24" style="padding-bottom: 0 !important;" >
         <div class="container">
           <h2 class="text-center text-2xl md:text-4xl ">
-            Trust and recognition from clients
+            Trusted by Leading Innovators in Manufacturing
           </h2>
           <div class="client-logo-slider swiper self-center">
             <div class="swiper-wrapper lg:justify-center justify-left items-center">
@@ -139,43 +144,70 @@ const { contact_form_action }: { contact_form_action: string } = config.params;
     )
   }
 
-  {
-    about?.enable && (
-      <section class="section ">
-        <div class="container overlay-content">
-          <div class="row bg-slate-600 rounded-md md:p-8 py-8 px-3">
-            <h2 class="text-center text-white text-2xl md:text-4xl pb-5" set:text={title} />
-            <div class="md:col-7 grid place-content-center">
-              {about.bulletPoint && (
-              <ul class=" space-y-2 mb-6">
-                {about.bulletPoint.map((point: string) => (
-                  <li style="font-size: 16px;" class="text-white " set:html={markdownify(point)}>
-                    <DynamicIcon
-                      className="inline-block text-primary me-2"
-                      icon="TfiArrowCircleRight"
-                    />
-                  </li>
-                ))}
-              </ul>
-            )}
-            </div>
-            <div class="md:col-5">
-              <ImageMod
-                            src={about.bg_image}
-                           class="rounded-md"
-                            alt="client-logo"
-                          />
-            </div>
-            
-          </div>
+
+{
+  funfacts?.enable && (
+    <section
+      class=" mt-20  ">
+      <div class="container z-10 relative">
+        <div class="row gy-4 py-10 justify-between rounded-md after:rounded-md overlay after:bg-opacity-80 bg-cover bg-no-repeat" style={{ backgroundImage: `url(${funfactsBgImage})` }}>
+          {funfacts.counter &&
+            funfacts.counter.map((funfact) => (
+              <div class="md:col-6 lg:col-3 m-0 text-center ">
+                <div class="flex flex-col text-center md:text-start md:flex-row lg:justify-center items-center gap-4">
+                  
+                  <div>
+                    {funfact?.count && (
+                      <h3 class="h3 mb-1 text-center text-white z-10 relative">
+                        <TextCounter value={funfact.count} /> <span class=" text-sm mb-1 text-center text-white z-10 relative" set:html={markdownify(funfact.count_type)} />
+                      </h3>
+                      
+                    )}
+                    {funfact?.title && (
+                      <p
+                        class="opacity-80 text-center relative z-10  text-white font-medium"
+                        set:html={markdownify(funfact.title)}
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  )
+}
+
+<section class="">
+    <div class="container">
+      <div class="row gy-4">
+        <article class="lg:col-12 lg:order-2 order-1">
+          {
+            image && (
+              <ImageMod
+                src={image}
+                width={900}
+                height={500}
+                class="w-9/12 mx-auto mb-8 md:mb-16 rounded-t"
+                alt="industries"
+              />
+            )
+          }
+          {
+            body && (
+                <Content />
+            )
+          }
+        </article>
+      </div>
+    </div>
+  </section>
+  
   {
     banner_slider?.enable && (
-      <section class="md:py-8 py-4">
-        <h2 set:text={feature} class="text-center text-black text-2xl md:text-4xl pb-8" />
+      <section class="md:py-0 py-4">
+        <h2 set:text={feature} class="text-center text-black text-2xl md:text-4xl pb-16" />
         <div class="container overlay-content">
           <div class="row">
             <div class="md:col-6">
@@ -184,7 +216,7 @@ const { contact_form_action }: { contact_form_action: string } = config.params;
                 width={900}
                 height={500}
                 class="h-full object-cover rounded-md"
-                alt="products"
+                alt="industries"
               />
             </div>
             <div class="md:col-6 grid place-content-center ">
@@ -237,7 +269,7 @@ const { contact_form_action }: { contact_form_action: string } = config.params;
               width={900}
               height={500}
               class="h-full object-cover rounded-md"
-              alt="products"
+              alt="industries"
             />
           </div>
         </div>
@@ -257,7 +289,7 @@ const { contact_form_action }: { contact_form_action: string } = config.params;
               width={900}
               height={500}
               class="h-full object-cover rounded-md"
-              alt="products"
+              alt="industries"
             />
           </div>
           <div class="md:col-6 grid place-content-center">
@@ -310,7 +342,7 @@ const { contact_form_action }: { contact_form_action: string } = config.params;
               width={900}
               height={500}
               class="h-full object-cover rounded-md"
-              alt="products"
+              alt="industries"
             />
           </div>
         </div>
@@ -330,7 +362,7 @@ const { contact_form_action }: { contact_form_action: string } = config.params;
               width={900}
               height={500}
               class="h-full object-cover rounded-md"
-              alt="products"
+              alt="industries"
             />
           </div>
           <div class="md:col-6 grid place-content-center">
@@ -356,32 +388,7 @@ const { contact_form_action }: { contact_form_action: string } = config.params;
 }
 
 
-  <section class="">
-    <div class="container">
-      <div class="row gy-4">
-        <article class="lg:col-12 lg:order-2 order-1">
-          {
-            image && (
-              <ImageMod
-                src={image}
-                width={900}
-                height={500}
-                class="w-9/12 mx-auto mb-8 md:mb-16 rounded-t"
-                alt="products"
-              />
-            )
-          }
-          {
-            body && (
-              <div class="content">
-                <Content />
-              </div>
-            )
-          }
-        </article>
-      </div>
-    </div>
-
+  
     {
       offgrid?.enable && (
         <section class="py-8 ">
@@ -410,6 +417,30 @@ const { contact_form_action }: { contact_form_action: string } = config.params;
       )
     }
 
+{
+      cta?.enable && (
+<section
+      class="section-sm mt-16 p-10 bg-cover bg-center overlay rounded-lg after:bg-primary/60 bg-no-repeat"
+      style="background: url(/images/background/cta.jpg) no-repeat center;
+    background-size: cover;"
+    >
+      <div class="container overlay-content">
+        <div class="row items-center text-center lg:text-start gy-4">
+          <div class="lg:col-8 ">
+              <h3 class="text-white m-0 h3 font-medium" set:text={cta.title} />
+              <p class="text-white m-0 mt-4 " set:text={cta.content} />
+          </div>
+          <div class="lg:col-4 mb-5 lg:text-right">        
+              <a
+                href="/contact"
+                class="btn btn-primary-white"
+              >{cta.button}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+ )
+}
     {testimonial?.enable && <Testimonial content={testimonialContent} />}
 
     <section class="section">
