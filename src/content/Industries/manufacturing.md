@@ -128,38 +128,38 @@ funfacts:
 ---
 
 <section class="section">
-<h2 class="text-center text-black md:text-4xl text-2xl m-0 md:pb-16 pb-8" id="use-cases">Solving Industry Challenges with AI Excellence
+<h2 class="text-center text-black dark:text-white md:text-4xl text-2xl m-0 md:pb-16 pb-8" id="use-cases">Solving Industry Challenges with AI Excellence
 
 </h2>
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-4 mb-5 ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-full p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-full p-5">
 
-<h3 class="text-xl text-black">Inventory/Product Catalogue Search</h3>
+<h3 class="text-xl text-black dark:text-white">Inventory/Product Catalogue Search</h3>
 
-Implement AI-driven search functionalities to quickly locate and provide relevant information from product catalogues and manuals, significantly reducing the time and effort required.
-
-</div>
-</div>
-<div class="lg:col-4 mb-5 ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-full p-5">
-
-<h3 class="text-xl text-black">Product Maintenance and Troubleshooting
-</h3>
-
-Use AI-based tools to interpret and process large sets of documents, enabling accurate and efficient troubleshooting and maintenance support.
-
+<p class="dark:text-white">Implement AI-driven search functionalities to quickly locate and provide relevant information from product catalogues and manuals, significantly reducing the time and effort required.</p>
 
 </div>
 </div>
 <div class="lg:col-4 mb-5 ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-full p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-full p-5">
 
-<h3 class="text-xl text-black">Building Corrective Actions Report
+<h3 class="text-xl text-black dark:text-white">Product Maintenance and Troubleshooting
 </h3>
 
-Automate the report-building process with AI, ensuring quick, accurate, and detailed corrective action reports with minimal manual input.
+<p class="dark:text-white">Use AI-based tools to interpret and process large sets of documents, enabling accurate and efficient troubleshooting and maintenance support.</p>
+
+
+</div>
+</div>
+<div class="lg:col-4 mb-5 ">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-full p-5">
+
+<h3 class="text-xl text-black dark:text-white">Building Corrective Actions Report
+</h3>
+
+<p class="dark:text-white">Automate the report-building process with AI, ensuring quick, accurate, and detailed corrective action reports with minimal manual input.</p>
 
 
 </div>
@@ -167,34 +167,34 @@ Automate the report-building process with AI, ensuring quick, accurate, and deta
 
 
 <div class="lg:col-4 ml-auto  mb-5 ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-full p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-full p-5">
 
-<h3 class="text-xl text-black">Employee Onboarding - Knowledge Transfer
+<h3 class="text-xl text-black dark:text-white">Employee Onboarding - Knowledge Transfer
 </h3>
 
-Devoptek AI to streamline the onboarding process, providing new employees with instant access to necessary documents and knowledge, thus reducing training time and costs.
+<p class="dark:text-white">Devoptek AI to streamline the onboarding process, providing new employees with instant access to necessary documents and knowledge, thus reducing training time and costs.</p>
 
 </div>
 </div>
 <div class="lg:col-4 ml-auto mb-5  ">
-<div class="rounded-lg shadow-xl sol_card grid place-content-center h-full p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl sol_card grid place-content-center h-full p-5">
 
-<h3 class="text-xl text-black"> Creation of Assembly Instructions Manual
+<h3 class="text-xl text-black dark:text-white"> Creation of Assembly Instructions Manual
 </h3>
 
-Devoptek AI to generate comprehensive assembly instructions, speeding up the creation process while maintaining accuracy and reducing the need for extensive manual input.
+<p class="dark:text-white">Devoptek AI to generate comprehensive assembly instructions, speeding up the creation process while maintaining accuracy and reducing the need for extensive manual input.</p>
 
 </div>
 </div>
 <div class="lg:col-4 ml-auto  mb-5 ">
-<div class="rounded-lg shadow-xl sol_card grid place-content-center h-full p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl sol_card grid place-content-center h-full p-5">
 
-<h3 class="text-xl text-black">AI for Different Teams to Communicate and Share Knowledge
+<h3 class="text-xl text-black dark:text-white">AI for Different Teams to Communicate and Share Knowledge
 </h3>
 
-<b>Problem:</b> Challenges in Inter-team Communication and Knowledge Sharing.
+<p class="dark:text-white"><b>Problem:</b> Challenges in Inter-team Communication and Knowledge Sharing.</p>
 
-<b>Solution:</b> Deploy AI solutions tailored for different teams to enhance communication and knowledge sharing, breaking down silos and improving overall organizational efficiency.
+<p class="dark:text-white"><b>Solution:</b> Deploy AI solutions tailored for different teams to enhance communication and knowledge sharing, breaking down silos and improving overall organizational efficiency.</p>
 
 
 

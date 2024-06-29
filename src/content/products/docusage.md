@@ -18,41 +18,41 @@ accordion:
     description: Import from multiple datasource, google drive, s3, confluence, pdfs, images, One Note, and so on. You can also integrate with your existing tools e.g. slack, teams, whatsapp
 ---
 
-Introducing a cutting-edge document interaction AI bot powered by RagWorks (Highly customizable Retrieval-Augmented Generation) that offers a transformative solution for automating and enhancing document-related tasks. This advanced AI bot leverages the power of RAG to pull relevant information from a vast database, ensuring that the content it generates is not only accurate but also richly informed by the most relevant data available.
+<p class="dark:text-white">Introducing a cutting-edge document interaction AI bot powered by RagWorks (Highly customizable Retrieval-Augmented Generation) that offers a transformative solution for automating and enhancing document-related tasks. This advanced AI bot leverages the power of RAG to pull relevant information from a vast database, ensuring that the content it generates is not only accurate but also richly informed by the most relevant data available.</p>
 
-For customers, this integration of RAG technology into the document generation process presents numerous benefits. First and foremost, it significantly boosts efficiency by automating the creation of complex documents, from reports to contracts, saving valuable time and reducing manual effort. Additionally, the AI's ability to retrieve and utilise precise information enhances the quality and reliability of the documents produced, ensuring they meet specific requirements and standards.
+<p class="dark:text-white">For customers, this integration of RAG technology into the document generation process presents numerous benefits. First and foremost, it significantly boosts efficiency by automating the creation of complex documents, from reports to contracts, saving valuable time and reducing manual effort. Additionally, the AI's ability to retrieve and utilise precise information enhances the quality and reliability of the documents produced, ensuring they meet specific requirements and standards.</p>
 
-Moreover, this AI-driven approach minimises errors and inconsistencies often associated with manual document creation. It also adapts to the evolving needs of businesses by continuously learning from new data, which means the quality of document generation improves over time.
+<p class="dark:text-white">Moreover, this AI-driven approach minimises errors and inconsistencies often associated with manual document creation. It also adapts to the evolving needs of businesses by continuously learning from new data, which means the quality of document generation improves over time.</p>
 
 
 <section class="mt-10">
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-4 mr-auto grid place-content-center  ">
-<div class="rounded-lg shadow-xl mb-10 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
 
-#### Detailed Features and Benefits
+<h4 class="dark:text-white">Detailed Features and Benefits</h4>
 
-Docusage, being built on RagWorks, naturally inherits all its advantages. 
+<p class="dark:text-white">Docusage, being built on RagWorks, naturally inherits all its advantages. </p>
 
 </div>
 </div>
 
 <div class="lg:col-4 mr-auto grid place-content-center  ">
-<div class="rounded-lg shadow-xl mb-10 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
 
-#### Multi Tenancy
+<h4 class="dark:text-white">Multi Tenancy</h4>
 
- Each user will have their own dedicated knowledge source and data can be shared between users effectively.
+ <p class="dark:text-white">Each user will have their own dedicated knowledge source and data can be shared between users effectively.</p>
 
 </div>
 </div>
 <div class="lg:col-4 mr-auto grid place-content-center  ">
-<div class="rounded-lg shadow-xl mb-10 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
 
-#### Instant Refresh
+<h4 class="dark:text-white"> Instant Refresh</h4>
 
-Experience the convenience of an automatically updated knowledge base. As soon as new data is uploaded to your storage, our system refreshes, ensuring you always have access to the latest information.
+<p class="dark:text-white">Experience the convenience of an automatically updated knowledge base. As soon as new data is uploaded to your storage, our system refreshes, ensuring you always have access to the latest information.</p>
 
 </div>
 </div>
@@ -64,29 +64,29 @@ Experience the convenience of an automatically updated knowledge base. As soon a
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-4 mr-auto grid place-content-center  ">
-<div class="rounded-lg shadow-xl mb-10 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
 
-#### Fully Customizable
+<h4 class="dark:text-white">Fully Customizable</h4>
 
-Tailor the system to your specific needs. Import data from a wide range of sources including Google Drive, S3, Confluence, PDFs, images, OneNote, and more. Plus, effortlessly integrate with your existing collaboration tools such as Slack, Teams, and WhatsApp to streamline your workflows and communications.
-
-</div>
-</div>
-<div class="lg:col-4 mr-auto grid place-content-center  ">
-<div class="rounded-lg shadow-xl mb-10 p-5">
-
-#### Instant Document Interaction
-
- Engage with your documents seamlessly. Obtain immediate responses and ask questions in your preferred language, enhancing your productivity and understanding.
+<p class="dark:text-white">Tailor the system to your specific needs. Import data from a wide range of sources including Google Drive, S3, Confluence, PDFs, images, OneNote, and more. Plus, effortlessly integrate with your existing collaboration tools such as Slack, Teams, and WhatsApp to streamline your workflows and communications.</p>
 
 </div>
 </div>
 <div class="lg:col-4 mr-auto grid place-content-center  ">
-<div class="rounded-lg shadow-xl mb-10 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
 
-#### Conversational Chat and Session History
+<h4 class="dark:text-white">Instant Document Interaction</h4>
 
-Users can establish a limited number of sessions to engage with documents, allowing them to pick up the conversation right where they left off. Additionally, questions do not need to be exact, as our system is capable of understanding the context of inquiries based on chat history.
+ <p class="dark:text-white">Engage with your documents seamlessly. Obtain immediate responses and ask questions in your preferred language, enhancing your productivity and understanding.</p>
+
+</div>
+</div>
+<div class="lg:col-4 mr-auto grid place-content-center  ">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
+
+<h4 class="dark:text-white"> Conversational Chat and Session History</h4>
+
+<p class="dark:text-white">Users can establish a limited number of sessions to engage with documents, allowing them to pick up the conversation right where they left off. Additionally, questions do not need to be exact, as our system is capable of understanding the context of inquiries based on chat history.</p>
 
 </div>
 </div>
@@ -95,14 +95,14 @@ Users can establish a limited number of sessions to engage with documents, allow
 </section>
 
  <section
-      class="section-sm my-10 p-0 pb-5 bg-cover bg-center overlay rounded-lg after:bg-primary/60 bg-no-repeat"
+      class="section-sm my-10 p-0 pb-5 bg-cover bg-center overlay rounded-lg dark:bg-[#222C40] after:bg-primary/60 bg-no-repeat"
       style="background: url(/images/background/cta.jpg) no-repeat center;
     background-size: cover;"
     >
       <div class="container overlay-content">
         <div class="row items-center text-center lg:text-start gy-4">
           <div class="lg:col-6 mb-5">
-              <h3 class="text-white h3 font-medium" >
+              <h3 class="text-white dark:text-white h3 font-medium" >
 Get Started with DocuSage Today
               </h3>
           </div>
@@ -116,7 +116,7 @@ Get Started with DocuSage Today
       </div>
     </section>
 
-### We are Exceptional
+<h3 class="dark:text-white text-center py-10"> We are Exceptional</h4>
 
 <section class="py-1 bg-blueGray-50">
 <div class="w-full xl:w-12/12 mb-12 xl:mb-0 px-4 mx-auto">

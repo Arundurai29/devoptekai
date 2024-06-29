@@ -128,35 +128,35 @@ funfacts:
 ---
 
 <section class="section">
-<h2 class="text-center text-black md:text-4xl text-2xl m-0 md:pb-16 pb-8" id="use-cases">Solving Industry Challenges with AI Excellence</h2>
+<h2 class="text-center text-black dark:text-white md:text-4xl text-2xl m-0 md:pb-16 pb-8" id="use-cases">Solving Industry Challenges with AI Excellence</h2>
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-4  ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg shadow-xl dark:bg-[#222C40] grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Inventory/Product Catalogue Search</h3>
+<h3 class="text-xl text-black dark:text-white">Inventory/Product Catalogue Search</h3>
 
-AI-driven search functionalities to quickly locate and provide relevant information from product catalogues and manuals, significantly reducing the time and effort required.
+<p class="dark:text-white">AI-driven search functionalities to quickly locate and provide relevant information from product catalogues and manuals, significantly reducing the time and effort required.</p>
 
 
 </div>
 </div>
 <div class="lg:col-4 ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg shadow-xl dark:bg-[#222C40] grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Product Maintenance and Troubleshooting</h3>
+<h3 class="text-xl text-black dark:text-white">Product Maintenance and Troubleshooting</h3>
 
- DevoptekAI’s  tools to interpret and process large sets of documents, enabling accurate and efficient troubleshooting and maintenance support.
+ <p class="dark:text-white">DevoptekAI’s  tools to interpret and process large sets of documents, enabling accurate and efficient troubleshooting and maintenance support.</p>
 
 
 </div>
 </div>
 <div class="lg:col-4  ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg shadow-xl dark:bg-[#222C40] grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Engineering Data/Design Access Challenges</h3>
+<h3 class="text-xl text-black dark:text-white">Engineering Data/Design Access Challenges</h3>
 
-DevoptekAI bot enables designers to quickly retrieve relevant documents and data using natural language queries, significantly reducing search time.
+<p class="dark:text-white">DevoptekAI bot enables designers to quickly retrieve relevant documents and data using natural language queries, significantly reducing search time.</p>
 
 
 </div>
@@ -164,42 +164,42 @@ DevoptekAI bot enables designers to quickly retrieve relevant documents and data
 
 
 <div class="lg:col-4 ml-auto   ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg shadow-xl dark:bg-[#222C40] grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Building Corrective Actions Report</h3>
+<h3 class="text-xl text-black dark:text-white">Building Corrective Actions Report</h3>
 
-Automate the report-building process with Devoptek AI, ensuring quick, accurate, and detailed corrective action reports with minimal manual input.
-
-
-</div>
-</div>
-<div class="lg:col-4 ml-auto   ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
-
-<h3 class="text-xl text-black">Employee Onboarding - Knowledge Transfer</h3>
-
-Devoptek AI streamlines the onboarding process, providing new employees with instant access to necessary documents and knowledge, thus reducing training time and costs.
+<p class="dark:text-white">Automate the report-building process with Devoptek AI, ensuring quick, accurate, and detailed corrective action reports with minimal manual input.</p>
 
 
 </div>
 </div>
 <div class="lg:col-4 ml-auto   ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg shadow-xl dark:bg-[#222C40] grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Creation of Assembly Instructions Manual</h3>
+<h3 class="text-xl text-black dark:text-white">Employee Onboarding - Knowledge Transfer</h3>
 
-Devoptek AI generates comprehensive assembly instructions, speeding up the creation process while maintaining accuracy and reducing the need forextensive manual input.
+<p class="dark:text-white">Devoptek AI streamlines the onboarding process, providing new employees with instant access to necessary documents and knowledge, thus reducing training time and costs.</p>
+
+
+</div>
+</div>
+<div class="lg:col-4 ml-auto   ">
+<div class="rounded-lg shadow-xl dark:bg-[#222C40] grid place-content-center h-5/6 mb-5 p-5">
+
+<h3 class="text-xl text-black dark:text-white">Creation of Assembly Instructions Manual</h3>
+
+<p class="dark:text-white">Devoptek AI generates comprehensive assembly instructions, speeding up the creation process while maintaining accuracy and reducing the need forextensive manual input.</p>
 
 
 
 </div>
 </div>
 <div class="lg:col-4  mb-0  ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 p-5">
+<div class="rounded-lg shadow-xl dark:bg-[#222C40] grid place-content-center h-5/6 p-5">
  
-<h3 class="text-xl text-black">AI for Different Teams to Communicate and Share Knowledge</h3>
+<h3 class="text-xl text-black dark:text-white">AI for Different Teams to Communicate and Share Knowledge</h3>
 
-Deploy AI solutions tailored for different teams to enhance communication and knowledge sharing, breaking down silos and improving overall organisational efficiency.
+<p class="dark:text-white">Deploy AI solutions tailored for different teams to enhance communication and knowledge sharing, breaking down silos and improving overall organisational efficiency.</p>
 
 
 </div>

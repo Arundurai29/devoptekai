@@ -113,45 +113,45 @@ funfacts:
 ---
 
 <section class="section">
-<h2 class="text-center text-black md:text-4xl text-2xl m-0 md:pb-16 pb-8" id="use-cases">Solving E-Commerce Challenges with AI
+<h2 class="text-center text-black dark:text-white md:text-4xl text-2xl m-0 md:pb-16 pb-8" id="use-cases">Solving E-Commerce Challenges with AI
 </h2>
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-4  ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Enhanced Customer Support
+<h3 class="text-xl text-black dark:text-white">Enhanced Customer Support
 </h3>
 
-Automate responses and provide 24/7 customer support with AI chatbots. 
+<p class="dark:text-white">Automate responses and provide 24/7 customer support with AI chatbots. </p>
 
-Our AI-powered chatbots handle common customer queries, provide instant support, and escalate issues to human agents when necessary, ensuring customer satisfaction and reducing support costs.
+<p class="dark:text-white">Our AI-powered chatbots handle common customer queries, provide instant support, and escalate issues to human agents when necessary, ensuring customer satisfaction and reducing support costs.</p>
 
 </div>
 </div>
 <div class="lg:col-4 ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Bill of Materials (BOM) for Replacement Parts
+<h3 class="text-xl text-black dark:text-white">Bill of Materials (BOM) for Replacement Parts
 </h3>
 
-Streamline the Bill of Materials (BOM) process for replacement parts with AI. 
+<p class="dark:text-white">Streamline the Bill of Materials (BOM) process for replacement parts with AI.</p> 
 
-Our AI tools can automatically generate and optimize BOMs based on inventory data, product specifications, and customer demand, ensuring you have the right parts available when needed and reducing downtime.
+<p class="dark:text-white">Our AI tools can automatically generate and optimize BOMs based on inventory data, product specifications, and customer demand, ensuring you have the right parts available when needed and reducing downtime.</p>
 
 
 
 </div>
 </div>
 <div class="lg:col-4  ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Personalised Shopping Experiences
+<h3 class="text-xl text-black dark:text-white">Personalised Shopping Experiences
 </h3>
 
-AI-driven product recommendations tailored to individual customer preferences enhance the shopping experience and increase sales. 
+<p class="dark:text-white">AI-driven product recommendations tailored to individual customer preferences enhance the shopping experience and increase sales. </p>
 
-By analysing customer behaviour and purchase history, our AI suggests products that customers are most likely to buy, improving conversion rates.
+<p class="dark:text-white">By analysing customer behaviour and purchase history, our AI suggests products that customers are most likely to buy, improving conversion rates.</p>
 
 
 
@@ -160,41 +160,41 @@ By analysing customer behaviour and purchase history, our AI suggests products t
 
 
 <div class="lg:col-4 ml-auto   ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Sales Lead Generation
+<h3 class="text-xl text-black dark:text-white">Sales Lead Generation
 </h3>
 
-Identify high-potential leads and streamline your sales process with AI.
+<p class="dark:text-white">Identify high-potential leads and streamline your sales process with AI.</p>
 
-Our AI solutions analyse customer data and behaviour to identify and prioritise leads, enabling your sales team to focus on the most promising prospects and close deals faster.
-
-
-
-</div>
-</div>
-<div class="lg:col-4 ml-auto   ">
-<div class="rounded-lg shadow-xl sol_card grid place-content-center h-5/6 mb-5 p-5">
-
-<h3 class="text-xl text-black"> Fraud Detection</h3>
-
-Identify and prevent fraudulent activities in real-time to protect your business. 
-
-Our AI monitors transactions for suspicious behaviour, flags potential fraud, and minimises false positives, safeguarding your revenue and reputation.
+<p class="dark:text-white">Our AI solutions analyse customer data and behaviour to identify and prioritise leads, enabling your sales team to focus on the most promising prospects and close deals faster.</p>
 
 
 
 </div>
 </div>
 <div class="lg:col-4 ml-auto   ">
-<div class="rounded-lg shadow-xl sol_card grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl sol_card grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Inventory Optimization
+<h3 class="text-xl text-black dark:text-white"> Fraud Detection</h3>
+
+<p class="dark:text-white">Identify and prevent fraudulent activities in real-time to protect your business. </p>
+
+<p class="dark:text-white">Our AI monitors transactions for suspicious behaviour, flags potential fraud, and minimises false positives, safeguarding your revenue and reputation.
+</p>
+
+
+</div>
+</div>
+<div class="lg:col-4 ml-auto   ">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl sol_card grid place-content-center h-5/6 mb-5 p-5">
+
+<h3 class="text-xl text-black dark:text-white">Inventory Optimization
 Instructions Manual</h3>
 
-Predict demand and manage stock levels efficiently to reduce costs and avoid stockouts.
+<p class="dark:text-white">Predict demand and manage stock levels efficiently to reduce costs and avoid stockouts.</p>
 
-Our AI solutions provide insights into which products to reorder and when, ensuring optimal inventory levels and reducing excess stock.
+<p class="dark:text-white">Our AI solutions provide insights into which products to reorder and when, ensuring optimal inventory levels and reducing excess stock.</p>
 
 
 
@@ -202,14 +202,14 @@ Our AI solutions provide insights into which products to reorder and when, ensur
 </div>
 </div>
 <div class="lg:col-4  mb-0  ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-5/6 p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-5/6 p-5">
  
-<h3 class="text-xl text-black">Dynamic Pricing
+<h3 class="text-xl text-black dark:text-white">Dynamic Pricing
 </h3>
 
-Implement intelligent pricing strategies based on market trends and customer behaviour. 
+<p class="dark:text-white">Implement intelligent pricing strategies based on market trends and customer behaviour. </p>
 
-Our AI analyses competitor pricing, market demand, and customer behaviour to dynamically adjust prices, maximising profit margins and staying competitive.
+<p class="dark:text-white">Our AI analyses competitor pricing, market demand, and customer behaviour to dynamically adjust prices, maximising profit margins and staying competitive.</p>
 
 
 

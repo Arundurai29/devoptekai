@@ -128,22 +128,22 @@ testimonial:
 ---
 
 <section class="section">
-<h2 class="text-center text-black text-4xl m-0 pb-6" id="use-cases">Use Cases</h2>
+<h2 class="text-center dark:text-white text-black text-4xl m-0 pb-6" id="use-cases">Use Cases</h2>
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-4  ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Secure Internal Documentation Access</h3>
+<h3 class="text-xl dark:text-white text-black">Secure Internal Documentation Access</h3>
 
  OffGrid AI allows employees to securely access and interact with internal documentation, ensuring data remains within the private, secure customer datacenter.
 
 </div>
 </div>
 <div class="lg:col-4 ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Healthcare Records Management</h3>
+<h3 class="text-xl dark:text-white text-black">Healthcare Records Management</h3>
 
  Enhance healthcare operations by securely managing patient records and providing instant, AI-driven responses to staff queries, all within a secure datacenter environment.
 
@@ -151,9 +151,9 @@ testimonial:
 </div>
 </div>
 <div class="lg:col-4  ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:text-white dark:bg-[#222C40] shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Legal Document Review</h3>
+<h3 class="text-xl dark:text-white text-black">Legal Document Review</h3>
 
 Streamline legal processes by allowing secure, AI-driven analysis and retrieval of legal documents, ensuring sensitive information remains protected.
 
@@ -163,9 +163,9 @@ Streamline legal processes by allowing secure, AI-driven analysis and retrieval 
 
 
 <div class="lg:col-4 ml-auto   ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-<h3 class="text-xl text-black">Financial Compliance and Reporting</h3>
+<h3 class="text-xl dark:text-white text-black">Financial Compliance and Reporting</h3>
 
 Utilize OffGrid AI to handle sensitive financial documents, facilitating compliance and reporting while maintaining data security within the private datacenter.
 
@@ -173,9 +173,9 @@ Utilize OffGrid AI to handle sensitive financial documents, facilitating complia
 </div>
 </div>
 <div class="lg:col-4 mr-auto   ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl grid place-content-center h-5/6 mb-5 p-5">
  
-<h3 class="text-xl text-black">Government Policy Access</h3>
+<h3 class="text-xl dark:text-white text-black">Government Policy Access</h3>
 
 OffGrid AI provides secure access to governmental policies and documents, ensuring data sovereignty and compliance with regulatory standards.
 

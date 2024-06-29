@@ -31,39 +31,148 @@ const {
   description={description}
   image={image}>
   <PageHeader title={title} meta_title={title} bg_image={bg_image} />
-  <section class="section">
+  <section class="section bg-white dark:bg-[#07031E]">
     <div class="container">
       <div class="row">
-        <div class="lg:col-4 lg:offset-1 md:col-5 grid place-content-center">
-          <h2 class="h3 mb-8" set:html="Contact Us" />
+        <div class="lg:col-5 md:col-5 grid place-content-center">
+          <h2 class="h2 mb-8 dark:text-white" set:html="Contact Us" />
 
-          {
-            contact_info && (
-              <ul class="pl-0">
-                {contact_info.map((info) => {
-                  const { name, icon, content } = info;
-
-                  return (
-                    <li class="flex mb-8">
-                      <span
-                        class={`mr-4${
-                          icon ? ` ${icon}` : ""
-                        } h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-3xl text-primary inline-block rounded-full border-solid`}>
-                        <span class="sr-only" set:html={name} />
-                        <DynamicIcon className="inline-block" icon={icon} />
-                      </span>
-                      <div class="self-center font-primary">
-                        <div
-                          class="text-dark"
-                          set:html={markdownify(content)}
-                        />
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            )
-          }
+          <ul
+            class="pl-0"
+            data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+            data-astro-source-loc="42:32"
+          >
+            <li
+              class="flex mb-8 dark:text-white"
+              data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+              data-astro-source-loc="47:43"
+            >
+              <span
+                class="mr-4 TfiMobile h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="51:247"
+              >
+                <span
+                  class="sr-only"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="52:26">mobile</span
+                >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.1"
+                  viewBox="0 0 17 17"
+                  class="inline-block"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><g></g><path
+                    d="M12.5 0h-8c-0.827 0-1.5 0.673-1.5 1.5v14c0 0.827 0.673 1.5 1.5 1.5h8c0.827 0 1.5-0.673 1.5-1.5v-14c0-0.827-0.673-1.5-1.5-1.5zM4.5 1h8c0.276 0 0.5 0.224 0.5 0.5v1.5h-9v-1.5c0-0.276 0.224-0.5 0.5-0.5zM13 4v8h-9v-8h9zM12.5 16h-8c-0.276 0-0.5-0.224-0.5-0.5v-2.5h9v2.5c0 0.276-0.224 0.5-0.5 0.5zM9 14.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5 0.224-0.5 0.5-0.5 0.5 0.224 0.5 0.5z"
+                  ></path></svg
+                >
+              </span>
+              <div
+                class="self-center font-primary"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="55:61"
+              >
+                <div
+                  class="text-dark dark:text-white"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="56:26"
+                >
+                  +1 (226)&nbsp;246-7055
+                </div>
+              </div>
+            </li><li
+              class="flex mb-8"
+              data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+              data-astro-source-loc="47:43"
+            >
+              <span
+                class="mr-4 TfiEmail h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="51:247"
+              >
+                <span
+                  class="sr-only"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="52:26">mail</span
+                >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.1"
+                  viewBox="0 0 17 17"
+                  class="inline-block"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><g></g><path
+                    d="M0 2v13h17v-13h-17zM8.494 9.817l-6.896-6.817h13.82l-6.924 6.817zM5.755 8.516l-4.755 4.682v-9.383l4.755 4.701zM6.466 9.219l2.026 2.003 1.996-1.966 4.8 4.744h-13.677l4.855-4.781zM11.201 8.555l4.799-4.725v9.467l-4.799-4.742z"
+                  ></path></svg
+                >
+              </span>
+              <div
+                class="self-center font-primary"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="55:61"
+              >
+                <div
+                  class="text-dark dark:text-white"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="56:26"
+                >
+                  <a href="mailto:admin@devoptek.ai">admin@devoptek.ai</a>
+                </div>
+              </div>
+            </li><li
+              class="flex mb-8"
+              data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+              data-astro-source-loc="47:43"
+            >
+              <span
+                class="mr-4 TfiMapAlt h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="51:247"
+              >
+                <span
+                  class="sr-only"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="52:26">location</span
+                >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.1"
+                  viewBox="0 0 17 17"
+                  class="inline-block"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><g></g><path
+                    d="M15 4v0.069l-0.013-0.058-1.015 0.221c-0.139-1.803-1.634-3.232-3.472-3.232-1.841 0-3.339 1.435-3.474 3.242l-1.026-0.223v-0.019h-6v11h5.348l5.196 1.479 5.456-1.605v-10.874h-1zM10.5 2c1.379 0 2.5 1.122 2.5 2.5 0 1.806-1.719 4.209-2.5 5.207-0.781-0.998-2.5-3.401-2.5-5.207 0-1.378 1.121-2.5 2.5-2.5zM6 5.042l1.081 0.235c0.412 2.269 2.406 4.788 2.919 5.406v4.602l-4-1.139v-9.104zM1 5h4v9.017l-4-0.017v-9zM11 15.303v-4.621c0.514-0.619 2.513-3.145 2.921-5.416l1.079-0.234v9.094l-4 1.177zM11.858 4.583c0-0.749-0.609-1.358-1.358-1.358s-1.358 0.609-1.358 1.358 0.609 1.359 1.358 1.359 1.358-0.609 1.358-1.359zM10.142 4.583c0-0.198 0.161-0.358 0.358-0.358s0.358 0.161 0.358 0.358-0.161 0.359-0.358 0.359-0.358-0.161-0.358-0.359z"
+                  ></path></svg
+                >
+              </span>
+              <div
+                class="self-center font-primary"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="55:61"
+              >
+                <div
+                  class="text-dark dark:text-white"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="56:26"
+                >
+                  67, Zieman Crescent, Cambridge, ON
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="lg:col-7 md:col-7">
           <div class="p-5 md:p-10 rounded shadow">
@@ -108,26 +217,7 @@ const {
                   required
                 />
               </div>
-              <div class="lg:col-6 px-4">
-              <label class="" for="">Which Service Can We Help You With?</label>
-<div class="flex items-center mb-4 mt-3">
-  <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4  bg-light-100 border-gray-300 rounded text-primary focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2  dark:border-gray-600">
-  <label for="default-checkbox" class=" font-primary ms-2 text-sm  text-drak-400 dark:text-drak-400">DocuSage</label>
-</div>
-<div class="flex items-center mb-4">
-  <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-primary bg-light-100 border-gray-300 rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2  dark:border-gray-600">
-  <label for="default-checkbox" class="font-primary ms-2 text-sm  text-drak-400 dark:text-drak-400">Web Concierge</label>
-</div>
-<div class="flex items-center mb-4">
-  <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-primary bg-light-100 border-gray-300 rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2  dark:border-gray-600">
-  <label for="default-checkbox" class="font-primary ms-2 text-sm  text-drak-400 dark:text-drak-400">AI Consulting</label>
-</div>
-<div class="flex items-center">
-  <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-primary bg-light-100 border-gray-300 rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:border-gray-600">
-  <label for="checked-checkbox" class="font-primary ms-2 text-sm  text-drak-400 dark:text-drak-400">Cloud/Devops Consulting</label>
-</div>
 
-              </div>
               <div class="lg:col-12">
                 <textarea
                   class="form-input"

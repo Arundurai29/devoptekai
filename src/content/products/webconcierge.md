@@ -5,7 +5,7 @@ title: Web Concierge
 content: Meet Web Concierge, transforming online customer interactions with its advanced website bot, powered by RagWorks technology.
 button: Book a Free demo
 
-image: "/images/service/ai.jpg"
+image: "/images/service/desk.png"
 testimonial:
   enable: true
 accordion:
@@ -16,38 +16,38 @@ accordion:
   - title: Response with citation
     description: AI will be retrained automatically on your website changes and AI will answer with the accurate citation on your website.
 ---
-Web Concierge revolutionises online customer interactions with its cutting-edge website bot, powered by RagWorks technology. Designed for businesses aiming to enhance their customer service, boost engagement, and drive conversions, Web Concierge is the smart solution that delivers precise, context-aware responses in real-time.
+<p class="dark:text-white">Web Concierge revolutionises online customer interactions with its cutting-edge website bot, powered by RagWorks technology. Designed for businesses aiming to enhance their customer service, boost engagement, and drive conversions, Web Concierge is the smart solution that delivers precise, context-aware responses in real-time.</p>
 
-### Features
+<h3 class="dark:text-white py-10 text-center"> Features</h3>
 
 <section class="mt-10">
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-4 mr-auto   ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-#### Intelligent Response Generation
+<h4 class="dark:text-white"> Intelligent Response Generation</h4>
 
- Leveraging RagWorks, Web Concierge retrieves relevant information and generates accurate, contextually appropriate responses. This ensures every customer interaction is meaningful and effectively addressed, escalation to live agent when absolutely necessary, reducing response times and increasing satisfaction. 
-
-</div>
-</div>
-<div class="lg:col-4 mr-auto   ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
-
-#### Plug-and-Play Setup
-
- Easily integrates with your existing website infrastructure, whether you operate on traditional web hosts or modern cloud services. The setup process is streamlined to get your AI bot up and running with minimal downtime.
-
+<p class="dark:text-white"> Leveraging RagWorks, Web Concierge retrieves relevant information and generates accurate, contextually appropriate responses. This ensures every customer interaction is meaningful and effectively addressed, escalation to live agent when absolutely necessary, reducing response times and increasing satisfaction. </p>
 
 </div>
 </div>
 <div class="lg:col-4 mr-auto   ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-#### Chat Summarization
+<h4 class="dark:text-white"> Plug-and-Play Setup</h4>
 
-Gain valuable insights into customer interactions with chat summarization. Understand your customers’ needs better, enabling you to make informed decisions that enhance user experience and service offerings.
+<p class="dark:text-white"> Easily integrates with your existing website infrastructure, whether you operate on traditional web hosts or modern cloud services. The setup process is streamlined to get your AI bot up and running with minimal downtime.</p>
+
+
+</div>
+</div>
+<div class="lg:col-4 mr-auto   ">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+
+<h4 class="dark:text-white"> Chat Summarization</h4>
+
+<p class="dark:text-white">Gain valuable insights into customer interactions with chat summarization. Understand your customers’ needs better, enabling you to make informed decisions that enhance user experience and service offerings.</p>
 
 </div>
 </div>
@@ -59,30 +59,30 @@ Gain valuable insights into customer interactions with chat summarization. Under
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-4 mr-auto   ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-#### Global Reach
+<h4 class="dark:text-white"> Global Reach</h4>
 
-Break language barriers with multi-language support, allowing your business to interact with customers from around the globe in their native language, making your website truly accessible to a worldwide audience.
+<p class="dark:text-white">Break language barriers with multi-language support, allowing your business to interact with customers from around the globe in their native language, making your website truly accessible to a worldwide audience.</p>
 
-
-</div>
-</div>
-<div class="lg:col-4 mr-auto   ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
-
-#### Robust Security
-
-Built with the highest security standards, Web Concierge ensures that all interactions and data handling meet strict privacy and compliance requirements, giving you and your customers peace of mind.
 
 </div>
 </div>
 <div class="lg:col-4 mr-auto   ">
-<div class="rounded-lg shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl grid place-content-center h-5/6 mb-5 p-5">
 
-#### Always Online
+<h4 class="dark:text-white"> Robust Security</h4>
 
-With Web Concierge, your business is never offline. Provide constant support, answering queries and resolving issues around the clock, even outside of traditional business hours.
+<p class="dark:text-white">Built with the highest security standards, Web Concierge ensures that all interactions and data handling meet strict privacy and compliance requirements, giving you and your customers peace of mind.</p>
+
+</div>
+</div>
+<div class="lg:col-4 mr-auto   ">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl grid place-content-center h-5/6 mb-5 p-5">
+
+<h4 class="dark:text-white"> Always Online</h4>
+
+<p class="dark:text-white">With Web Concierge, your business is never offline. Provide constant support, answering queries and resolving issues around the clock, even outside of traditional business hours.</p>
 
 </div>
 </div>
@@ -90,7 +90,7 @@ With Web Concierge, your business is never offline. Provide constant support, an
 </div>
 </section>
  <section
-      class="section-sm my-10 p-0 pb-5 bg-cover bg-center overlay rounded-lg after:bg-primary/60 bg-no-repeat"
+      class="section-sm my-10 p-0 pb-5 bg-cover bg-center overlay rounded-lg dark:bg-[#222C40] after:bg-primary/60 bg-no-repeat"
       style="background: url(/images/background/cta.jpg) no-repeat center;
     background-size: cover;"
     >
@@ -111,18 +111,18 @@ Get Started with DocuSage Today
       </div>
     </section>
 
-### Benefits
+<h3 class="dark:text-white py-10 text-center">Benefits</h3>
 
-- <b>Enhanced Customer Experience:</b> Provide timely and relevant responses that meet customers’ needs, dramatically improving the overall user experience on your site.
+- <p class="dark:text-white"><b>Enhanced Customer Experience:</b> Provide timely and relevant responses that meet customers’ needs, dramatically improving the overall user experience on your site.</p>
 
-- <b>Increased Engagement:</b> Keep your customers engaged with dynamic and interactive conversations that drive longer visits and repeated interactions.
+- <p class="dark:text-white"><b>Increased Engagement:</b> Keep your customers engaged with dynamic and interactive conversations that drive longer visits and repeated interactions.</p>
 
-- <b>Higher Conversion Rates:</b> Convert more visitors into customers by addressing their concerns in real-time, directly impacting sales positively.
+- <p class="dark:text-white"><b>Higher Conversion Rates:</b> Convert more visitors into customers by addressing their concerns in real-time, directly impacting sales positively.</p>
 
-- <b>Reduced Operational Costs:</b> Automate responses to common inquiries, allowing your team to focus on more complex issues and strategic tasks.
+- <p class="dark:text-white"><b>Reduced Operational Costs:</b> Automate responses to common inquiries, allowing your team to focus on more complex issues and strategic tasks.</p>
 
 
-### We are Exceptional
+<h3 class="dark:text-white py-10 text-center"> We are Exceptional </h3>
 
 <section class="py-1 bg-blueGray-50">
 <div class="w-full xl:w-12/12 mb-12 xl:mb-0 px-4 mx-auto">

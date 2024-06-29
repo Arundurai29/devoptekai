@@ -111,44 +111,44 @@ funfacts:
 ---
 
 <section class="section">
-<h2 class="text-center text-black md:text-4xl text-2xl m-0 md:pb-16 pb-8" id="use-cases">Addressing HR Challenges with AI Solutions
+<h2 class="text-center text-black dark:text-white md:text-4xl text-2xl m-0 md:pb-16 pb-8" id="use-cases">Addressing HR Challenges with AI Solutions
 </h2>
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-4 mb-5 ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-full p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-full p-5">
 
-<h3 class="text-xl text-black">Screening Candidates Based on Job Descriptions
+<h3 class="text-xl text-black dark:text-white">Screening Candidates Based on Job Descriptions
 </h3>
 
-<b>AI-Driven Matching Algorithms:</b> Our AI tools analyze job descriptions and candidate profiles to ensure the best match, reducing the time spent on screening.
+<p class="dark:text-white"><b>AI-Driven Matching Algorithms:</b> Our AI tools analyze job descriptions and candidate profiles to ensure the best match, reducing the time spent on screening.</p>
 
-<b>Efficient Filtering and Ranking:</b>  Automatically rank candidates based on their fit with the job requirements, ensuring you focus on the top prospects.
+<p class="dark:text-white"><b>Efficient Filtering and Ranking:</b>  Automatically rank candidates based on their fit with the job requirements, ensuring you focus on the top prospects.</p>
 
 </div>
 </div>
 <div class="lg:col-4 mb-5 ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-full p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-full p-5">
 
-<h3 class="text-xl text-black">Optimizing Interview Processes
+<h3 class="text-xl text-black dark:text-white">Optimizing Interview Processes
 </h3>
 
-<b>Automated Interview Scheduling:</b> Use AI to coordinate interview schedules, send reminders, and reduce no-shows.
+<p class="dark:text-white"><b>Automated Interview Scheduling:</b> Use AI to coordinate interview schedules, send reminders, and reduce no-shows.</p>
 
-<b>Performance Analysis:</b> AI tools can analyze interview transcripts or recordings to provide insights into candidate responses, helping you make data-driven hiring decisions.
+<p class="dark:text-white"><b>Performance Analysis:</b> AI tools can analyze interview transcripts or recordings to provide insights into candidate responses, helping you make data-driven hiring decisions.</p>
 
 
 </div>
 </div>
 <div class="lg:col-4 mb-5 ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-full p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-full p-5">
 
-<h3 class="text-xl text-black">Employee Turnover
+<h3 class="text-xl text-black dark:text-white">Employee Turnover
 </h3>
 
-<b>Predictive Analytics:</b> Use AI to identify employees who may be at risk of leaving and understand the factors contributing to turnover.
+<p class="dark:text-white"><b>Predictive Analytics:</b> Use AI to identify employees who may be at risk of leaving and understand the factors contributing to turnover.</p>
 
-<b>Retention Strategies:</b> Develop personalized retention plans based on AI insights to improve employee satisfaction and reduce turnover rates.
+<p class="dark:text-white"><b>Retention Strategies:</b> Develop personalized retention plans based on AI insights to improve employee satisfaction and reduce turnover rates.</p>
 
 
 </div>
@@ -156,39 +156,39 @@ funfacts:
 
 
 <div class="lg:col-4 ml-auto  mb-5 ">
-<div class="rounded-lg sol_card shadow-xl grid place-content-center h-full p-5">
+<div class="rounded-lg dark:bg-[#222C40] sol_card shadow-xl grid place-content-center h-full p-5">
 
-<h3 class="text-xl text-black">Workforce Planning
+<h3 class="text-xl text-black dark:text-white">Workforce Planning
 </h3>
 
-<b>Forecasting Trends:</b> AI can predict workforce trends based on historical data, helping you anticipate hiring needs and plan accordingly.
+<p class="dark:text-white"><b>Forecasting Trends:</b> AI can predict workforce trends based on historical data, helping you anticipate hiring needs and plan accordingly.</p>
 
-<b>Strategic Alignment:</b> Align your HR strategies with business objectives using AI-driven insights for better decision-making.
+<p class="dark:text-white"><b>Strategic Alignment:</b> Align your HR strategies with business objectives using AI-driven insights for better decision-making.</p>
 
 </div>
 </div>
 <div class="lg:col-4 ml-auto mb-5  ">
-<div class="rounded-lg shadow-xl sol_card grid place-content-center h-full p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl sol_card grid place-content-center h-full p-5">
 
-<h3 class="text-xl text-black"> Training and Development
+<h3 class="text-xl text-black dark:text-white"> Training and Development
 </h3>
 
-<b>Personalized Learning Paths:</b> AI assesses employee skills and recommends tailored training programs to address skill gaps.
+<p class="dark:text-white"><b>Personalized Learning Paths:</b> AI assesses employee skills and recommends tailored training programs to address skill gaps.</p>
 
-<b>Continuous Development:</b> Ensure ongoing skill enhancement with AI-driven learning modules that adapt to individual progress and feedback.
+<p class="dark:text-white"><b>Continuous Development:</b> Ensure ongoing skill enhancement with AI-driven learning modules that adapt to individual progress and feedback.</p>
 
 
 </div>
 </div>
 <div class="lg:col-4 ml-auto  mb-5 ">
-<div class="rounded-lg shadow-xl sol_card grid place-content-center h-full p-5">
+<div class="rounded-lg dark:bg-[#222C40] shadow-xl sol_card grid place-content-center h-full p-5">
 
-<h3 class="text-xl text-black">Enhancing Employee Engagement
+<h3 class="text-xl text-black dark:text-white">Enhancing Employee Engagement
 </h3>
 
-<b>Real-Time Feedback:</b> AI tools facilitate continuous feedback loops between employees and managers, fostering a culture of open communication and improvement.
+<p class="dark:text-white"><b>Real-Time Feedback:</b> AI tools facilitate continuous feedback loops between employees and managers, fostering a culture of open communication and improvement.</p>
 
-<b>Recognition Programs:</b> Implement AI-driven recognition systems that personalize rewards and acknowledgments, boosting employee morale and engagement.
+<p class="dark:text-white"><b>Recognition Programs:</b> Implement AI-driven recognition systems that personalize rewards and acknowledgments, boosting employee morale and engagement.</p>
 
 
 </div>

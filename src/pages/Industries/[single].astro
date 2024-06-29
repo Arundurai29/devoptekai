@@ -96,9 +96,9 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
 
   {
     clients_logo_slider?.enable && (
-      <section class="bg-white py-24" style="padding-bottom: 0 !important;" >
+      <section class="bg-white dark:bg-[#07031E] py-24" style="padding-bottom: 0 !important;" >
         <div class="container">
-          <h2 class="text-center text-2xl md:text-4xl ">
+          <h2 class="text-center dark:text-white text-2xl md:text-4xl ">
             Trusted by Leading Innovators in Manufacturing
           </h2>
           <div class="client-logo-slider swiper self-center">
@@ -148,7 +148,7 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
 {
   funfacts?.enable && (
     <section
-      class=" mt-20  ">
+      class=" pt-20 dark:bg-[#07031E] ">
       <div class="container z-10 relative">
         <div class="row gy-4 py-10 justify-between rounded-md after:rounded-md overlay after:bg-opacity-80 bg-cover bg-no-repeat" style={{ backgroundImage: `url(${funfactsBgImage})` }}>
           {funfacts.counter &&
@@ -179,7 +179,7 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
   )
 }
 
-<section class="">
+<section class=" dark:bg-[#07031E]">
     <div class="container">
       <div class="row gy-4">
         <article class="lg:col-12 lg:order-2 order-1">
@@ -206,8 +206,8 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
   
   {
     banner_slider?.enable && (
-      <section class="md:py-0 py-4">
-        <h2 set:text={feature} class="text-center text-black text-2xl md:text-4xl pb-16" />
+      <section class="md:py-0 py-4 dark:bg-[#07031E]">
+        <h2 set:text={feature} class="text-center dark:text-white text-black text-2xl md:text-4xl pb-16" />
         <div class="container overlay-content">
           <div class="row">
             <div class="md:col-6">
@@ -220,12 +220,12 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
               />
             </div>
             <div class="md:col-6 grid place-content-center ">
-              <h3 class="text-start text-black text-2xl py-4" set:text={banner_slider.title} />
-              <p set:text={banner_slider.content} class="pb-4" />
+              <h3 class="text-start dark:text-white text-black text-2xl py-4" set:text={banner_slider.title} />
+              <p set:text={banner_slider.content} class="pb-4 dark:text-white" />
               {banner_slider.bulletPoint && (
               <ul class=" space-y-2 m-0 md:mb-6">
                 {banner_slider.bulletPoint.map((point: string) => (
-                  <li class="text-black" set:html={markdownify(point)}>
+                  <li class="text-black dark:text-white" set:html={markdownify(point)}>
                     <DynamicIcon
                       className="inline-block text-primary me-2"
                       icon="TfiArrowCircleRight"
@@ -243,17 +243,17 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
 
 {
   banner_slider1?.enable && (
-    <section class="md:py-8 p-0 ">
+    <section class="md:py-8 p-0 dark:bg-[#07031E]">
       <div class="container overlay-content">
         <div class="row">
           
           <div class="md:col-6 grid place-content-center">
-            <h3 class="text-start text-black text-2xl pb-4" set:text={banner_slider1.title} />
-            <p set:text={banner_slider1.content} class="pb-4" />
+            <h3 class="text-start text-black dark:text-white text-2xl pb-4" set:text={banner_slider1.title} />
+            <p set:text={banner_slider1.content} class="pb-4 dark:text-white" />
             {banner_slider1.bulletPoint && (
             <ul class=" space-y-2 mb-6">
               {banner_slider1.bulletPoint.map((point: string) => (
-                <li class="text-black" set:html={markdownify(point)}>
+                <li class="text-black dark:text-white" set:html={markdownify(point)}>
                   <DynamicIcon
                     className="inline-block text-primary me-2"
                     icon="TfiArrowCircleRight"
@@ -280,7 +280,7 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
 
 {
   banner_slider2?.enable && (
-    <section class="py-8 ">
+    <section class="py-8 dark:bg-[#07031E]">
       <div class="container overlay-content">
         <div class="row md:flex-row  flex-col-reverse">
           <div class="md:col-6">
@@ -293,12 +293,12 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
             />
           </div>
           <div class="md:col-6 grid place-content-center">
-            <h3 class="text-start text-black text-2xl py-4" set:text={banner_slider2.title} />
-            <p set:text={banner_slider2.content} class="pb-4" />
+            <h3 class="text-start dark:text-white text-black text-2xl py-4" set:text={banner_slider2.title} />
+            <p set:text={banner_slider2.content} class="pb-4 dark:text-white " />
             {banner_slider2.bulletPoint && (
             <ul class=" space-y-2 mb-6">
               {banner_slider2.bulletPoint.map((point: string) => (
-                <li class="text-black" set:html={markdownify(point)}>
+                <li class="text-black dark:text-white " set:html={markdownify(point)}>
                   <DynamicIcon
                     className="inline-block text-primary me-2"
                     icon="TfiArrowCircleRight"
@@ -316,17 +316,17 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
 
 {
   banner_slider3?.enable && (
-    <section class="md:py-8 p-0">
+    <section class="md:py-8 p-0 dark:bg-[#07031E]">
       <div class="container overlay-content">
         <div class="row">
           
           <div class="md:col-6 grid place-content-center">
-            <h3 class="text-start text-black text-2xl pb-4" set:text={banner_slider3.title} />
-            <p set:text={banner_slider3.content} class="pb-4" />
+            <h3 class="text-start dark:text-white text-black text-2xl pb-4" set:text={banner_slider3.title} />
+            <p set:text={banner_slider3.content} class="pb-4 dark:text-white" />
             {banner_slider3.bulletPoint && (
             <ul class=" space-y-2 mb-6">
               {banner_slider3.bulletPoint.map((point: string) => (
-                <li class="text-black" set:html={markdownify(point)}>
+                <li class="text-black dark:text-white" set:html={markdownify(point)}>
                   <DynamicIcon
                     className="inline-block text-primary me-2"
                     icon="TfiArrowCircleRight"
@@ -353,7 +353,7 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
 
 {
   banner_slider4?.enable && (
-    <section class="py-8  ">
+    <section class="py-8 pb-20 dark:bg-[#07031E] ">
       <div class="container overlay-content">
         <div class="row md:flex-row  flex-col-reverse">
           <div class="md:col-6">
@@ -366,12 +366,12 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
             />
           </div>
           <div class="md:col-6 grid place-content-center">
-            <h3 class="text-start text-black text-2xl py-4" set:text={banner_slider4.title} />
-            <p set:text={banner_slider4.content} class="pb-4" />
+            <h3 class="text-start dark:text-white text-black text-2xl py-4" set:text={banner_slider4.title} />
+            <p set:text={banner_slider4.content} class="pb-4 dark:text-white" />
             {banner_slider4.bulletPoint && (
             <ul class=" space-y-2 mb-6">
               {banner_slider4.bulletPoint.map((point: string) => (
-                <li class="text-black" set:html={markdownify(point)}>
+                <li class="text-black dark:text-white" set:html={markdownify(point)}>
                   <DynamicIcon
                     className="inline-block text-primary me-2"
                     icon="TfiArrowCircleRight"
@@ -391,7 +391,7 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
   
     {
       offgrid?.enable && (
-        <section class="py-8 ">
+        <section class="py-8 dark:bg-[#07031E]">
  <h2 class="text-center text-black text-2xl md:text-4xl py-5" set:text={offgrid.title} />
            <div class="container overlay-content">
             <div class="row ">
@@ -420,7 +420,7 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
 {
       cta?.enable && (
 <section
-      class="section-sm mt-16 p-10 bg-cover bg-center overlay rounded-lg after:bg-primary/60 bg-no-repeat"
+      class="section-sm p-10 bg-cover bg-center overlay rounded-lg after:bg-primary/60 bg-no-repeat"
       style="background: url(/images/background/cta.jpg) no-repeat center;
     background-size: cover;"
     >
@@ -443,13 +443,148 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
 }
     {testimonial?.enable && <Testimonial content={testimonialContent} />}
 
-    <section class="section">
+    <section class="section bg-white dark:bg-[#07031E]">
       <div class="container">
         <div class="row">
           <div class="lg:col-5 md:col-5 grid place-content-center">
-            <h2 class="h2 mb-8" set:html="Contact Us" />
-  
-           <ul class="pl-0" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="42:32"> <li class="flex mb-8" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="47:43"> <span class="mr-4 TfiMobile h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="51:247"> <span class="sr-only" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="52:26">mobile</span> <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 17 17" class="inline-block" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g></g><path d="M12.5 0h-8c-0.827 0-1.5 0.673-1.5 1.5v14c0 0.827 0.673 1.5 1.5 1.5h8c0.827 0 1.5-0.673 1.5-1.5v-14c0-0.827-0.673-1.5-1.5-1.5zM4.5 1h8c0.276 0 0.5 0.224 0.5 0.5v1.5h-9v-1.5c0-0.276 0.224-0.5 0.5-0.5zM13 4v8h-9v-8h9zM12.5 16h-8c-0.276 0-0.5-0.224-0.5-0.5v-2.5h9v2.5c0 0.276-0.224 0.5-0.5 0.5zM9 14.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5 0.224-0.5 0.5-0.5 0.5 0.224 0.5 0.5z"></path></svg> </span> <div class="self-center font-primary" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="55:61"> <div class="text-dark" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="56:26">+1 (226)&nbsp;246-7055</div> </div> </li><li class="flex mb-8" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="47:43"> <span class="mr-4 TfiEmail h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="51:247"> <span class="sr-only" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="52:26">mail</span> <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 17 17" class="inline-block" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g></g><path d="M0 2v13h17v-13h-17zM8.494 9.817l-6.896-6.817h13.82l-6.924 6.817zM5.755 8.516l-4.755 4.682v-9.383l4.755 4.701zM6.466 9.219l2.026 2.003 1.996-1.966 4.8 4.744h-13.677l4.855-4.781zM11.201 8.555l4.799-4.725v9.467l-4.799-4.742z"></path></svg> </span> <div class="self-center font-primary" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="55:61"> <div class="text-dark" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="56:26"><a href="mailto:admin@devoptek.ai">admin@devoptek.ai</a></div> </div> </li><li class="flex mb-8" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="47:43"> <span class="mr-4 TfiMapAlt h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="51:247"> <span class="sr-only" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="52:26">location</span> <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 17 17" class="inline-block" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g></g><path d="M15 4v0.069l-0.013-0.058-1.015 0.221c-0.139-1.803-1.634-3.232-3.472-3.232-1.841 0-3.339 1.435-3.474 3.242l-1.026-0.223v-0.019h-6v11h5.348l5.196 1.479 5.456-1.605v-10.874h-1zM10.5 2c1.379 0 2.5 1.122 2.5 2.5 0 1.806-1.719 4.209-2.5 5.207-0.781-0.998-2.5-3.401-2.5-5.207 0-1.378 1.121-2.5 2.5-2.5zM6 5.042l1.081 0.235c0.412 2.269 2.406 4.788 2.919 5.406v4.602l-4-1.139v-9.104zM1 5h4v9.017l-4-0.017v-9zM11 15.303v-4.621c0.514-0.619 2.513-3.145 2.921-5.416l1.079-0.234v9.094l-4 1.177zM11.858 4.583c0-0.749-0.609-1.358-1.358-1.358s-1.358 0.609-1.358 1.358 0.609 1.359 1.358 1.359 1.358-0.609 1.358-1.359zM10.142 4.583c0-0.198 0.161-0.358 0.358-0.358s0.358 0.161 0.358 0.358-0.161 0.359-0.358 0.359-0.358-0.161-0.358-0.359z"></path></svg> </span> <div class="self-center font-primary" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="55:61"> <div class="text-dark" data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro" data-astro-source-loc="56:26">67, Zieman Crescent, Cambridge, ON</div> </div> </li> </ul>
+            <h2 class="h2 mb-8 dark:text-white" set:html="Contact Us" />
+
+            <ul
+              class="pl-0"
+              data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+              data-astro-source-loc="42:32"
+            >
+              <li
+                class="flex mb-8 dark:text-white"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="47:43"
+              >
+                <span
+                  class="mr-4 TfiMobile h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="51:247"
+                >
+                  <span
+                    class="sr-only"
+                    data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                    data-astro-source-loc="52:26">mobile</span
+                  >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    version="1.1"
+                    viewBox="0 0 17 17"
+                    class="inline-block"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><g></g><path
+                      d="M12.5 0h-8c-0.827 0-1.5 0.673-1.5 1.5v14c0 0.827 0.673 1.5 1.5 1.5h8c0.827 0 1.5-0.673 1.5-1.5v-14c0-0.827-0.673-1.5-1.5-1.5zM4.5 1h8c0.276 0 0.5 0.224 0.5 0.5v1.5h-9v-1.5c0-0.276 0.224-0.5 0.5-0.5zM13 4v8h-9v-8h9zM12.5 16h-8c-0.276 0-0.5-0.224-0.5-0.5v-2.5h9v2.5c0 0.276-0.224 0.5-0.5 0.5zM9 14.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5 0.224-0.5 0.5-0.5 0.5 0.224 0.5 0.5z"
+                    ></path></svg
+                  >
+                </span>
+                <div
+                  class="self-center font-primary"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="55:61"
+                >
+                  <div
+                    class="text-dark dark:text-white"
+                    data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                    data-astro-source-loc="56:26"
+                  >
+                    +1 (226)&nbsp;246-7055
+                  </div>
+                </div>
+              </li><li
+                class="flex mb-8"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="47:43"
+              >
+                <span
+                  class="mr-4 TfiEmail h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="51:247"
+                >
+                  <span
+                    class="sr-only"
+                    data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                    data-astro-source-loc="52:26">mail</span
+                  >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    version="1.1"
+                    viewBox="0 0 17 17"
+                    class="inline-block"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><g></g><path
+                      d="M0 2v13h17v-13h-17zM8.494 9.817l-6.896-6.817h13.82l-6.924 6.817zM5.755 8.516l-4.755 4.682v-9.383l4.755 4.701zM6.466 9.219l2.026 2.003 1.996-1.966 4.8 4.744h-13.677l4.855-4.781zM11.201 8.555l4.799-4.725v9.467l-4.799-4.742z"
+                    ></path></svg
+                  >
+                </span>
+                <div
+                  class="self-center font-primary"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="55:61"
+                >
+                  <div
+                    class="text-dark dark:text-white"
+                    data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                    data-astro-source-loc="56:26"
+                  >
+                    <a href="mailto:admin@devoptek.ai">admin@devoptek.ai</a>
+                  </div>
+                </div>
+              </li><li
+                class="flex mb-8"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="47:43"
+              >
+                <span
+                  class="mr-4 TfiMapAlt h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="51:247"
+                >
+                  <span
+                    class="sr-only"
+                    data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                    data-astro-source-loc="52:26">location</span
+                  >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    version="1.1"
+                    viewBox="0 0 17 17"
+                    class="inline-block"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    ><g></g><path
+                      d="M15 4v0.069l-0.013-0.058-1.015 0.221c-0.139-1.803-1.634-3.232-3.472-3.232-1.841 0-3.339 1.435-3.474 3.242l-1.026-0.223v-0.019h-6v11h5.348l5.196 1.479 5.456-1.605v-10.874h-1zM10.5 2c1.379 0 2.5 1.122 2.5 2.5 0 1.806-1.719 4.209-2.5 5.207-0.781-0.998-2.5-3.401-2.5-5.207 0-1.378 1.121-2.5 2.5-2.5zM6 5.042l1.081 0.235c0.412 2.269 2.406 4.788 2.919 5.406v4.602l-4-1.139v-9.104zM1 5h4v9.017l-4-0.017v-9zM11 15.303v-4.621c0.514-0.619 2.513-3.145 2.921-5.416l1.079-0.234v9.094l-4 1.177zM11.858 4.583c0-0.749-0.609-1.358-1.358-1.358s-1.358 0.609-1.358 1.358 0.609 1.359 1.358 1.359 1.358-0.609 1.358-1.359zM10.142 4.583c0-0.198 0.161-0.358 0.358-0.358s0.358 0.161 0.358 0.358-0.161 0.359-0.358 0.359-0.358-0.161-0.358-0.359z"
+                    ></path></svg
+                  >
+                </span>
+                <div
+                  class="self-center font-primary"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="55:61"
+                >
+                  <div
+                    class="text-dark dark:text-white"
+                    data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                    data-astro-source-loc="56:26"
+                  >
+                    67, Zieman Crescent, Cambridge, ON
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
           <div class="lg:col-7 md:col-7">
             <div class="p-5 md:p-10 rounded shadow">
@@ -494,7 +629,7 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
                     required
                   />
                 </div>
-                
+
                 <div class="lg:col-12">
                   <textarea
                     class="form-input"
