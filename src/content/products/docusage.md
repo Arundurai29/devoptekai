@@ -16,16 +16,33 @@ accordion:
 
   - title: Fully Customizable
     description: Import from multiple datasource, google drive, s3, confluence, pdfs, images, One Note, and so on. You can also integrate with your existing tools e.g. slack, teams, whatsapp
+
+################################ clints logo slider ################################
+clients_logo_slider:
+  enable: true
+  clientLogos:
+    - logo: "/images/client-logo/aimco.png"
+      link: "https://example.com"
+
+    - logo: "/images/client-logo/cloudy.png"
+      link: https://example.com
+
+    - logo: "/images/client-logo/cookd.png"
+      link: "https://example.com"
+
+    - logo: "/images/client-logo/beyond.png"
+      link: https://example.com
 ---
 
-<p class="dark:text-white">Introducing a cutting-edge document interaction AI bot powered by RagWorks (Highly customizable Retrieval-Augmented Generation) that offers a transformative solution for automating and enhancing document-related tasks. This advanced AI bot leverages the power of RAG to pull relevant information from a vast database, ensuring that the content it generates is not only accurate but also richly informed by the most relevant data available.</p>
+<p class="dark:text-white pt-10">Introducing a cutting-edge document interaction AI bot powered by RagWorks (Highly customizable Retrieval-Augmented Generation) that offers a transformative solution for automating and enhancing document-related tasks. This advanced AI bot leverages the power of RAG to pull relevant information from a vast database, ensuring that the content it generates is not only accurate but also richly informed by the most relevant data available.</p>
 
 <p class="dark:text-white">For customers, this integration of RAG technology into the document generation process presents numerous benefits. First and foremost, it significantly boosts efficiency by automating the creation of complex documents, from reports to contracts, saving valuable time and reducing manual effort. Additionally, the AI's ability to retrieve and utilise precise information enhances the quality and reliability of the documents produced, ensuring they meet specific requirements and standards.</p>
 
 <p class="dark:text-white">Moreover, this AI-driven approach minimises errors and inconsistencies often associated with manual document creation. It also adapts to the evolving needs of businesses by continuously learning from new data, which means the quality of document generation improves over time.</p>
 
+<h2 class="dark:text-white py-10 text-center"> Features</h2>
 
-<section class="mt-10">
+<section class="">
 <div class="container overlay-content">
 <div class="row">
 <div class="lg:col-4 mr-auto grid place-content-center  ">

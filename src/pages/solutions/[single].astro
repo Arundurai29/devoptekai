@@ -1,4 +1,5 @@
 ---
+
 import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
@@ -13,23 +14,23 @@ import config from "@/config/config.json";
 import TextCounter from "@/components/TextCounter.astro";
 
 interface Props {
-  industries: CollectionEntry<"Industries">;
+  industries: CollectionEntry<"solutions">;
 }
 
 interface Props {
   class?: string;
   content: TestimonialType;
 }
-const COLLECTION_FOLDER = "Industries";
+const COLLECTION_FOLDER = "solutions";
 export async function getStaticPaths() {
-  const COLLECTION_FOLDER = "Industries";
-  const industriessCollection = await getSinglePage(COLLECTION_FOLDER);
+  const COLLECTION_FOLDER = "solutions";
+  const solutionssCollection = await getSinglePage(COLLECTION_FOLDER);
 
-  const paths = industriessCollection.map((industries) => ({
+  const paths = solutionssCollection.map((solutions) => ({
     params: {
-      single: industries.slug,
+      single: solutions.slug,
     },
-    props: { industries },
+    props: { solutions },
   }));
   return paths;
 }
@@ -47,7 +48,7 @@ const testimonialContent = (await getEntry("sections", "testimonial"))
   content: string;
 }
 
-const { industries } = Astro.props;
+const { solutions } = Astro.props;
 const {
   body,
   render,
@@ -74,11 +75,11 @@ const {
     funfacts,
     cta
   },
-} = industries;
+} = solutions;
 
 
 const { Content } = await render();
-const industriessCollection = await getSinglePage(COLLECTION_FOLDER);
+const solutionssCollection = await getSinglePage(COLLECTION_FOLDER);
 const aboutBgImage = await bgImageMod(about?.bg_image!);
 const { contact_form_action }: { contact_form_action: string } = config.params;
 const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);

@@ -15,10 +15,26 @@ accordion:
     description: Ask in your own language. Chat summarization can be forwarded to your sales/marketing teams.
   - title: Response with citation
     description: AI will be retrained automatically on your website changes and AI will answer with the accurate citation on your website.
----
-<p class="dark:text-white">Web Concierge revolutionises online customer interactions with its cutting-edge website bot, powered by RagWorks technology. Designed for businesses aiming to enhance their customer service, boost engagement, and drive conversions, Web Concierge is the smart solution that delivers precise, context-aware responses in real-time.</p>
 
-<h3 class="dark:text-white py-10 text-center"> Features</h3>
+################################ clints logo slider ################################
+clients_logo_slider:
+  enable: true
+  clientLogos:
+    - logo: "/images/client-logo/aimco.png"
+      link: "https://example.com"
+
+    - logo: "/images/client-logo/cloudy.png"
+      link: https://example.com
+
+    - logo: "/images/client-logo/cookd.png"
+      link: "https://example.com"
+
+    - logo: "/images/client-logo/beyond.png"
+      link: https://example.com
+---
+<p class="dark:text-white pt-10">Web Concierge revolutionises online customer interactions with its cutting-edge website bot, powered by RagWorks technology. Designed for businesses aiming to enhance their customer service, boost engagement, and drive conversions, Web Concierge is the smart solution that delivers precise, context-aware responses in real-time.</p>
+
+<h2 class="dark:text-white py-10 text-center"> Features</h2>
 
 <section class="mt-10">
 <div class="container overlay-content">

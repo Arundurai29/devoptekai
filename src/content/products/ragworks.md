@@ -36,19 +36,35 @@ list:
 # half_day: Thursday
 # half_time: 08.00am - 01.00pm
 # off_day: Friday
+################################ clints logo slider ################################
+clients_logo_slider:
+  enable: true
+  clientLogos:
+    - logo: "/images/client-logo/aimco.png"
+      link: "https://example.com"
+
+    - logo: "/images/client-logo/cloudy.png"
+      link: https://example.com
+
+    - logo: "/images/client-logo/cookd.png"
+      link: "https://example.com"
+
+    - logo: "/images/client-logo/beyond.png"
+      link: https://example.com
 ---
 
 <p class="dark:text-white">RAGWorks is a versatile and powerful platform designed to revolutionise the way businesses utilise AI for content generation. Here’s a deeper look into what makes RAGWorks a standout product</p>
 
 <section>
 <div class="container overlay-content">
+<h2 class="text-center mt-10 mb-10">Features</h2>
 <div class="row flex flex-col-reverse sm:flex-row">
 <div class="lg:col-6 ml-auto h-3/6">
    <img class="w-full object-cover rounded-lg h-3/6" src="/images/service/service-1.jpg" />
 </div>
 <div class="lg:col-6 mr-auto grid place-content-center">
 
-<h4 class="dark:text-white"> Plug-and-Play Architecture</h4>
+<h3 class="dark:text-white"> Plug-and-Play Architecture</h3>
 
 <p class="dark:text-white">RAGWorks features a modular design that enables users to easily add or swap out different components or "layers." This flexibility allows for customization to fit specific use cases, whether it's tweaking the retrieval mechanics or refining the generative models. Users can tailor the system to optimise performance, relevance, and accuracy specific to their requirements.</p>
 
@@ -63,7 +79,7 @@ list:
 
 <div class="lg:col-6 mr-auto grid place-content-center">
 
-<h4 class="dark:text-white"> Cross-Platform Compatibility</h4>
+<h3 class="dark:text-white"> Cross-Platform Compatibility</h3>
 
 <p class="dark:text-white">One of the key strengths of RAGWorks is its compatibility with both on-premises and cloud-based environments. This dual compatibility ensures that businesses can deploy the solution in a manner that aligns with their IT strategies and data governance policies. Whether you have strict data security requirements that necessitate on-premises deployment or prefer the scalability of cloud services, RAGWorks accommodates both.</p>
 
@@ -84,7 +100,7 @@ list:
 </div>
 <div class="lg:col-6 mr-auto grid place-content-center">
 
-<h4 class="dark:text-white"> Advanced Retrieval-Augmented Generation Technology</h4>
+<h3 class="dark:text-white"> Advanced Retrieval-Augmented Generation Technology</h3>
 
 <p class="dark:text-white">At its core, RAGWorks utilises advanced RAG technology to enhance AI-generated content. By leveraging vast repositories of information, the system efficiently retrieves relevant data before using state-of-the-art generative techniques to produce contextually accurate and precise responses. This process not only improves the quality of the output but also significantly enhances the relevance of the responses to user queries.</p>
 
@@ -102,7 +118,7 @@ list:
 
 <div class="lg:col-6 mr-auto grid place-content-center">
 
-<h4 class="dark:text-white"> Managed Services</h4>
+<h3 class="dark:text-white"> Managed Services</h3>
 
 <p class="dark:text-white">RAGWorks is supported by comprehensive managed services offered by DevopTek AI. These services include continuous updates, system maintenance, and security management, ensuring that the platform remains reliable and secure at all times. This support extends the platform's capabilities and ensures it operates at peak efficiency, freeing up businesses to focus more on their core operations and less on technical complexities.</p>
 
@@ -124,7 +140,7 @@ list:
 </div>
 <div class="lg:col-6 mr-auto grid place-content-center">
 
-<h4 class="dark:text-white"> Scalability and Security</h4>
+<h3 class="dark:text-white"> Scalability and Security</h3>
 
 <p class="dark:text-white">The platform is built to scale with your business needs, easily handling increasing volumes of data and interactions without compromising on performance. Security is a paramount concern, with robust measures in place to protect sensitive information and ensure compliance with data protection regulations.</p>
 
@@ -143,13 +159,16 @@ list:
 .breadcrumb li:nth-child(2){
   display:none;
 }
+.order-1{
+  
+}
 </style>
 
  <div class="md:flex gap-10 grid justify-between pt-3" >
 
 <ul class="list-content dark:bg-[#222C40] p-10 my-4 rounded-lg shadow-xl">
 
-<h4 class="dark:text-white"># Supported Embedding Models
+<h3 class="dark:text-white text-xl"># Supported Embedding Models</h3>
 
 <li class="dark:text-white"> Open AI</li>
 <li class="dark:text-white"> Azure OpenAI</li>
@@ -162,7 +181,7 @@ list:
 
 <ul class="list-content dark:bg-[#222C40] p-10 my-4 rounded-lg shadow-xl">
 
-<h4 class="dark:text-white"># Supported Embedding Models
+<h3 class="dark:text-white text-xl"># Supported Embedding Models</h3>
 
 <li class="dark:text-white"> Qdrant </li>
 <li class="dark:text-white"> LanceDB</li>
@@ -176,7 +195,7 @@ list:
 
 <ul class="list-content dark:bg-[#222C40] p-10 my-4 rounded-lg shadow-xl" >
 
-<h4 class="dark:text-white"># Supported Embedding Models
+<h3 class="dark:text-white text-xl"># Supported Embedding Models</h3>
 
 <li class="dark:text-white"> OpenAI </li>
 <li class="dark:text-white"> Azure OpenAI</li>

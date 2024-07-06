@@ -34,26 +34,26 @@
       ]
     },
     {
-      "name": "Industries",
+      "name": "Solutions",
       "url": "",
       "hasChildren": true,
       "children": [
         
         {
-          "name": "Automotive",
-          "url": "/Industries/automotive"
+          "name": "AI Automotive",
+          "url": "/solutions/ai-automotive"
         },
         {
-          "name": "E-Commerce",
-          "url": "/Industries/e-commerce"
+          "name": "AI E-Commerce",
+          "url": "/solutions/ai-e-commerce"
         },
         {
-          "name": "HR Industry",
-          "url": "/Industries/hr-industry"
+          "name": "AI HR Industry",
+          "url": "/solutions/ai-hr-industry"
         },
         {
-          "name": "Manufacturing",
-          "url": "/Industries/manufacturing"
+          "name": "AI Manufacturing",
+          "url": "/solutions/ai-manufacturing"
         }
         
       ]

@@ -66,13 +66,21 @@ about:
     enable: true
     label: Explore More
     link: /about
-
+ 
 ##################################### Skill ##############################################
 our_expertise:
   enable: true
-  subtitle: Our Skills
-  title: Why Choose Us
-  content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt laboris nisi ut aliquip ex ea commodo consequat. <br><br> Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint ocaecat cupidatat non proident sunt culpa qui officia deserunt mollit anim id est laborum. sed perspiciatis unde omnisiste natus error sit voluptatem accusantium.doloremque ladantium totam rem aperieaque ipsa quae ab illo inventore.veritatis. et quasi architecto beatae vitae dicta sunt explicabo.
+  title:  Our Project Lifecycle
+  content: Provide a brief overview of the three-stage phases of the project lifecycle, highlighting the key activities and deliverables at each stage.
+  stages:
+     - title:  Planning and Strategy
+       content: Outline the initial steps of project planning and strategy development, including requirements gathering, goal setting, and roadmap creation.
+
+     - title:  Implementation and Development
+       content: Describe the development and implementation phase, including design, coding, testing, and deployment activities.
+       
+     - title:  Monitoring and Optimization
+       content: Explain the ongoing monitoring and optimization phase, focusing on performance tracking, feedback collection, and continuous improvement.
   # funfacts
   funfacts:
     - icon: TfiServer # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
@@ -153,4 +161,7 @@ clients_logo_slider:
 
     - logo: "/images/client-logo/beyond.png"
       link: https://example.com
+
+
+
 ---

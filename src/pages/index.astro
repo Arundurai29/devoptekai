@@ -15,6 +15,7 @@ import MissionVision1 from "@/partials/MissionVision1.astro";
 import ImageMod from "@/components/ImageMod.astro";
 import DynamicIcon from "@/helpers/DynamicIcon";
 import Swiper from 'swiper';
+import config from "@/config/config.json";
 
 import type {
   CallToActionType,
@@ -29,13 +30,15 @@ const missionVisionContent1 = (await getEntry("sections", "docusage"))
   .data as MissionVisionType;
   const missionVisionContent2 = (await getEntry("sections", "webconcierge"))
   .data as MissionVisionType;
+  const missionVisionContent3 = (await getEntry("sections", "offgridai"))
+  .data as MissionVisionType;
 const ourExpertiseContent = (await getEntry("sections", "our-expertise"))
   .data as OurExpertiseType;
 const callToActionContent = (await getEntry("sections", "call-to-action"))
   .data as CallToActionType;
 const testimonialContent = (await getEntry("sections", "testimonial"))
   .data as TestimonialType;
-
+  const { contact_form_action }: { contact_form_action: string } = config.params;
 const BLOG_FOLDER = "blog";
 const blogCollection = await getSinglePage(BLOG_FOLDER);
 const servicesCollection = await getSinglePage("services");
@@ -51,6 +54,7 @@ const {
     promo_video,
     our_expertise,
     blog,
+    lifecycle,
     testimonial,
     call_to_action,
     clients_logo_slider,
@@ -327,77 +331,11 @@ const isValidPath = (path: string) => {
       </section>
     )
   } -->
-  
-  {mission?.enable && <MissionVision content={missionVisionContent} />}
-  {mission?.enable && <MissionVision1 content={missionVisionContent1} />}
-  {mission?.enable && <MissionVision content={missionVisionContent2} />}
-
-
-  {
-    service?.enable && (
-      <section class="section pt-0 bg-white dark:bg-[#07031E]">
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-12 text-center mb-5">
-              {service.subtitle && (
-                <span
-                  class="text-lg text-text dark:text-white"
-                  set:html={markdownify(service.subtitle)}
-                />
-              )}
-              {service.title && <h2 class="text-dark dark:text-white" set:html={markdownify(service.title)} />}
-              <div class="separator" />
-            </div>
-            {servicesCollection.slice(0, 4).map((service) => {
-              return (
-                <div class="md:col-6 xl:col-3">
-                  <ServiceCard content={service} />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-{call_to_action?.enable && <CallToAction content={callToActionContent} />}
-
-  {testimonial?.enable && <Testimonial content={testimonialContent} />}
- 
-
-  <!-- {
-    blog?.enable && (
-      <section class="section bg-theme-light">
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-12 text-center mb-5">
-              {blog.subtitle && (
-                <span
-                  class="text-lg text-text"
-                  set:html={markdownify(blog.subtitle)}
-                />
-              )}
-              {blog.title && <h2 set:html={markdownify(blog.title)} />}
-              <div class="separator after:shadow-theme-light" />
-            </div>
-
-            {blogCollection.slice(0, 3).map((post) => {
-              return (
-                <div class="md:col-6 xl:col-4">
-                  <BlogCard content={post} />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-    )
-  } -->
 
   {
     clients_logo_slider?.enable && (
-      <section class="bg-white py-4">
+      <section class="bg-white dark:bg-[#07031E] pt-28">
+        <h2 class="text-center text-black dark:text-white"> Trusted by Industry Leaders</h2>
         <div class="container">
           <div class="client-logo-slider swiper self-center">
             <div class="swiper-wrapper lg:justify-center justify-left items-center">
@@ -440,6 +378,328 @@ const isValidPath = (path: string) => {
       </section>
     )
   }
+  
+
+  {
+    service?.enable && (
+      <section class="section pb-0 bg-white dark:bg-[#07031E]">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-12 text-center mb-5">
+              {service.subtitle && (
+                <span
+                  class="text-lg text-text dark:text-white"
+                  set:html={markdownify(service.subtitle)}
+                />
+              )}
+              {service.title && <h2 class="text-dark dark:text-white" set:html={markdownify(service.title)} />}
+              <div class="separator" />
+            </div>
+            {servicesCollection.slice(0, 4).map((service) => {
+              return (
+                <div class="md:col-6 xl:col-3">
+                  <ServiceCard content={service} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+{mission?.enable && <MissionVision content={missionVisionContent} />}
+{mission?.enable && <MissionVision1 content={missionVisionContent1} />}
+{mission?.enable && <MissionVision content={missionVisionContent2} />}
+{mission?.enable && <MissionVision1 content={missionVisionContent3} />}
+
+{call_to_action?.enable && <CallToAction content={callToActionContent} />}
+
+{
+  our_expertise?.enable && (
+    <section class="section pb-0 bg-white dark:bg-[#07031E]">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-12 text-center mb-5">
+            
+            {our_expertise.title && <h2 class="text-dark dark:text-white" set:html={markdownify(our_expertise.title)} />}
+            {our_expertise.content && <p class="text-dark dark:text-white" set:html={markdownify(our_expertise.content)} />}
+            <div class="separator" />
+          </div>
+
+        <div class="md:col-4 ">
+          <div class="shadow-md grid place-content-center h-full dark:bg-[#222C40] rounded-sm p-5">
+         <h3 class="text-dark text-2xl dark:text-white" >
+          Planning and Strategy
+         </h3>
+            <p class=" dark:text-white">
+              Outline the initial steps of project planning and strategy development, including requirements gathering, goal setting, and roadmap creation.
+            </p>
+          </div>
+      </div>
+      <div class="md:col-4">
+          <div class="shadow-md  dark:bg-[#222C40] rounded-sm p-5">
+         <h3 class="text-dark text-2xl dark:text-white" >
+          Implementation and Development
+         </h3>
+            <p class=" dark:text-white">
+              Describe the development and implementation phase, including design, coding, testing, and deployment activities.
+            </p>
+          </div>
+      </div>
+      <div class="md:col-4">
+          <div class="shadow-md h-full place-content-center dark:bg-[#222C40] rounded-sm p-5">
+         <h3 class="text-dark text-2xl dark:text-white" >
+          Monitoring and Optimization
+         </h3>
+            <p class=" dark:text-white">
+              Explain the ongoing monitoring and optimization phase, focusing on performance tracking, feedback collection, and continuous improvement.
+            </p>
+          </div>
+      </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+  {testimonial?.enable && <Testimonial content={testimonialContent} />}
+ 
+  <section class="section bg-white dark:bg-[#07031E]">
+    <div class="container">
+      <div class="row">
+        <div class="lg:col-5 md:col-5 grid place-content-center">
+          <h2 class="h2 mb-8 dark:text-white" set:html="Contact Us" />
+
+          <ul
+            class="pl-0"
+            data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+            data-astro-source-loc="42:32"
+          >
+            <li
+              class="flex mb-8 dark:text-white"
+              data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+              data-astro-source-loc="47:43"
+            >
+              <span
+                class="mr-4 TfiMobile h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="51:247"
+              >
+                <span
+                  class="sr-only"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="52:26">mobile</span
+                >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.1"
+                  viewBox="0 0 17 17"
+                  class="inline-block"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><g></g><path
+                    d="M12.5 0h-8c-0.827 0-1.5 0.673-1.5 1.5v14c0 0.827 0.673 1.5 1.5 1.5h8c0.827 0 1.5-0.673 1.5-1.5v-14c0-0.827-0.673-1.5-1.5-1.5zM4.5 1h8c0.276 0 0.5 0.224 0.5 0.5v1.5h-9v-1.5c0-0.276 0.224-0.5 0.5-0.5zM13 4v8h-9v-8h9zM12.5 16h-8c-0.276 0-0.5-0.224-0.5-0.5v-2.5h9v2.5c0 0.276-0.224 0.5-0.5 0.5zM9 14.5c0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5 0.224-0.5 0.5-0.5 0.5 0.224 0.5 0.5z"
+                  ></path></svg
+                >
+              </span>
+              <div
+                class="self-center font-primary"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="55:61"
+              >
+                <div
+                  class="text-dark dark:text-white"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="56:26"
+                >
+                  +1 (226)&nbsp;246-7055
+                </div>
+              </div>
+            </li><li
+              class="flex mb-8"
+              data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+              data-astro-source-loc="47:43"
+            >
+              <span
+                class="mr-4 TfiEmail h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="51:247"
+              >
+                <span
+                  class="sr-only"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="52:26">mail</span
+                >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.1"
+                  viewBox="0 0 17 17"
+                  class="inline-block"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><g></g><path
+                    d="M0 2v13h17v-13h-17zM8.494 9.817l-6.896-6.817h13.82l-6.924 6.817zM5.755 8.516l-4.755 4.682v-9.383l4.755 4.701zM6.466 9.219l2.026 2.003 1.996-1.966 4.8 4.744h-13.677l4.855-4.781zM11.201 8.555l4.799-4.725v9.467l-4.799-4.742z"
+                  ></path></svg
+                >
+              </span>
+              <div
+                class="self-center font-primary"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="55:61"
+              >
+                <div
+                  class="text-dark dark:text-white"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="56:26"
+                >
+                  <a href="mailto:admin@devoptek.ai">admin@devoptek.ai</a>
+                </div>
+              </div>
+            </li><li
+              class="flex mb-8"
+              data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+              data-astro-source-loc="47:43"
+            >
+              <span
+                class="mr-4 TfiMapAlt h-[50px] xl:h-[70px] min-w-[50px] max-w-[50px] xl:min-w-[70px] xl:max-w-[70px] border border-border text-center leading-[50px] xl:leading-[70px] text-2xl xl:text-2xl text-primary inline-block rounded-full border-solid"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="51:247"
+              >
+                <span
+                  class="sr-only"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="52:26">location</span
+                >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.1"
+                  viewBox="0 0 17 17"
+                  class="inline-block"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><g></g><path
+                    d="M15 4v0.069l-0.013-0.058-1.015 0.221c-0.139-1.803-1.634-3.232-3.472-3.232-1.841 0-3.339 1.435-3.474 3.242l-1.026-0.223v-0.019h-6v11h5.348l5.196 1.479 5.456-1.605v-10.874h-1zM10.5 2c1.379 0 2.5 1.122 2.5 2.5 0 1.806-1.719 4.209-2.5 5.207-0.781-0.998-2.5-3.401-2.5-5.207 0-1.378 1.121-2.5 2.5-2.5zM6 5.042l1.081 0.235c0.412 2.269 2.406 4.788 2.919 5.406v4.602l-4-1.139v-9.104zM1 5h4v9.017l-4-0.017v-9zM11 15.303v-4.621c0.514-0.619 2.513-3.145 2.921-5.416l1.079-0.234v9.094l-4 1.177zM11.858 4.583c0-0.749-0.609-1.358-1.358-1.358s-1.358 0.609-1.358 1.358 0.609 1.359 1.358 1.359 1.358-0.609 1.358-1.359zM10.142 4.583c0-0.198 0.161-0.358 0.358-0.358s0.358 0.161 0.358 0.358-0.161 0.359-0.358 0.359-0.358-0.161-0.358-0.359z"
+                  ></path></svg
+                >
+              </span>
+              <div
+                class="self-center font-primary"
+                data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                data-astro-source-loc="55:61"
+              >
+                <div
+                  class="text-dark dark:text-white"
+                  data-astro-source-file="E:/react-projects/devoptekai/src/pages/contact.astro"
+                  data-astro-source-loc="56:26"
+                >
+                  67, Zieman Crescent, Cambridge, ON
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:col-7 md:col-7">
+          <div class="p-5 md:p-10 rounded shadow">
+            <form method="post" action={contact_form_action} class="row g-3">
+              <div class="lg:col-6">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-input"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="lg:col-6">
+                <input
+                  type="email"
+                  class="form-input"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+              <div class="lg:col-6 flex items-start">
+                <input
+                  type="tel"
+                  class="form-input"
+                  name="phone"
+                  id="phone"
+                  placeholder="Phone No"
+                  required
+                />
+              </div>
+              <div class="lg:col-6">
+                <input
+                  type="text"
+                  name="company-name"
+                  id="company-name"
+                  class="form-input"
+                  placeholder="Company Name"
+                  required
+                />
+              </div>
+
+              <div class="lg:col-12">
+                <textarea
+                  class="form-input"
+                  name="message"
+                  id="message"
+                  placeholder="Your Message Here..."
+                  required
+                  style="height: 150px;"></textarea>
+              </div>
+              <div class="lg:col-12">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- {
+    blog?.enable && (
+      <section class="section bg-theme-light">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-12 text-center mb-5">
+              {blog.subtitle && (
+                <span
+                  class="text-lg text-text"
+                  set:html={markdownify(blog.subtitle)}
+                />
+              )}
+              {blog.title && <h2 set:html={markdownify(blog.title)} />}
+              <div class="separator after:shadow-theme-light" />
+            </div>
+
+            {blogCollection.slice(0, 3).map((post) => {
+              return (
+                <div class="md:col-6 xl:col-4">
+                  <BlogCard content={post} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    )
+  } -->
+
+ 
 
   <div
     class="modal"

@@ -135,43 +135,14 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"Industries": {
-"-index.md": {
-	id: "-index.md";
-  slug: "-index";
+		"Industries": Record<string, {
+  id: string;
+  slug: string;
   body: string;
   collection: "Industries";
-  data: any
-} & { render(): Render[".md"] };
-"automotive.md": {
-	id: "automotive.md";
-  slug: "automotive";
-  body: string;
-  collection: "Industries";
-  data: any
-} & { render(): Render[".md"] };
-"e-commerce.md": {
-	id: "e-commerce.md";
-  slug: "e-commerce";
-  body: string;
-  collection: "Industries";
-  data: any
-} & { render(): Render[".md"] };
-"hr-industry.md": {
-	id: "hr-industry.md";
-  slug: "hr-industry";
-  body: string;
-  collection: "Industries";
-  data: any
-} & { render(): Render[".md"] };
-"manufacturing.md": {
-	id: "manufacturing.md";
-  slug: "manufacturing";
-  body: string;
-  collection: "Industries";
-  data: any
-} & { render(): Render[".md"] };
-};
+  data: any;
+  render(): Render[".md"];
+}>;
 "about": {
 "-index.md": {
 	id: "-index.md";
@@ -431,6 +402,13 @@ declare module 'astro:content' {
   collection: "sections";
   data: any
 } & { render(): Render[".md"] };
+"offgridai.md": {
+	id: "offgridai.md";
+  slug: "offgridai";
+  body: string;
+  collection: "sections";
+  data: any
+} & { render(): Render[".md"] };
 "our-expertise.md": {
 	id: "our-expertise.md";
   slug: "our-expertise";
@@ -515,6 +493,43 @@ declare module 'astro:content' {
   slug: "valuable-idea";
   body: string;
   collection: "services";
+  data: any
+} & { render(): Render[".md"] };
+};
+"solutions": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
+  body: string;
+  collection: "solutions";
+  data: any
+} & { render(): Render[".md"] };
+"ai-automotive.md": {
+	id: "ai-automotive.md";
+  slug: "ai-automotive";
+  body: string;
+  collection: "solutions";
+  data: any
+} & { render(): Render[".md"] };
+"ai-e-commerce.md": {
+	id: "ai-e-commerce.md";
+  slug: "ai-e-commerce";
+  body: string;
+  collection: "solutions";
+  data: any
+} & { render(): Render[".md"] };
+"ai-hr-industry.md": {
+	id: "ai-hr-industry.md";
+  slug: "ai-hr-industry";
+  body: string;
+  collection: "solutions";
+  data: any
+} & { render(): Render[".md"] };
+"ai-manufacturing.md": {
+	id: "ai-manufacturing.md";
+  slug: "ai-manufacturing";
+  body: string;
+  collection: "solutions";
   data: any
 } & { render(): Render[".md"] };
 };

@@ -47,7 +47,7 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
       <section class="section bg-white dark:bg-[#07031E] pb-20">
         <div class="container">
           <div class="row gy-5 flex-col-reverse lg:flex-row">
-            <div class="lg:col-7">
+            <div class="lg:col-7 grid place-content-center">
               {philosophy.subtitle && (
                 <span
                   class="text-lg dark:text-white text-text"
@@ -111,9 +111,9 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
                   )}
                   <div>
                     {funfact?.count && (
-                      <h3 class="h3 mb-1 text-white">
+                      <span class="h3 mb-1 text-center text-white">
                         <TextCounter value={funfact.count} />
-                      </h3>
+                      </span>
                     )}
                     {funfact?.title && (
                       <p
