@@ -15,23 +15,23 @@ const {
 
 {
   enable && (
-    <section class="section">
+    <section class="pt-28 dark:bg-[#07031E]">
       <div class="container">
         <div class="row gy-4">
-          <div class="col-12 mb-5">
+          <div class="col-12 text-center mb-5">
             {subtitle && (
               <span
-                class="text-lg text-text"
+                class="text-lg text-center dark:text-white text-text"
                 set:html={markdownify(subtitle)}
               />
             )}
-            {title && <h2 set:html={markdownify(title)} />}
-            <div class="separator separator-secondary after:shadow-white after:bg-white" />
+            {title && <h2 class="dark:text-white text-center" set:html={markdownify(title)} />}
+            <div class="separator " />
           </div>
-          <div class="lg:col-7">
-            {content && <p set:html={markdownify(content)} />}
+          <div class="lg:col-6">
+            {content && <p class="dark:text-white" set:html={markdownify(content)} />}
             {funfacts && (
-              <ul class="flex justify-between gap-x-2 sm:gap-x-10 mt-8 mb-6">
+              <ul class="grid place-content-center gap-x-2 sm:gap-x-10 md:gap-7 mt-8 mb-6">
                 {funfacts.map((funfact) => (
                   <li class="flex flex-col text-center md:text-start md:flex-row items-center gap-4">
                     {funfact && funfact.icon && (
@@ -42,6 +42,7 @@ const {
                             className="inline-block"
                             icon={funfact.icon}
                           />
+                        
                         )}
                         {funfact.title && (
                           <span
@@ -53,13 +54,17 @@ const {
                     )}
                     <div>
                       {funfact?.count && (
-                        <h3 class="lg:h3 mb-1">
+                        <div class="flex align-bottom ">
+                        <h3 class="lg:h3 dark:text-white mb-1">
                           <TextCounter value={funfact.count} />
                         </h3>
+                          <span class="dark:text-white">
+                            %
+                          </span></div>
                       )}
                       {funfact?.title && (
                         <p
-                          class="opacity-80"
+                          class="opacity-80 dark:text-white"
                           set:html={markdownify(funfact.title)}
                         />
                       )}
@@ -70,29 +75,8 @@ const {
             )}
           </div>
           {progressbar && (
-            <div class="lg:col-4 ml-auto">
-              {progressbar.map((progressbar) => {
-                if (!progressbar) return null;
-
-                return (
-                  <div>
-                    {progressbar.title && (
-                      <h4 class="h6 font-normal mb-2">{progressbar.title}</h4>
-                    )}
-                    {progressbar.progress && (
-                      <div class="flex w-full h-4 bg-gray-20 mb-5 rounded-full overflow-hidden bg-theme-light">
-                        <div
-                          class="flex flex-col justify-center rounded-full relative overflow-hidden bg-secondary text-xs text-white text-center"
-                          role="progressbar"
-                          aria-label="progressbar"
-                          style={`width: ${progressbar.progress}`}>
-                          <div class="progress-bar-striped absolute w-full h-full left-0 bottom-0" />
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
+            <div class="lg:col-6 ml-auto">
+            <iframe class="w-full rounded-md h-full" src="https://www.youtube.com/embed/AGXI1V9wUq4?si=pRqSv7uoJDTgE3jw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           )}
         </div>

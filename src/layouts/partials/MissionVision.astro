@@ -45,14 +45,7 @@ const {
               })}
           </div>
           <div class="lg:col-6">
-            {image && (
-              <ImageMod
-                src={image}
-                width={1000}
-                height={1000}
-                alt={title || " mission image"}
-              />
-            )}
+           <img src={image} alt="" class="h-full object-contain" />
           </div>
         </div>
       </div>

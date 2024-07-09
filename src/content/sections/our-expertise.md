@@ -1,21 +1,22 @@
 ---
 enable: true
-subtitle: Our Skills
-title: Why Choose Us
-content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt laboris nisi ut aliquip ex ea commodo consequat. <br><br> Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint ocaecat cupidatat non proident sunt culpa qui officia deserunt mollit anim id est laborum. Sed perspiciatis unde omnisiste natus error sit voluptatem accusantium.doloremque ladantium totam rem aperieaque ipsa quae ab illo inventore.veritatis. et quasi architecto beatae vitae dicta sunt explicabo.
+subtitle: Business Data interaction and automation 
+title: Empower Business with Context rich AI Assistant
+
+content: In the dynamic world of business, staying ahead requires more than just traditional strategies. It's about leveraging cutting-edge technologies that can adapt, learn, and evolve with your needs. Enter the context-rich AI assistant – a transformative tool that can revolutionize the way you operate, enhance customer experiences, and drive growth.
 
 funfacts:
   - icon: TfiServer # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
-    title: Projects Done
-    count: 230
+    title: Labour and operational cost reduction of information retrieval by 
+    count: 80
 
   - icon: TfiFaceSmile # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
-    title: Satisfied Clients
-    count: 789
+    title: Enhancing engineer productivity and efficiency by 
+    count: 70
 
   - icon: TfiThumbUp # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
-    title: Cup Of Coffee
-    count: 580
+    title: From ZERO contextual interaction with documents to instant contextual response
+    count: 1
 
 progressbar:
   - title: Branding

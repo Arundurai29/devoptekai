@@ -54,8 +54,11 @@
         {
           "name": "AI Manufacturing",
           "url": "/solutions/ai-manufacturing"
+        },
+        {
+          "name": "AI Finance",
+          "url": "/solutions/ai-finance"
         }
-        
       ]
     }
   ],
