@@ -15,7 +15,7 @@ const {
 
 {
   enable && (
-    <section class="pt-28 dark:bg-[#07031E]">
+    <section class="md:pt-28 pt-16 dark:bg-[#07031E]">
       <div class="container">
         <div class="row gy-4">
           <div class="col-12 text-center mb-5">
@@ -31,7 +31,7 @@ const {
           <div class="lg:col-6">
             {content && <p class="dark:text-white" set:html={markdownify(content)} />}
             {funfacts && (
-              <ul class="grid place-content-center gap-x-2 sm:gap-x-10 md:gap-7 mt-8 mb-6">
+              <ul class="grid place-content-center gap-5 md:gap-7 mt-8 mb-6">
                 {funfacts.map((funfact) => (
                   <li class="flex flex-col text-center md:text-start md:flex-row items-center gap-4">
                     {funfact && funfact.icon && (
@@ -54,7 +54,7 @@ const {
                     )}
                     <div>
                       {funfact?.count && (
-                        <div class="flex align-bottom ">
+                        <div class="flex justify-center align-bottom ">
                         <h3 class="lg:h3 dark:text-white mb-1">
                           <TextCounter value={funfact.count} />
                         </h3>
