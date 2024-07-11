@@ -524,9 +524,9 @@ declare module 'astro:content' {
   collection: "solutions";
   data: any
 } & { render(): Render[".md"] };
-"ai-manufacturing copy.md": {
-	id: "ai-manufacturing copy.md";
-  slug: "ai-manufacturing-copy";
+"ai-manufacturing.md": {
+	id: "ai-manufacturing.md";
+  slug: "ai-manufacturing";
   body: string;
   collection: "solutions";
   data: any

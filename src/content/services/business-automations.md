@@ -1,10 +1,12 @@
 ---
-title: AI for Business Automations
+title:  AI Automotive 
 # date: 2018-09-25T15:51:35+06:00
 # description: This is meta description
-short_description: By integrating AI, businesses can automate routine tasks, optimise processes, and gain insights from data analytics, leading to increased efficiency and reduced costs. AI can also improve customer experiences through personalised services and predictive analytics. Furthermore, AI-driven solutions support better strategic planning and innovation by enabling more accurate forecasts and scenario analysis. 
+short_description: Enhance productivity, efficiency, and innovation in your manufacturing and automotive processes with our state-of-the-art AI solutions tailored to meet industry-specific needs. 
 image: "/images/service/service01.jpg"
 bg_image: "/images/background/page-title.jpg"
+video: "https://www.youtube.com/embed/AGXI1V9wUq4?si=pRqSv7uoJDTgE3jw"
+link: "/solutions/ai-automotive"
 # icon: TfiBarChart 
 # brochure: "#?"
 # regular_day: Sun-Tues

@@ -6,13 +6,14 @@ import type { CollectionEntry } from "astro:content";
 
 interface Props {
   content: CollectionEntry<"services">;
+
 }
 
 const {
   content: {
     body,
     slug,
-    data: { title, short_description, image, icon },
+    data: { title, short_description, image, icon,link,video },
   },
 } = Astro.props;
 
@@ -26,19 +27,12 @@ const description = () => {
 
 <div
   class="text-center border border-border dark:border-slate-700 dark:bg-[#222C40] rounded-md relative pb-6 mb-6 group">
-  {title && <h3 class="h5 my-4 px-3 dark:text-white" set:html={markdownify(title)} />}
   <div>
     <div
       class="overlay after:opacity-0 group-hover:after:opacity-100 after:duration-300">
       {
-        image && (
-          <ImageMod
-            src={image}
-            width={400}
-            height={220}
-            class="w-full"
-            alt={title || "service image"}
-          />
+        video && (
+        <iframe class="w-full rounded-md h-full" src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         )
       }
     </div>
@@ -50,13 +44,15 @@ const description = () => {
       )
     }
   </div>
-  <div class="px-4">
-    {description && <p set:html={description} class="my-8 text-justify mb-2 dark:text-white" />}
-    <!-- <a
-      class="btn btn-primary-dark absolute -bottom-6 left-1/2 -translate-x-1/2"
-      href={`/services/${slug}`}
+  <div class="px-4 grid ">
+    {title && <h3 class="text-lg mt-4 mb-0 text-left dark:text-white" set:html={markdownify(title)} />}
+
+    {description && <p set:html={description} class="my-8 mt-4 text-justify mb-2 dark:text-white" />}
+    <a
+      class="btn btn-primary-dark w-10/12 mt-2"
+      href={link}
       set:html="Read More">
       <span class="sr-only" set:html="details" />
-    </a> -->
+    </a>
   </div>
 </div>

@@ -72,6 +72,7 @@ export interface TestimonialType {
   subtitle: string;
   image: string;
   quote:string;
+  video:string;
   list: [
     {
       name: string;

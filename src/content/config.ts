@@ -27,6 +27,7 @@ const homepage = defineCollection({
       .object({
         enable: z.boolean(),
         title: z.string(),
+       
         subtitle: z.string().optional(),
       })
       .optional(),
@@ -213,6 +214,8 @@ const servicesCollection = defineCollection({
     bg_image: z.string().optional(),
     description: z.string().optional(),
     short_description: z.string().optional(),
+    link: z.string().optional(),
+    video: z.string().optional(),
     icon: z.string().optional(),
     brochure: z.string().optional(),
     regular_day: z.string().optional(),

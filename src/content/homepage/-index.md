@@ -71,8 +71,8 @@ about:
 our_expertise:
   enable: true
   subtitle: Our Skills
-  title: Why ChooseQ Us
-  content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt laboris nisi ut aliquip ex ea commodo consequat. <br><br> Duis aute irure dolor in reprehenderit voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint ocaecat cupidatat non proident sunt culpa qui officia deserunt mollit anim id est laborum. sed perspiciatis unde omnisiste natus error sit voluptatem accusantium.doloremque ladantium totam rem aperieaque ipsa quae ab illo inventore.veritatis. et quasi architecto beatae vitae dicta sunt explicabo.
+  title: Why Choose Us
+  content: Choose Devoptek AI for seamless AI chatbot integration, a proven track record, and tangible results. We make AI and cloud operations affordable and accessible, helping businesses innovate, scale, and thrive with user-friendly tools that boost efficiency, enhance decision-making, and drive competitive advantage.
   # funfacts
   funfacts:
     - icon: TfiServer # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/

@@ -1,10 +1,12 @@
 ---
-title: AI-Driven Sales Automations
+title:  AI E-Commerce 
 # date: 2018-09-25T15:51:35+06:00
 # description: This is meta description
-short_description: AI automation revolutionizes sales by streamlining tasks like data entry, lead scoring, and customer communications, freeing up time for teams to strategize, innovate, and engage with customers effectively. This  technology accelerates the sales cycle while ensuring precision and uniformity in all operational facets. , it empowers sales teams to adapt quickly to changing market dynamics.
+short_description: Elevate your online store with personalized experiences, intelligent recommendations, and efficient operations powered by cutting-edge AI.
 image: "/images/service/service02.jpg"
 bg_image: "/images/background/page-title.jpg"
+video: "https://www.youtube.com/embed/AGXI1V9wUq4?si=pRqSv7uoJDTgE3jw"
+link: "/solutions/ai-e-commerce "
 # icon: TfiBarChart 
 # brochure: "#?"
 # regular_day: Sun-Tues

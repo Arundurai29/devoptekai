@@ -1,10 +1,12 @@
 ---
-title: AI Solutions for HR Department
+title:  AI Manufacturing 
 # date: 2018-09-25T15:51:35+06:00
 # description: This is meta description
-short_description: AI in HR can automate routine tasks such as resume screening, employee onboarding, and payroll processing. It also enhances talent management through more sophisticated data analysis, offering insights into employee performance and potential. Integrating AI into HR practices can lead to more informed decision-making and a more effective human resources management system.
+short_description: Enhance productivity, efficiency, and innovation in your manufacturing and automotive processes with our state-of-the-art AI solutions tailored to meet industry-specific needs.
 image: "/images/service/service04.jpg"
 bg_image: "/images/background/page-title.jpg"
+video: "https://www.youtube.com/embed/AGXI1V9wUq4?si=pRqSv7uoJDTgE3jw"
+link: "/solutions/ai-manufacturing"
 # icon: TfiBarChart 
 # brochure: "#?"
 # regular_day: Sun-Tues

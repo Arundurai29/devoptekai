@@ -1,10 +1,12 @@
 ---
-title: Integrate AI Solutions in the Product
+title:  AI Finance
 # date: 2018-09-25T15:51:35+06:00
 # description: This is meta description
-short_description: Embedding artificial intelligence capabilities directly into products to enhance their functionality and user experience. This integration allows products to become smarter, more adaptive, and more responsive to user needs. This approach not only adds value to the product but also helps in differentiating it in the competitive market by offering unique, AI-driven benefits to the end users. 
+short_description: Enhance productivity, efficiency, and innovation in your financial services with our state-of-the-art AI solutions tailored to meet industry-specific needs.
 image: "/images/service/service06.jpg"
 bg_image: "/images/background/page-title.jpg"
+video: "https://www.youtube.com/embed/AGXI1V9wUq4?si=pRqSv7uoJDTgE3jw"
+link: "/solutions/ai-finance"
 # icon: TfiBarChart 
 # brochure: "#?"
 # regular_day: Sun-Tues

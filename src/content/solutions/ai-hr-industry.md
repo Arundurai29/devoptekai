@@ -56,20 +56,20 @@ banner_slider:
   title: Expertise in AI Technology
   content: Our team of AI experts has extensive experience in implementing AI solutions in the HR sector.
 
-  bg_image: "/images/service/service06.jpg"
+  bg_image: "/images/solution/hr-1.jpg"
 
 banner_slider1:
   enable: true
   title:  Proven Track Record
   content: We have successfully transformed HR processes for numerous clients, delivering measurable results.
-  bg_image: "/images/service/service03.jpg"
+  bg_image: "/images/solution/hr-2.jpg"
 
 
 banner_slider2:
   enable: true
   title:  Customized Solutions
   content: We tailor our AI consulting services to meet the specific needs of your business.
-  bg_image: "/images/service/service02.jpg"
+  bg_image: "/images/solution/h4-3.png"
 
 
 banner_slider3:
@@ -78,7 +78,7 @@ banner_slider3:
 
   content: From strategy to implementation, we provide end-to-end support for your AI HR initiatives.
 
-  bg_image: "/images/service/service-1.jpg"
+  bg_image: "/images/solution/hr-4.png"
 
 cta:
  enable: true

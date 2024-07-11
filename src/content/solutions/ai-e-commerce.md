@@ -54,28 +54,27 @@ banner_slider:
   enable: true
   title:  Industry Expertise
   content: Years of experience in delivering AI solutions tailored for e-commerce businesses.
-
-  bg_image: "/images/service/service06.jpg"
+  bg_image: "/images/solution/ecom-1.png"
 
 banner_slider1:
   enable: true
   title:  Scalable Solutions
   content: Our AI tools grow with your business, ensuring continued success.
-  bg_image: "/images/service/service03.jpg"
+  bg_image: "/images/solution/ecom-2.png"
 
 
 banner_slider2:
   enable: true
   title:   Customizable Features
   content: Solutions that can be tailored to meet the unique needs of your online store.
-  bg_image: "/images/service/service02.jpg"
+  bg_image: "/images/solution/ecom-3.png"
 
 
 banner_slider3:
   enable: true
   title: Comprehensive Support
   content: Ongoing support and consultation to ensure optimal performance of AI tools.
-  bg_image: "/images/service/service-1.jpg"
+  bg_image: "/images/solution/ecom-4.png"
 
 cta:
  enable: true

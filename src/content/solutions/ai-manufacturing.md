@@ -55,7 +55,7 @@ banner_slider:
   enable: true
   title:  Industry Expertise
   content: We understand the unique challenges of the manufacturing and automotive industries and offer tailored solutions to address them effectively.
-  bg_image: "/images/service/service06.jpg"
+  bg_image: "/images/solution/manufa-1.jpg"
   bulletPoint:
     - Decades of industry experience
     - Specialized AI models
@@ -64,7 +64,7 @@ banner_slider1:
   enable: true
   title:  Cutting-Edge Technology
   content: Our solutions leverage the latest advancements in AI to provide superior performance and reliability.
-  bg_image: "/images/service/service03.jpg"
+  bg_image: "/images/solution/manufa-2.png"
   bulletPoint:
     - State-of-the-art algorithms
     - Continuous innovation
@@ -74,7 +74,7 @@ banner_slider2:
   enable: true
   title:  Proven Track Record
   content: With numerous successful deployments, we have a track record of delivering tangible results.
-  bg_image: "/images/service/service02.jpg"
+  bg_image: "/images/solution/manufa-3.jpg"
   bulletPoint:
     - Verified success stories
     - High customer satisfaction
@@ -83,7 +83,7 @@ banner_slider3:
   enable: true
   title: Comprehensive Support
   content: We provide end-to-end support to ensure seamless integration and ongoing optimization of our AI solutions.
-  bg_image: "/images/service/service-1.jpg"
+  bg_image: "/images/solution/manufa-4.png"
   bulletPoint:
     - Dedicated support team
     - Continuous monitoring and updates
@@ -92,7 +92,7 @@ banner_slider4:
   enable: true
   title: Scalable Solutions
   content: Our AI solutions are designed to scale with your business, ensuring they grow and adapt as your needs evolve.
-  bg_image: "/images/service/service-1.jpg"
+  bg_image: "/images/solution/manufa-5.jpg"
   bulletPoint:
     - Flexible deployment options
     - Future-proof technology
