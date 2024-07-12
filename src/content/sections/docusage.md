@@ -3,7 +3,7 @@ enable: true
 subtitle: Powered by RagWorks
 title: Docusage
 content: Introducing a cutting-edge document interaction AI bot powered by RagWorks that offers a transformative solution for automating and enhancing document-related tasks. 
-image: "/images/service/desk.jpg"
+image: "/images/service/doc.png"
 accordion:
   - title: Interact with your documents.
     description: Get instant answers on your documents and inquire in your preferred language.

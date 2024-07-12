@@ -9,7 +9,7 @@ interface Props {
 }
 
 const {
-  content: { enable, subtitle, title, content, funfacts, progressbar },
+  content: { enable, subtitle, title,image, content, funfacts, progressbar },
 } = Astro.props;
 ---
 
@@ -75,8 +75,8 @@ const {
             )}
           </div>
           {progressbar && (
-            <div class="lg:col-6 ml-auto">
-            <iframe class="w-full rounded-md h-full" src="https://www.youtube.com/embed/AGXI1V9wUq4?si=pRqSv7uoJDTgE3jw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="lg:col-6 ml-auto grid place-items-center">
+              <img src={image} class="w-full rounded-md" alt=""/>
             </div>
           )}
         </div>

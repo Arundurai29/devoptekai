@@ -4,7 +4,7 @@ subtitle: Business Data interaction and automation
 title: Empower Business with Context rich AI Assistant
 
 content: In the dynamic world of business, staying ahead requires more than just traditional strategies. It's about leveraging cutting-edge technologies that can adapt, learn, and evolve with your needs. Enter the context-rich AI assistant – a transformative tool that can revolutionize the way you operate, enhance customer experiences, and drive growth.
-
+image: "/images/solution/fintech-1.jpg"
 funfacts:
   - icon: TfiServer # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
     title: Labour and operational cost reduction of information retrieval by 
@@ -16,7 +16,7 @@ funfacts:
 
   - icon: TfiThumbUp # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
     title: From ZERO contextual interaction with documents to instant contextual response
-    count: 1
+    count: 100
 
 progressbar:
   - title: Branding

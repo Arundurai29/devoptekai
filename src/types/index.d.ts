@@ -29,6 +29,7 @@ export interface OurExpertiseType {
   enable: boolean;
   subtitle: string;
   title: string;
+  image: string;
   content: string;
   funfacts: {
     icon: string;

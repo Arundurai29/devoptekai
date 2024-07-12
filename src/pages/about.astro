@@ -138,18 +138,8 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
         <div class="container">
           <div class="bg-secondary dark:bg-white text-white rounded-md overflow-hidden">
             <div class="row gy-0 xl:items-center">
-              <div class="lg:col-5">
-                {ceo.bg_image && (
-                  <ImageMod
-                    src={ceo.bg_image}
-                    width={500}
-                    height={526}
-                    class="object-cover w-full h-96 lg:h-full object-center"
-                    alt={ceo.title || "our ceo"}
-                  />
-                )}
-              </div>
-              <div class="lg:col-7">
+             
+              <div class="lg:col-12">
                 <div class="py-8 md:py-14 px-8">
                   {ceo.title && (
                     <h2

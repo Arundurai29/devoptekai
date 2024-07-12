@@ -16,10 +16,10 @@ ceo:
   enable: true
   bg_image: "/images/about/ceo.jpg"
   title: "We are efficient to <br> make your business rise"
-  content: "leverages over a decade of principal expertise in ML pipelines, infrastructure, automation, custom LLM solutions, coupled with extensive DevOps/SRE and Cloud architect roles, to lead teams and drive companies towards operational excellence and advancement in the Cloud Deployment and  LLM integration. "
+  content: "Our team leverages over a decade of principal expertise in ML pipelines, infrastructure, automation, custom LLM solutions, coupled with extensive DevOps/SRE and Cloud architect roles, to lead teams and drive companies towards operational excellence and advancement in the Cloud Deployment and LLM integration "
  
-  name: "Kishore K"
-  designation: "CEO & Co-founder of DevOpTek AI"
+  name: "Kishore & Kiran"
+  designation: "Co-founders of DevOpTek AI"
 
 mission:
   enable: true
