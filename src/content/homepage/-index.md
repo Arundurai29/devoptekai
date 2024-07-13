@@ -44,7 +44,7 @@ banner_slider:
 ########################################## Service ####################################
 service:
   enable: true
-  title: Best Use Cases
+  title: AI Business Solutions
   subtitle:  We Provide
   # service item comes from content/services folder
 

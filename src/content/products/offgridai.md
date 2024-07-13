@@ -57,7 +57,7 @@ banner_slider:
   enable: true
   title:  Bring AI to Your Servers
   content: Deploy advanced AI models directly on your servers, ensuring control and customization.
-  bg_image: "/images/service/service06.jpg"
+  bg_image: "/images/service/grid1.jpg"
   bulletPoint:
     - Seamless integration with existing infrastructure
     - Enhanced control over AI operations
@@ -67,7 +67,7 @@ banner_slider1:
   enable: true
   title:  Encrypted Storage
   content: Secure your data with robust encryption, ensuring privacy and compliance with industry standards.
-  bg_image: "/images/service/service03.jpg"
+  bg_image: "/images/service/grid2.jpg"
   bulletPoint:
     - State-of-the-art encryption algorithms
     - Protection against unauthorized access
@@ -78,7 +78,7 @@ banner_slider2:
   enable: true
   title:  Offline Functionality
   content: Operate seamlessly without internet connectivity, ensuring continuous AI performance.
-  bg_image: "/images/service/service02.jpg"
+  bg_image: "/images/service/grid3.jpg"
   bulletPoint:
     - Reliable performance in offline environments
     - Data processing without internet dependency
@@ -88,7 +88,7 @@ banner_slider3:
   enable: true
   title: Data Security
   content: Implement comprehensive security measures to protect sensitive information from breaches.
-  bg_image: "/images/service/service-1.jpg"
+  bg_image: "/images/service/grid4.jpg"
   bulletPoint:
     - Advanced security protocols
     - Continuous monitoring and threat detection
@@ -98,7 +98,7 @@ banner_slider4:
   enable: true
   title:  Customizable Solutions
   content: Tailor AI capabilities to suit your unique business requirements and workflows.
-  bg_image: "/images/service/service01.jpg"
+  bg_image: "/images/service/grid5.jpg"
   bulletPoint:
     - Flexible AI model configurations
     - Integration with various business processes
@@ -136,7 +136,7 @@ testimonial:
 
 <h3 class="text-xl dark:text-white text-black">Secure Internal Documentation Access</h3>
 
- OffGrid AI allows employees to securely access and interact with internal documentation, ensuring data remains within the private, secure customer datacenter.
+ <p class="dark:text-white">OffGrid AI allows employees to securely access and interact with internal documentation, ensuring data remains within the private, secure customer datacenter.</p>
 
 </div>
 </div>
@@ -145,7 +145,7 @@ testimonial:
 
 <h3 class="text-xl dark:text-white text-black">Healthcare Records Management</h3>
 
- Enhance healthcare operations by securely managing patient records and providing instant, AI-driven responses to staff queries, all within a secure datacenter environment.
+<p class="dark:text-white"> Enhance healthcare operations by securely managing patient records and providing instant, AI-driven responses to staff queries, all within a secure datacenter environment.</p>
 
 
 </div>
@@ -155,7 +155,7 @@ testimonial:
 
 <h3 class="text-xl dark:text-white text-black">Legal Document Review</h3>
 
-Streamline legal processes by allowing secure, AI-driven analysis and retrieval of legal documents, ensuring sensitive information remains protected.
+<p class="dark:text-white">Streamline legal processes by allowing secure, AI-driven analysis and retrieval of legal documents, ensuring sensitive information remains protected.</p>
 
 
 </div>
@@ -167,7 +167,7 @@ Streamline legal processes by allowing secure, AI-driven analysis and retrieval 
 
 <h3 class="text-xl dark:text-white text-black">Financial Compliance and Reporting</h3>
 
-Utilize OffGrid AI to handle sensitive financial documents, facilitating compliance and reporting while maintaining data security within the private datacenter.
+<p class="dark:text-white">Utilize OffGrid AI to handle sensitive financial documents, facilitating compliance and reporting while maintaining data security within the private datacenter.</p>
 
 
 </div>
@@ -177,7 +177,7 @@ Utilize OffGrid AI to handle sensitive financial documents, facilitating complia
  
 <h3 class="text-xl dark:text-white text-black">Government Policy Access</h3>
 
-OffGrid AI provides secure access to governmental policies and documents, ensuring data sovereignty and compliance with regulatory standards.
+<p class="dark:text-white">OffGrid AI provides secure access to governmental policies and documents, ensuring data sovereignty and compliance with regulatory standards.</p>
 
 
 </div>
