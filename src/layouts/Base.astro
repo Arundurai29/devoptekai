@@ -60,7 +60,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     />
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- google font css -->
     <AstroFont
       config={[
@@ -187,17 +187,27 @@ const { title, meta_title, description, image, noindex, canonical } =
             }
           }
         }
-
+    
         // Function to update the toggle button appearance based on theme
         function updateToggle(theme) {
           const toggleCircle = document.getElementById('toggle-circle');
+          const sunIcon = document.getElementById('sun-icon');
+          const moonIcon = document.getElementById('moon-icon');
           if (theme === 'dark') {
             toggleCircle.style.transform = 'translateX(260%)';
+            moonIcon.classList.add('inline-block');
+            moonIcon.classList.remove('hidden');
+            sunIcon.classList.add('hidden');
+            sunIcon.classList.remove('inline-block');
           } else {
             toggleCircle.style.transform = 'translateX(30%)';
+            moonIcon.classList.add('hidden');
+            moonIcon.classList.remove('inline-block');
+            sunIcon.classList.add('inline-block');
+            sunIcon.classList.remove('hidden');
           }
         }
-
+    
         // Function to toggle theme
         function toggleTheme() {
           const html = document.documentElement;
@@ -213,14 +223,14 @@ const { title, meta_title, description, image, noindex, canonical } =
             updateToggle('dark');
           }
         }
-
+    
         // Initialize theme and toggle button on page load
         document.addEventListener('DOMContentLoaded', function() {
           updateTheme();
           document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
         });
       })();
-    </script>
+      </script>
   </head>
   <body>
     <!-- <div class="fixed z-20 bg-white rounded-full p-4 shadow-md animate-bounce bottom-10 right-10">

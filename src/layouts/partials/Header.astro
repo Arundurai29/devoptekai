@@ -55,9 +55,12 @@ const { pathname } = Astro.url;
                 </li>
                 <li>
                    
-<button id="theme-toggle" class="relative w-20 h-8 bg-white dark:bg-black rounded-full p-1 transition-colors duration-300">
-  <div id="toggle-circle" class="absolute left-0 top-1.5 w-5 h-5 bg-black dark:bg-white rounded-full shadow-md transform transition-transform duration-300"></div>
-</button>
+                   <button id="theme-toggle" class="relative w-20 h-8 bg-white dark:bg-black rounded-full p-1 transition-colors duration-300">
+    <div id="toggle-circle" class="absolute left-0 top-1.5 w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center text-white dark:text-black">
+      <i id="sun-icon" class="fas fa-sun inline-block dark:hidden text-[#07031E]"></i>
+      <i id="moon-icon" class="fas fa-moon hidden dark:inline-block text-white"></i>
+    </div>
+  </button>
                 </li>
               )}
             </ul>
