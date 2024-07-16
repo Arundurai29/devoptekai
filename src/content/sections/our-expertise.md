@@ -7,16 +7,17 @@ content: In the dynamic world of business, staying ahead requires more than just
 image: "/images/solution/fintech-1.jpg"
 funfacts:
   - icon: TfiServer # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
-    title: Labour and operational cost reduction of information retrieval by 
-    count: 80
+    title: AI BUSINESS ASSISTANT
 
-  - icon: TfiFaceSmile # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
-    title: Enhancing engineer productivity and efficiency by 
-    count: 70
+  - icon: TfiShield  # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
+    title: ENSURING AI SECURITY 
 
-  - icon: TfiThumbUp # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
-    title: From ZERO contextual interaction with documents to instant contextual response
-    count: 100
+
+  - icon: TfiHarddrives  # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
+    title: QUICK IMPLEMENTATION
+
+  - icon: TfiFaceSmile  # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
+    title: COST EFFECTIVE
 
 progressbar:
   - title: Branding

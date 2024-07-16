@@ -31,7 +31,7 @@ const {
           <div class="lg:col-6">
             {content && <p class="dark:text-white" set:html={markdownify(content)} />}
             {funfacts && (
-              <ul class="grid place-content-center gap-5 md:gap-7 mt-8 mb-6">
+              <ul class="grid place-content-start gap-5 md:gap-7 mt-8 mb-6">
                 {funfacts.map((funfact) => (
                   <li class="flex flex-col text-center md:text-start md:flex-row items-center gap-4">
                     {funfact && funfact.icon && (
@@ -76,7 +76,7 @@ const {
           </div>
           {progressbar && (
             <div class="lg:col-6 ml-auto grid place-items-center">
-              <img src={image} class="w-full rounded-md" alt=""/>
+            <iframe class="w-full rounded-md h-full" src="https://www.youtube.com/embed/AGXI1V9wUq4?si=pRqSv7uoJDTgE3jw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" data-astro-source-file="E:/react-projects/devoptekai/src/layouts/components/ServiceCard.astro" data-astro-source-loc="35:10"></iframe>
             </div>
           )}
         </div>

@@ -137,9 +137,9 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
       <section class="section  bg-white dark:bg-[#07031E] pb-28 pb-0">
         <div class="container">
           <div class="bg-secondary dark:bg-white text-white rounded-md overflow-hidden">
-            <div class="row gy-0 xl:items-center">
+            <div class="row ">
              
-              <div class="lg:col-12">
+              <div class="lg:col-7">
                 <div class="py-8 md:py-14 px-8">
                   {ceo.title && (
                     <h2
@@ -178,6 +178,12 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
                       set:html={markdownify(ceo.designation)}
                     />
                   )}
+                </div>
+              </div>
+              <div class="lg:col-5 relative">
+                <div class="py-8 md:py-14 px-8 ">
+                  <img class="w-64 md:absolute top-0 left-0 bottom-0 right-0" src="/public/images/service/Kishore.jpg" alt="" />
+                  <img class="w-64 md:absolute bottom-0 right-0" src="/public/images/service/Kiran.jpg" alt="" />
                 </div>
               </div>
             </div>
