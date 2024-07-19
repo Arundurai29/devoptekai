@@ -201,7 +201,7 @@ Get Started with DocuSage Today
           </div>
           <div class="lg:col-6 mb-5 lg:text-right">        
               <a
-                href="/about/"
+                href="/contact/"
                 class="btn btn-primary-white"
               >Get a Quote </a>
           </div>
