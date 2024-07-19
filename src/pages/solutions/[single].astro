@@ -57,6 +57,7 @@ const {
     feature,
     button,
     meta_title,
+    meta_description,
     description,
     bg_image,
     image,
@@ -89,6 +90,7 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
 <Base
   title={title}
   meta_title={meta_title}
+  meta_description={meta_description}
   description={description}
   image={image}
 
@@ -159,9 +161,9 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
                   
                   <div>
                     {funfact?.count && (
-                      <h3 class="h3 mb-1 text-center text-white z-10 relative">
+                      <p class="h3 mb-1 text-center text-white z-10 relative">
                         <TextCounter value={funfact.count} /> <span class=" text-sm mb-1 text-center text-white z-10 relative" set:html={markdownify(funfact.count_type)} />
-                      </h3>
+                      </p>
                       
                     )}
                     {funfact?.title && (
@@ -428,12 +430,12 @@ const funfactsBgImage = await bgImageMod(funfacts?.bg_image!);
       <div class="container overlay-content">
         <div class="row items-center text-center lg:text-start gy-4">
           <div class="lg:col-8 ">
-              <h3 class="text-white m-0 h3 font-medium" set:text={cta.title} />
+              <h2 class="text-white m-0 h3 font-medium" set:text={cta.title} />
               <p class="text-white m-0 mt-4 " set:text={cta.content} />
           </div>
           <div class="lg:col-4 mb-5 lg:text-right">        
               <a
-                href="/contact"
+                href="/contact/"
                 class="btn btn-primary-white"
               >{cta.button}</a>
           </div>

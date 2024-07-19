@@ -1,8 +1,10 @@
 ---
+
 title: About Us
 bg_image: "/images/background/page-title.jpg"
 description: This is meta description
-meta_title: About
+meta_title: About - Devoptek AI
+meta_description: Learn about Devoptek AI’s mission to democratize AI and cloud technology, making advanced tools accessible to all. Get started now!
 draft: false
 
 philosophy:

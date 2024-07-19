@@ -135,6 +135,7 @@ const aboutpage = defineCollection({
   schema: z.object({
     title: z.string(),
     meta_title: z.string().optional(),
+    meta_description: z.string().optional(),
     image: z.string().optional(),
     bg_image: z.string().optional(),
     description: z.string().optional(),
@@ -193,6 +194,7 @@ const blogCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     meta_title: z.string().optional(),
+    meta_description: z.string().optional(),
     description: z.string().optional(),
     date: z.date(),
     image: z.string().optional(),
@@ -209,6 +211,7 @@ const servicesCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     meta_title: z.string().optional(),
+    meta_description: z.string().optional(),
     date: z.date().optional(),
     image: z.string().optional(),
     bg_image: z.string().optional(),
@@ -246,6 +249,7 @@ const projectsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     meta_title: z.string().optional(),
+    meta_description: z.string().optional(),
     date: z.date(),
     image: z.string().optional(),
     bg_image: z.string().optional(),
@@ -269,6 +273,7 @@ const authorsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     meta_title: z.string().optional(),
+    meta_description: z.string().optional(),
     bg_image: z.string().optional(),
     email: z.string().optional(),
     image: z.string().optional(),
@@ -293,6 +298,7 @@ const pagesCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     meta_title: z.string().optional(),
+    meta_description: z.string().optional(),
     description: z.string().optional(),
     image: z.string().optional(),
     draft: z.boolean(),
@@ -304,6 +310,7 @@ const teamCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     meta_title: z.string().optional(),
+    meta_description: z.string().optional(),
     date: z.date().optional(),
     bg_image: z.string().optional(),
     description: z.string().optional(),

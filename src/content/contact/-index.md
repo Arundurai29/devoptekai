@@ -1,5 +1,7 @@
 ---
 title: Contact
+meta_title: Contact - Devoptek AI
+meta_description: Get in touch with Devoptek AI for inquiries, support, or more information. Contact us now to learn more!
 date: 2018-07-12T18:19:33+06:00
 bg_image: "/images/background/page-title.jpg"
 description: This is meta description

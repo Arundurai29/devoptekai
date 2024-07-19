@@ -1,5 +1,7 @@
 ---
 title: RagWorks
+meta_title: RagWorks by Devoptek AI - Advanced AI for Precise Responses
+meta_description: Explore RagWorks, Devoptek AI's Retrieval Augmented Generation engine, merging AI models for precise, contextually accurate responses.
 # date: 2018-09-25T15:51:35+06:00
 # description: This is meta description
 short_description: RAGWorks is a versatile and powerful platform designed to revolutionise the way businesses utilise AI for content generation. Here’s a deeper look into what makes RAGWorks a standout product
@@ -41,23 +43,23 @@ clients_logo_slider:
   enable: true
   clientLogos:
     - logo: "/images/client-logo/aimco.png"
-      link: "https://example.com"
+      
 
     - logo: "/images/client-logo/cloudy.png"
-      link: https://example.com
+      
 
     - logo: "/images/client-logo/cookd.png"
-      link: "https://example.com"
+      
 
     - logo: "/images/client-logo/beyond.png"
-      link: https://example.com
+      
 ---
 
 <p class="dark:text-white">RAGWorks is a versatile and powerful platform designed to revolutionise the way businesses utilise AI for content generation. Here’s a deeper look into what makes RAGWorks a standout product</p>
 
 <section>
 <div class="container overlay-content">
-<h2 class="text-center mt-10 mb-10">Features</h2>
+<h2 class="text-center dark:text-white mt-10 mb-10">Features</h2>
 <div class="row flex flex-col-reverse sm:flex-row">
 <div class="lg:col-6 ml-auto h-3/6">
    <img class="w-full object-cover rounded-lg h-3/6" src="/images/service/service-1.jpg" />

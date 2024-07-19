@@ -1,6 +1,8 @@
 ---
 enable: true
 subtitle: Powered by RagWorks
+meta_title: AI Solutions for Automotive Industry - Devoptek AI
+meta_description: Boost automotive efficiency with AI solutions tailored for the industry. Enhance productivity, innovation, and growth. Learn more now!
 title: Revolutionise Manufacturing with AI-Powered Solutions
 description: Enhance productivity, efficiency, and innovation in your manufacturing and automotive processes with our state-of-the-art AI solutions tailored to meet industry-specific needs.
 button: Book a Free demo
@@ -25,16 +27,16 @@ clients_logo_slider:
   enable: true
   clientLogos:
     - logo: "/images/client-logo/aimco.png"
-      link: "https://example.com"
+      link: 
 
     - logo: "/images/client-logo/cloudy.png"
-      link: https://example.com
+      link: 
 
     - logo: "/images/client-logo/cookd.png"
-      link: "https://example.com"
+      link: 
 
     - logo: "/images/client-logo/beyond.png"
-      link: https://example.com
+      link: 
 
 about:
   enable: true
@@ -49,7 +51,7 @@ about:
   button:
     enable: true
     label: Explore More
-    link: /about
+    link: /about/
 
 ###################### hero slider ###########################
 banner_slider:
@@ -122,7 +124,7 @@ funfacts:
 
     - title: "From ZERO contextual interaction with documents to instant contextual response"
       icon: "TfiThumbUp" # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
-      count: 1
+      count: 100
       count_type: "%"
 
 ---

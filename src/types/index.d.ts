@@ -14,6 +14,7 @@ export type PricingType = {
   bg_image: string;
   description: string;
   meta_title: string;
+  meta_description: string;
   image: string;
   pricingTable: {
     title: string;

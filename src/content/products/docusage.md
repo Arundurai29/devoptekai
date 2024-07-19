@@ -1,5 +1,7 @@
 ---
 enable: true
+meta_title: DocuSage by Devoptek AI - Smart Document Management
+meta_description: Enhance your document management with DocuSage, powered by RagWorks. Automate tasks, get instant answers, and customize your needs. Try it now!
 subtitle: Powered by RagWorks
 title: Docusage
 content: Introducing a cutting-edge document interaction AI bot powered by RagWorks that offers a transformative solution for automating and enhancing document-related tasks. 
@@ -22,16 +24,16 @@ clients_logo_slider:
   enable: true
   clientLogos:
     - logo: "/images/client-logo/aimco.png"
-      link: "https://example.com"
+     
 
     - logo: "/images/client-logo/cloudy.png"
-      link: https://example.com
+      
 
     - logo: "/images/client-logo/cookd.png"
-      link: "https://example.com"
+     
 
     - logo: "/images/client-logo/beyond.png"
-      link: https://example.com
+      
 ---
 
 <p class="dark:text-white pt-10">Introducing a cutting-edge document interaction AI bot powered by RagWorks (Highly customizable Retrieval-Augmented Generation) that offers a transformative solution for automating and enhancing document-related tasks. This advanced AI bot leverages the power of RAG to pull relevant information from a vast database, ensuring that the content it generates is not only accurate but also richly informed by the most relevant data available.</p>
@@ -48,7 +50,7 @@ clients_logo_slider:
 <div class="lg:col-4 mr-auto grid place-content-center  ">
 <div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
 
-<h4 class="dark:text-white">Detailed Features and Benefits</h4>
+<h3 class="dark:text-white text-2xl">Detailed Features and Benefits</h3>
 
 <p class="dark:text-white">Docusage, being built on RagWorks, naturally inherits all its advantages. </p>
 
@@ -58,7 +60,7 @@ clients_logo_slider:
 <div class="lg:col-4 mr-auto grid place-content-center  ">
 <div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
 
-<h4 class="dark:text-white">Multi Tenancy</h4>
+<h3 class="dark:text-white text-2xl">Multi Tenancy</h3>
 
  <p class="dark:text-white">Each user will have their own dedicated knowledge source and data can be shared between users effectively.</p>
 
@@ -67,7 +69,7 @@ clients_logo_slider:
 <div class="lg:col-4 mr-auto grid place-content-center  ">
 <div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
 
-<h4 class="dark:text-white"> Instant Refresh</h4>
+<h3 class="dark:text-white text-2xl"> Instant Refresh</h3>
 
 <p class="dark:text-white">Experience the convenience of an automatically updated knowledge base. As soon as new data is uploaded to your storage, our system refreshes, ensuring you always have access to the latest information.</p>
 
@@ -83,7 +85,7 @@ clients_logo_slider:
 <div class="lg:col-4 mr-auto grid place-content-center  ">
 <div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
 
-<h4 class="dark:text-white">Fully Customizable</h4>
+<h3 class="dark:text-white text-2xl">Fully Customizable</h3>
 
 <p class="dark:text-white">Tailor the system to your specific needs. Import data from a wide range of sources including Google Drive, S3, Confluence, PDFs, images, OneNote, and more. Plus, effortlessly integrate with your existing collaboration tools such as Slack, Teams, and WhatsApp to streamline your workflows and communications.</p>
 
@@ -92,7 +94,7 @@ clients_logo_slider:
 <div class="lg:col-4 mr-auto grid place-content-center  ">
 <div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
 
-<h4 class="dark:text-white">Instant Document Interaction</h4>
+<h3 class="dark:text-white text-2xl">Instant Document Interaction</h3>
 
  <p class="dark:text-white">Engage with your documents seamlessly. Obtain immediate responses and ask questions in your preferred language, enhancing your productivity and understanding.</p>
 
@@ -101,7 +103,7 @@ clients_logo_slider:
 <div class="lg:col-4 mr-auto grid place-content-center  ">
 <div class="rounded-lg dark:bg-[#222C40] shadow-xl mb-10 p-5">
 
-<h4 class="dark:text-white"> Conversational Chat and Session History</h4>
+<h3 class="dark:text-white text-2xl"> Conversational Chat and Session History</h3>
 
 <p class="dark:text-white">Users can establish a limited number of sessions to engage with documents, allowing them to pick up the conversation right where they left off. Additionally, questions do not need to be exact, as our system is capable of understanding the context of inquiries based on chat history.</p>
 
@@ -119,13 +121,13 @@ clients_logo_slider:
       <div class="container overlay-content">
         <div class="row items-center text-center lg:text-start gy-4">
           <div class="lg:col-6 mb-5">
-              <h3 class="text-white dark:text-white h3 font-medium" >
+              <h2 class="text-white dark:text-white h2 font-medium" >
 Get Started with DocuSage Today
-              </h3>
+              </h2>
           </div>
           <div class="lg:col-6 mb-5 lg:text-right">        
               <a
-                href=""
+                href="/contact/"
                 class="btn btn-primary-white"
               >Get a Quote </a>
           </div>
@@ -133,7 +135,7 @@ Get Started with DocuSage Today
       </div>
     </section>
 
-<h3 class="dark:text-white text-center py-10"> We are Exceptional</h4>
+<h2 class="dark:text-white text-center py-10"> We are Exceptional</h2>
 
 <section class="py-1 bg-blueGray-50">
 <div class="w-full xl:w-12/12 mb-12 xl:mb-0 px-4 mx-auto">

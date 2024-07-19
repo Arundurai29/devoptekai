@@ -1,5 +1,7 @@
 ---
 enable: true
+meta_title: AI Solutions for Finance Industry - Devoptek AI
+meta_description: Transform financial services with AI solutions designed for enhanced productivity and innovation. Stay ahead with Devoptek AI. Learn more now!
 title:  Revolutionize Fintech with AI-Powered Solutions
 description: Enhance productivity, efficiency, and innovation in your financial services with our state-of-the-art AI solutions tailored to meet industry-specific needs.
 button:   Book a Free Demo
@@ -23,16 +25,16 @@ clients_logo_slider:
   enable: true
   clientLogos:
     - logo: "/images/client-logo/aimco.png"
-      link: "https://example.com"
+      
 
     - logo: "/images/client-logo/cloudy.png"
-      link: https://example.com
+      
 
     - logo: "/images/client-logo/cookd.png"
-      link: "https://example.com"
+      
 
     - logo: "/images/client-logo/beyond.png"
-      link: https://example.com
+      
 
 about:
   enable: true
@@ -47,7 +49,7 @@ about:
   button:
     enable: true
     label: Explore More
-    link: /about
+    link: /about/
 
 ###################### hero slider ###########################
 feature: "Why Devoptek AI is a Perfect Fit for the Industry/Solution"
@@ -121,13 +123,13 @@ funfacts:
 
     - title: "From ZERO contextual interaction with documents to instant contextual response"
       icon: "TfiThumbUp" # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
-      count: 1
+      count: 100
       count_type: "%"
 
 ---
 
 <section class="section">
-<h2 class="text-center text-black dark:text-white md:text-4xl text-2xl m-0 pb-5" id="use-cases">Solving Industry Challenges Portfolio Management and ReportingSolution
+<h2 class="text-center text-black dark:text-white md:text-4xl text-2xl m-0 pb-5" id="use-cases">Solving Industry Challenges Portfolio Management and Reporting Solution
 </h2>
 <p class="dark:text-white md:pb-16 pb-8" >Analyzing and extracting information from financial statements, market reports, and other relevant documents to generate comprehensive portfolio management reports.</p>
 <div class="container overlay-content">

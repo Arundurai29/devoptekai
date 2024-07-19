@@ -49,15 +49,13 @@ const {
     banner_slider,
     service,
     about,
-    project,
     mission,
     promo_video,
     our_expertise,
-    blog,
-    lifecycle,
     testimonial,
     call_to_action,
     clients_logo_slider,
+
   },
 } = await getEntry("homepage", "-index");
 
@@ -65,11 +63,14 @@ const {
 const aboutBgImage = await bgImageMod(about?.bg_image!);
 const promoVideoBgImage = await bgImageMod(promo_video?.bg_image!);
 
-
-
+const meta_title="Devoptek AI: Empower Your Business with AI & Cloud Solutions";
+const meta_description="Discover how Devoptek AI empowers businesses with affordable AI and cloud solutions. Innovate and thrive with us. Learn more today!";
 ---
 
-<Base>
+<Base 
+meta_title={meta_title}
+meta_description={meta_description}
+>
   {
     banner_slider?.enable && (
       <section>

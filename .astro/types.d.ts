@@ -307,71 +307,14 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] };
 };
-"projects": {
-"-index.md": {
-	id: "-index.md";
-  slug: "-index";
+"projects": Record<string, {
+  id: string;
+  slug: string;
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"project-1.md": {
-	id: "project-1.md";
-  slug: "project-1";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"project-2.md": {
-	id: "project-2.md";
-  slug: "project-2";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"project-3.md": {
-	id: "project-3.md";
-  slug: "project-3";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"project-4.md": {
-	id: "project-4.md";
-  slug: "project-4";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"project-5.md": {
-	id: "project-5.md";
-  slug: "project-5";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"project-6.md": {
-	id: "project-6.md";
-  slug: "project-6";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"project-7.md": {
-	id: "project-7.md";
-  slug: "project-7";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"project-8.md": {
-	id: "project-8.md";
-  slug: "project-8";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-};
+  data: InferEntrySchema<"projects">;
+  render(): Render[".md"];
+}>;
 "sections": {
 "call-to-action.md": {
 	id: "call-to-action.md";

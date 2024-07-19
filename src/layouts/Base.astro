@@ -29,6 +29,7 @@ if (theme.fonts.font_family.secondary) {
 export interface Props {
   title?: string;
   meta_title?: string;
+  meta_description?: string;
   description?: string;
   image?: string;
   noindex?: boolean;
@@ -36,7 +37,7 @@ export interface Props {
 }
 
 // distructure frontmatters
-const { title, meta_title, description, image, noindex, canonical } =
+const { title, meta_title, meta_description, description, image, noindex, canonical } =
   Astro.props;
 ---
 
@@ -46,7 +47,6 @@ const { title, meta_title, description, image, noindex, canonical } =
     <!-- favicon -->
     <link rel="shortcut icon" href={config.site.favicon} />
     <!-- theme meta -->
-    <meta name="theme-name" content="biztrox-astro" />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta
       name="theme-color"
@@ -105,9 +105,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     <!-- meta-description -->
     <meta
       name="description"
-      content={plainify(
-        description ? description : config.metadata.meta_description,
-      )}
+      content={meta_description}
     />
 
     <!-- author from config.json -->

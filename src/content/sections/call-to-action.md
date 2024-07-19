@@ -5,5 +5,5 @@ bg_image: "/images/background/cta.jpg"
 button:
   enable: true
   label: get a quote
-  link: "/contact"  
+  link: "/contact/"  
 ---

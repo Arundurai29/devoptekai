@@ -1,5 +1,7 @@
 ---
 enable: true
+meta_title: AI Solutions for E-Commerce Industry - Devoptek AI
+meta_description: Elevate your e-commerce with AI-powered personalized experiences and intelligent recommendations. Drive growth with Devoptek AI. Discover more!
 title:  Transform Your E-Commerce with AI-Driven Solutions
 description: Elevate your online store with personalized experiences, intelligent recommendations, and efficient operations powered by cutting-edge AI.
 button: Book a Free demo
@@ -23,16 +25,16 @@ clients_logo_slider:
   enable: true
   clientLogos:
     - logo: "/images/client-logo/aimco.png"
-      link: "https://example.com"
+     
 
     - logo: "/images/client-logo/cloudy.png"
-      link: https://example.com
+      
 
     - logo: "/images/client-logo/cookd.png"
-      link: "https://example.com"
+     
 
     - logo: "/images/client-logo/beyond.png"
-      link: https://example.com
+      
 
 about:
   enable: true
@@ -47,7 +49,7 @@ about:
   button:
     enable: true
     label: Explore More
-    link: /about
+    link: /about/
 
 ###################### hero slider ###########################
 banner_slider:

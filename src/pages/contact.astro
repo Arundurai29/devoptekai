@@ -9,6 +9,7 @@ import { getEntry } from "astro:content";
 interface data {
   title: string;
   description: string;
+  meta_description: string;
   image: string;
   meta_title: string;
   bg_image: string;
@@ -21,7 +22,7 @@ interface data {
 
 const { contact_form_action }: { contact_form_action: string } = config.params;
 const {
-  data: { title, description, image, contact_info, meta_title, bg_image },
+  data: { title, description, image, contact_info,meta_description, meta_title, bg_image },
 }: { data: data } = await getEntry("contact", "-index");
 ---
 
@@ -29,6 +30,7 @@ const {
   title={title}
   meta_title={meta_title}
   description={description}
+  meta_description={meta_description}
   image={image}>
   <PageHeader title={title} meta_title={title} bg_image={bg_image} />
   <section class="section bg-white dark:bg-[#07031E]">

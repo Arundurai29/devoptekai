@@ -1,5 +1,7 @@
 ---
 enable: true
+meta_title: OffGrid AI by Devoptek AI - Secure Offline AI Models
+meta_description: Deploy advanced AI models with OffGrid AI for unparalleled security and offline functionality. Enhance operations seamlessly. Get started!
 subtitle: Powered by RagWorks
 title: Secure and Own Your AI with OffGrid AI
 description: Enhance your business operations with OffGrid AI's state-of-the-art technology, designed  to provide unparalleled security and innovation tailored to your specific needs.
@@ -24,16 +26,16 @@ clients_logo_slider:
   enable: true
   clientLogos:
     - logo: "/images/client-logo/aimco.png"
-      link: "https://example.com"
+     
 
     - logo: "/images/client-logo/cloudy.png"
-      link: https://example.com
+     
 
     - logo: "/images/client-logo/cookd.png"
-      link: "https://example.com"
+     
 
     - logo: "/images/client-logo/beyond.png"
-      link: https://example.com
+      
 
 about:
   enable: true
@@ -193,13 +195,13 @@ testimonial:
       <div class="container overlay-content">
         <div class="row items-center text-center lg:text-start gy-4">
           <div class="lg:col-6 mb-5">
-              <h3 class="text-white h3 font-medium" >
+              <h2 class="text-white h3 font-medium" >
 Get Started with DocuSage Today
-              </h3>
+              </h2>
           </div>
           <div class="lg:col-6 mb-5 lg:text-right">        
               <a
-                href=""
+                href="/about/"
                 class="btn btn-primary-white"
               >Get a Quote </a>
           </div>

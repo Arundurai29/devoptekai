@@ -1,5 +1,7 @@
 ---
 enable: true
+meta_title: AI Solutions for Manufacturing Industry - Devoptek AI
+meta_description: Enhance manufacturing productivity and innovation with AI solutions tailored to the industry. Drive growth and efficiency. Discover more!
 title:  Revolutionise Manufacturing with AI-Powered Solutions
 description:  Enhance productivity, efficiency, and innovation in your manufacturing and automotive processes with our state-of-the-art AI solutions tailored to meet industry-specific needs.
 button:   Book a Free Demo
@@ -23,16 +25,16 @@ clients_logo_slider:
   enable: true
   clientLogos:
     - logo: "/images/client-logo/aimco.png"
-      link: "https://example.com"
+     
 
     - logo: "/images/client-logo/cloudy.png"
-      link: https://example.com
+      
 
     - logo: "/images/client-logo/cookd.png"
-      link: "https://example.com"
+     
 
     - logo: "/images/client-logo/beyond.png"
-      link: https://example.com
+      
 
 about:
   enable: true
@@ -47,7 +49,7 @@ about:
   button:
     enable: true
     label: Explore More
-    link: /about
+    link: /about/
 
 ###################### hero slider ###########################
 feature: " why DevopTek is the ideal choice for the particular industry or solution."
@@ -122,7 +124,7 @@ funfacts:
 
     - title: "From ZERO contextual interaction with documents to instant contextual response"
       icon: "TfiThumbUp" # themify icon pack : https://react-icons.github.io/react-icons/icons/tfi/
-      count: 1
+      count: 100
       count_type: "%"
 
 ---

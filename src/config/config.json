@@ -39,7 +39,7 @@
   "navigation_button": {
     "enable": true,
     "label": "Get A Quote",
-    "link": "/contact"
+    "link": "/contact/"
   },
 
   "subscription_in_footer": {

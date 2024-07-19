@@ -1,5 +1,7 @@
 ---
 enable: true
+meta_title: AI Solutions for HR Industry - Devoptek AI
+meta_description: Revolutionize HR with AI solutions designed to enhance efficiency and decision-making. Transform HR operations with Devoptek AI. Learn more today!
 title:  Revolutionize Your HR with Cutting-Edge AI Solutions
 description: Transform your HR processes with our AI-powered consulting services tailored to your unique business needs.
 button: Book a Free Consultation
@@ -23,16 +25,16 @@ clients_logo_slider:
   enable: true
   clientLogos:
     - logo: "/images/client-logo/aimco.png"
-      link: "https://example.com"
+      
 
     - logo: "/images/client-logo/cloudy.png"
-      link: https://example.com
+      
 
     - logo: "/images/client-logo/cookd.png"
-      link: "https://example.com"
+      
 
     - logo: "/images/client-logo/beyond.png"
-      link: https://example.com
+      
 
 about:
   enable: true
@@ -47,7 +49,7 @@ about:
   button:
     enable: true
     label: Explore More
-    link: /about
+    link: /about/
 
 ###################### hero slider ###########################
 feature: "Why We Are the Perfect Choice for Your AI HR Needs"
