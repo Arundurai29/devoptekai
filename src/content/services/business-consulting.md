@@ -6,7 +6,7 @@ short_description: Elevate your online store with personalized experiences, inte
 image: "/images/service/service02.jpg"
 bg_image: "/images/background/page-title.jpg"
 video: "https://www.youtube.com/embed/AGXI1V9wUq4?si=pRqSv7uoJDTgE3jw"
-link: "/solutions/ai-e-commerce "
+link: "/solutions/ai-e-commerce/"
 # icon: TfiBarChart 
 # brochure: "#?"
 # regular_day: Sun-Tues

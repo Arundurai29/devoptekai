@@ -6,7 +6,7 @@ short_description: Enhance productivity, efficiency, and innovation in your manu
 image: "/images/service/service04.jpg"
 bg_image: "/images/background/page-title.jpg"
 video: "https://www.youtube.com/embed/AGXI1V9wUq4?si=pRqSv7uoJDTgE3jw"
-link: "/solutions/ai-manufacturing"
+link: "/solutions/ai-manufacturing/"
 # icon: TfiBarChart 
 # brochure: "#?"
 # regular_day: Sun-Tues

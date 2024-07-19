@@ -16,7 +16,7 @@ import { IoMdMailOpen } from "react-icons/io";
   <div class="py-12 md:py-28 border-b border-border/10">
     <div class="container">
       <div class="row gy-4 justify-between">
-        <div class="md:col-6 lg:col-4 xl:col-4">
+        <div class="md:col-4 lg:col-4 xl:col-4">
           <div class="mb-5 mb-md-0">
             <Logo
               src={config.site.logo_footer}
@@ -34,49 +34,11 @@ import { IoMdMailOpen } from "react-icons/io";
             <Social source={social.main} className="social-icons" />
           </div>
         </div>
-        {
-          menu.services && menu.services[0] && (
-            <div class="xl:col-2 lg:col-3 md:col-6 sm:col-8 col-6">
-              <h3 class="h5 text-white mb-5" set:html="Services" />
-              <ul class="flex flex-col gap-4">
-                {menu.services.map((menu) => (
-                  <li>
-                    <DynamicIcon
-                      className="inline-block text-white me-2 align-[-1px] text-xs"
-                      icon="TfiAngleRight"
-                    />
-                    <a
-                      href={menu.url}
-                      class="text-white text-sm"
-                      set:html={menu.name}
-                    />
-                  </li>
-                ))}
-              </ul>
-              <h3 class="h5 text-white mt-4 mb-5" set:html="Products" />
-              <ul class="flex flex-col gap-4">
-                {menu.products.map((menu) => (
-                  <li>
-                    <DynamicIcon
-                      className="inline-block text-white me-2 align-[-1px] text-xs"
-                      icon="TfiAngleRight"
-                    />
-                    <a
-                      href={menu.url}
-                      class="text-white text-sm"
-                      set:html={menu.name}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )
-        }
 
         {
           menu.quick_links && menu.quick_links[0] && (
-            <div class="lg:col-2 md:col-4 sm:col-4 col-6">
-              <h3 class="h5 text-white mb-5" set:html="Quick Links" />
+            <div class="lg:col-2 md:col-2 sm:col-4 col-6">
+              <p class="h5 text-white mb-5" set:html="Quick Links" />
               <ul class="flex flex-col gap-4">
                 {menu.quick_links.map((menu) => (
                   <li>
@@ -97,13 +59,62 @@ import { IoMdMailOpen } from "react-icons/io";
           )
         }
 
+        {
+          menu.services && menu.services[0] && (
+            <div class="xl:col-2 lg:col-2 md:col-6 sm:col-8 col-6">
+              <p class="h5 text-white mb-5" set:html="Services" />
+              <ul class="flex flex-col gap-4">
+                {menu.services.map((menu) => (
+                  <li>
+                    <DynamicIcon
+                      className="inline-block text-white me-2 align-[-1px] text-xs"
+                      icon="TfiAngleRight"
+                    />
+                    <a
+                      href={menu.url}
+                      class="text-white text-sm"
+                      set:html={menu.name}
+                    />
+                  </li>
+                ))}
+              </ul>
+              
+            </div>
+          )
+        }
+
+         {
+          menu.services && menu.services[0] && (
+            <div class="xl:col-2 lg:col-2 md:col-6 sm:col-8 col-6">
+              
+              <p class="h5 text-white  mb-5" set:html="Products" />
+              <ul class="flex flex-col gap-4">
+                {menu.products.map((menu) => (
+                  <li>
+                    <DynamicIcon
+                      className="inline-block text-white me-2 align-[-1px] text-xs"
+                      icon="TfiAngleRight"
+                    />
+                    <a
+                      href={menu.url}
+                      class="text-white text-sm"
+                      set:html={menu.name}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+
+
         <!-- subscribe form -->
         {
           config.subscription_in_footer?.enable && (
-            <div class="md:col-6 lg:col-3">
+            <div class="col-6 lg:col-2">
               <div class="mt-5 lg:mt-0">
                 {config.subscription_in_footer.title && (
-                  <h3
+                  <p
                     class="h5 mb-4 text-white"
                     set:html="Contact Info"
                   />

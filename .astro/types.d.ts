@@ -285,9 +285,9 @@ declare module 'astro:content' {
   collection: "products";
   data: any
 } & { render(): Render[".md"] };
-"offgridai.md": {
-	id: "offgridai.md";
-  slug: "offgridai";
+"offgrid-ai.md": {
+	id: "offgrid-ai.md";
+  slug: "offgrid-ai";
   body: string;
   collection: "products";
   data: any
@@ -299,9 +299,9 @@ declare module 'astro:content' {
   collection: "products";
   data: any
 } & { render(): Render[".md"] };
-"webconcierge.md": {
-	id: "webconcierge.md";
-  slug: "webconcierge";
+"web-concierge.md": {
+	id: "web-concierge.md";
+  slug: "web-concierge";
   body: string;
   collection: "products";
   data: any
@@ -517,9 +517,9 @@ declare module 'astro:content' {
   collection: "solutions";
   data: any
 } & { render(): Render[".md"] };
-"ai-hr-industry.md": {
-	id: "ai-hr-industry.md";
-  slug: "ai-hr-industry";
+"ai-hr.md": {
+	id: "ai-hr.md";
+  slug: "ai-hr";
   body: string;
   collection: "solutions";
   data: any

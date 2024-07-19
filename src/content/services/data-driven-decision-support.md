@@ -6,7 +6,7 @@ short_description: Enhance productivity, efficiency, and innovation in your fina
 image: "/images/service/service06.jpg"
 bg_image: "/images/background/page-title.jpg"
 video: "https://www.youtube.com/embed/AGXI1V9wUq4?si=pRqSv7uoJDTgE3jw"
-link: "/solutions/ai-finance"
+link: "/solutions/ai-finance/"
 # icon: TfiBarChart 
 # brochure: "#?"
 # regular_day: Sun-Tues

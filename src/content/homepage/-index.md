@@ -13,7 +13,7 @@ banner_slider:
       button:
         enable: true
         label: More details
-        link: /products/ragworks
+        link: /products/ragworks/
 
 
 
@@ -27,7 +27,7 @@ banner_slider:
       button:
         enable: true
         label: More details
-        link: /contact
+        link: /contact/
 
     # slider item loop
     - bg_image: "/images/banner/banner-3.jpg:/images/banner/Aimobheader.jpg"
@@ -39,7 +39,7 @@ banner_slider:
       button:
         enable: true
         label: More details
-        link: /contact
+        link: /contact/
 
 ########################################## Service ####################################
 service:
@@ -65,7 +65,7 @@ about:
   button:
     enable: true
     label: Explore More
-    link: /about
+    link: /about/
  
 ##################################### Skill ##############################################
 our_expertise:

@@ -7,11 +7,11 @@
     
     {
       "name": "About us",
-      "url": "/about"
+      "url": "/about/"
     },
     {
       "name": "RagWorks",
-      "url": "/products/ragworks"
+      "url": "/products/ragworks/"
     },
     {
       "name": "Products",
@@ -21,15 +21,15 @@
         
         {
           "name": "DocuSage",
-          "url": "/products/docusage"
+          "url": "/products/docusage/"
         },
         {
           "name": "Web Concierge",
-          "url": "/products/webconcierge"
+          "url": "/products/web-concierge/"
         },
         {
           "name": "Offgrid AI",
-          "url": "/products/offgridai"
+          "url": "/products/offgrid-ai/"
         }
       ]
     },
@@ -41,71 +41,89 @@
         
         {
           "name": "AI Automotive",
-          "url": "/solutions/ai-automotive"
+          "url": "/solutions/ai-automotive/"
         },
         {
           "name": "AI E-Commerce",
-          "url": "/solutions/ai-e-commerce"
+          "url": "/solutions/ai-e-commerce/"
         },
         {
           "name": "AI HR Industry",
-          "url": "/solutions/ai-hr-industry"
+          "url": "/solutions/ai-hr/"
         },
         {
           "name": "AI Manufacturing",
-          "url": "/solutions/ai-manufacturing"
+          "url": "/solutions/ai-manufacturing/"
         },
         {
           "name": "AI Finance",
-          "url": "/solutions/ai-finance"
+          "url": "/solutions/ai-finance/"
         }
       ]
     }
   ],
   "services": [
+     
     {
-      "name": "AI",
-      "url": "/contact"
+      "name": "AI Automotive",
+      "url": "/solutions/ai-automotive/"
     },
     {
-      "name": "DevOps",
-      "url": "/contact"
+      "name": "AI E-Commerce",
+      "url": "/solutions/ai-e-commerce/"
     },
     {
-      "name": "Cloud Architecture",
-      "url": "/contact"
+      "name": "AI HR Industry",
+      "url": "/solutions/ai-hr/"
+    },
+    {
+      "name": "AI Manufacturing",
+      "url": "/solutions/ai-manufacturing/"
+    },
+    {
+      "name": "AI Finance",
+      "url": "/solutions/ai-finance/"
     }
   ],
   "products": [
     {
+      "name": "RagWorks",
+      "url": "/products/ragworks/"
+    },
+    {
       "name": "DocuSage",
-      "url": "/products/docusage"
+      "url": "/products/docusage/"
     },
     {
       "name": "Web Concierge",
-      "url": "/products/webconcierge"
+      "url": "/products/web-concierge/"
+    },
+    {
+      "name": "Offgrid AI",
+      "url": "/products/offgrid-ai/"
     }
   ],
   "quick_links": [
-    {
-      "name": "RagWorks",
-      "url": "/products/ragworks"
-    },
+   
     {
       "name": "Home",
       "url": "/"
     },
-    
+    {
+      "name": "About us",
+      "url": "/about/"
+    },
+  
     {
       "name": "Contact ",
-      "url": "/contact"
+      "url": "/contact/"
     }
   ],
   "footer": [
    
     {
       "name": "Privacy Policy",
-      "url": "/privacy-policy"
+      "url": "/privacy-policy/"
     },
     {
       "name": "Terms & Conditions",
