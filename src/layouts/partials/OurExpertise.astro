@@ -31,7 +31,7 @@ const {
           <div class="lg:col-6">
             {content && <p class="dark:text-white" set:html={markdownify(content)} />}
             {funfacts && (
-              <ul class="grid place-content-start gap-5 md:gap-7 mt-8 mb-6">
+              <ul class="grid  grid-cols-2 place-content-start gap-5 md:gap-7 mt-8 mb-6">
                 {funfacts.map((funfact) => (
                   <li class="flex flex-col text-center md:text-start md:flex-row items-center gap-4">
                     {funfact && funfact.icon && (

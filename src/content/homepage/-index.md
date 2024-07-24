@@ -144,16 +144,13 @@ clients_logo_slider:
   enable: true
   clientLogos:
     - logo: "/images/client-logo/aimco.png"
-      link: "https://example.com"
-
+      
     - logo: "/images/client-logo/cloudy.png"
-      link: https://example.com
-
+     
     - logo: "/images/client-logo/cookd.png"
-      link: "https://example.com"
 
     - logo: "/images/client-logo/beyond.png"
-      link: https://example.com
+     
 
 
 
